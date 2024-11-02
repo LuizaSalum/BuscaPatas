@@ -46,7 +46,7 @@ header{
 .nav_logo img{
     width: 100%;
     border: none;
-    margin-left:70%; /*Mudar para que ajuste quando mudamos as dimensões*/
+  
 }
 
 .nav_logo img:hover{
