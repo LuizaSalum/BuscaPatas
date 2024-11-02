@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -7,17 +10,113 @@
   text-decoration: none;
 }
 
-#part_1{
+
+section{
+  height: 100vh;
   display: flex;
-  align-items: center; /* Vertical alignment */
-  justify-content: center; /* Horizontal alignment */
-  height: 50%; /* Ensure the div has a height */
+  justify-content: center;
+  align-items: center;
 }
 
-#part_2{
-  height: 20%;
+
+ /* Section 1 */
+ .map {
+  width: 40%;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 200px;
+}
+.quiz-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin-top: 200px;
+}
+.quiz-button button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
-#part_3{
-  height: 0%
+/* Section 2 */
+.section2-buttons, .section3-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
+.button-square {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* Section 3 */
+.section3-buttons .button-square {
+  width: 80px;
+  height: 80px;
+}
+
+
+
+.container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+.container::-webkit-scrollbar{
+  width: 0;
+}
+  
+.box {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 5px;
+    height: 200px;
+    min-width: 200px;
+  }
+
+  
+  /* Styling for Swiper */
+
+
+.three {
+  position: relative;
+  padding-bottom: 20px; /* Adds space between the swiper and pagination */
+}
+
+.swiper-pagination {
+  position: absolute;
+  margin-bottom: 20vh; /* Add spacing if needed */
+  text-align: center; /* Center the pagination */
+}
+
+.swiper {
+  width: 75%;
+  height: 50%;
+  position: relative;
+  
+}
+
+.swiper-slide {
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
