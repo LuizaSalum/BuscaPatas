@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         /* Set up flexbox to keep footer at bottom */
         body, html {
@@ -25,7 +26,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            background-color: #f3dfbf8e;
+           
         }
 
         .background-image {
@@ -47,55 +48,6 @@
             background-color: #f1f1f1;
         }
 
-         /* Section 1 */
-         .map {
-            width: 40%;
-            height: 200px;
-            background-color: #ddd;
-            border-radius: 10px;
-            margin-top: 200px;
-        }
-        .quiz-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
-            margin-top: 200px;
-        }
-        .quiz-button button {
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Section 2 */
-        .section2-buttons, .section3-buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .button-square {
-            width: 100px;
-            height: 100px;
-            background-color: #ddd;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Section 3 */
-        .section3-buttons .button-square {
-            width: 80px;
-            height: 80px;
-        }
     </style>
 </head>
 <body>
@@ -148,34 +100,38 @@
               </div>
           </header>
 
-        <!-- Section 1: Map and Quiz Button -->
-        <div class="container">
-          <div class="section d-flex" id = "part_1">
-              <div class="map"></div>
+          <section class = "one">
+            <div class="map"></div>
               <div class="quiz-button">
                   <button onclick="window.location.href='quiz_page.php'">Start Quiz</button>
               </div>
-          </div>
+          </section>
 
-          <!-- Section 2: Three Buttons -->
-          <div class="section" id = "part_2">
-              <div class="section2-buttons">
-                  <div class="button-square">Adopt Now</div>
-                  <div class="button-square">Donations</div>
-                  <div class="button-square">Surrender</div>
-              </div>
-          </div>
+          <section class = "two">
+            <div class="section2-buttons">
+              <div class="button-square">Adopt Now</div>
+              <div class="button-square">Donations</div>
+              <div class="button-square">Surrender</div>
+            </div>
+          </section>
 
-          <!-- Section 3: Four Buttons -->
-          <div class="section" id = "part_3">
-              <div class="section3-buttons">
-                  <div class="button-square">Name</div>
-                  <div class="button-square">Name</div>
-                  <div class="button-square">Name</div>
-                  <div class="button-square">Name</div>
-              </div>
+                <!-- Section with Swiper -->
+        <section class="three">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 1" style="width: 100%; height: auto;border-radius: 2px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 2" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 3" style="width: 100%; height: auto; border-radius: 2px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 4" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 5" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 6" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 7" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 8" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 9" style="width: 100%; height: auto; border-radius: 10px;"></div>
           </div>
-      </div>
+        </div>
+        <div class="swiper-pagination"></div> <!-- Moved outside of the Swiper container -->
+    </section>
 
 
   <!--Footer-->
@@ -224,10 +180,23 @@
 
     </footer>
 
-    <!-- Scripts -->
-    <script src="Introduction.js"></script>
-    <script src="navbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+        <!-- Scripts -->
+        <script src="Introduction.js"></script>
+        <script src="navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper only for the section with class "three"
+            var swiper = new Swiper(".three .mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
 </body>
 </html>
+
+
