@@ -25,7 +25,7 @@ body {
 
 .btn-adopt {
     background-color: #FF823A;
-    color: #fff;
+    color: #EFEADE;
     border: none;
     padding: 10px 20px;
     font-size: 1.9rem;
@@ -36,7 +36,8 @@ body {
 }
 
 .btn-adopt:hover {
-    background-color: #e04e39;
+    background-color: #FFAD7E;
+    color: #EFEADE;
 }
 
 .personality {
