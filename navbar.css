@@ -69,7 +69,7 @@ header{
 }
 
 .navbar a:hover{
-    color: #82C0CC;
+    color: #817A68;
 }
 
 .navbar a.active{ 
@@ -108,7 +108,7 @@ header{
 }
 
 .nav_main .register:hover{
-    color: #489FB5;
+    color:  var(--main-color);
 }
 
 
