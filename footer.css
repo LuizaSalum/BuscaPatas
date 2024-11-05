@@ -15,7 +15,7 @@ html{
 
 .footer{
     margin-top: 0;
-    background-color: #3F392B;
+    background-color: #24262b;
     padding: 70px 0;
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
@@ -141,7 +141,7 @@ ol{
     width: 500px; 
     position: relative;
     top: -10%;
-    left: 8%;
+    right: 10vh;
 }
 
 .a{
