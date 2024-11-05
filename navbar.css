@@ -34,7 +34,11 @@ header{
     background: transparent;
     padding: 28px 12%;
     transition: all 0.3s ease;  
+}
 
+.nav_main a, 
+.navbar a {
+  text-decoration: none; 
 }
 
 .nav_logo{
@@ -47,7 +51,7 @@ header{
 .nav_logo img{
     width: 100%;
     border: none;
-    margin-left:70%; /*Mudar para que ajuste quando mudamos as dimensões*/
+  
 }
 
 .nav_logo img:hover{
@@ -69,7 +73,7 @@ header{
 }
 
 .navbar a:hover{
-    color: #817A68;
+    color: #82C0CC;
 }
 
 .navbar a.active{ 
@@ -108,7 +112,7 @@ header{
 }
 
 .nav_main .register:hover{
-    color:  var(--main-color);
+    color: #489FB5;
 }
 
 
