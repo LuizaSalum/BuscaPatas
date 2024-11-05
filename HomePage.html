@@ -18,6 +18,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    
     <style>
         /* Set up flexbox to keep footer at bottom */
         body, html {
@@ -25,7 +29,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            background-color: #f3dfbf8e;
+           
         }
 
         .background-image {
@@ -47,176 +51,180 @@
             background-color: #f1f1f1;
         }
 
-         /* Section 1 */
-         .map {
-            width: 40%;
-            height: 200px;
-            background-color: #ddd;
-            border-radius: 10px;
-            margin-top: 200px;
-        }
-        .quiz-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
-            margin-top: 200px;
-        }
-        .quiz-button button {
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Section 2 */
-        .section2-buttons, .section3-buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .button-square {
-            width: 100px;
-            height: 100px;
-            background-color: #ddd;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Section 3 */
-        .section3-buttons .button-square {
-            width: 80px;
-            height: 80px;
-        }
     </style>
 </head>
 <body>
     <div class="background-image">
         <!-- Header -->
         <header>
-          <a href="../php/HomePageLogIN.php" class="nav_logo"><img src="buscapatas.png"></a>
-    
-          <ul class="navbar">
-            <li><a href="../php/HomePageLogIN.php" class="active">Home</a></li>
-            <li><a href="../php/GuidesPage.php">Adotar</a></li>
-            <li><a href="../php/Profilepage.php">Rendição</a></li>
-            <li><a href="">Abrigos</a></li>
-            <li><a href="">Perdidos e Achados</a></li>
-          </ul>
-    
-          <div class="nav_main">
-              <a href="#" class="user"><i class="ri-user-fill"></i>
-                <button id="login-button" name="logbutton" class="nav-link">Login</button>
-                <div id="file_modal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal_header" style="padding-bottom: 10px;">
-                            <span id="close-modal" class="close">&times;</span>  
-                            <span>Acessar sua Conta</span>
-                        </div>
-                        <form class="modal_body" action="../php/login.php" method="POST">
-                          <label for="username">Email:</label>
-                          <input type="text" name="username" id="username" required>
-                      
-                          <label for="password">Senha:</label>
-                          <input type="password" name="password" id="password" required>
-                      
-                          <button type="submit">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-              </a>
-              <a href="../html/Register_Page.html" class="register">Registrar</a>
-              <div class="bx bx-menu" id="menu-icon"></div>
-            </div>
-        </header>
+            <a href="../php/HomePageLogIN.php" class="nav_logo"><img src="buscapatas.png"></a>
+      
+            <ul class="navbar">
+              <li><a href="../php/HomePageLogIN.php" class="active">Home</a></li>
+              <li><a href="../php/GuidesPage.php">Adopt</a></li>
+              <li><a href="../php/Profilepage.php">Surrender</a></li>
+              <li><a href="">Shelter</a></li>
+              <li><a href="">Lost & Found</a></li>
+            </ul>
+      
+            <!--<li>
+              <form class="search-form" action="" method="GET"> 
+                <input type="text" name="search" id="searchInput" placeholder="Search..."
+                  value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </li>-->
+      
+            <div class = "nav_main">
+                <a href="#" class = "user"><i class="ri-user-fill"></i>
+                  <button id="login-button" name="logbutton" class="nav-link">Login</button>
+                  <div id="file_modal" class="modal">
+                      <div class="modal-content">
+                          <div class="modal_header" style="padding-bottom: 10px;">
+                              <span id="close-modal" class="close">&times;</span>  
+                              <span>Access your Account</span>
+                          </div>
+                          <form class="modal_body" action="../php/login.php" method="POST">
+          
+                            <label for="username">Email:</label>
+                            <input type="text" name="username" id="username" required>
+                        
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" required>
+                        
+                            <button type="submit">Submit</button>
+          
+                          </form>
+                      </div>
+                  </div>
+                </a>
+                <a href="../html/Register_Page.html" class = "register">Register</a>
+                <div class="bx bx-menu" id = "menu-icon"></div>
+              </div>
+          </header>
 
-        <!-- Section 1: Map and Quiz Button -->
-        <div class="container">
-          <div class="section d-flex" id = "part_1">
-              <div class="map"></div>
+          <section class="one">
+            <div class="container">
+              <div class="text">
+                <h2 class="title">Best Pets</h2>
+                <h3 class="subtitle">Find your soul buddy!</h3>
+                <p class="description"> Welcome to our virtual shelter! Click on the Dachshund button to discover your perfect pet match --> </p>
+              </div>
               <div class="quiz-button">
-                  <button onclick="window.location.href='quiz_page.php'">Começar Quiz</button>
+                <button class="image-button">
+                  <p class="click1">Click!</p>
+                  <p class="click2">Click!</p>
+                  <p class="click3">Click!</p>
+                  <span>QUIZZ</span>
+                </button>
               </div>
-          </div>
+            </div>
+          </section>          
 
-          <!-- Section 2: Three Buttons -->
-          <div class="section" id = "part_2">
-              <div class="section2-buttons">
-                  <div class="button-square">Adotar</div>
-                  <div class="button-square">Doações</div>
-                  <div class="button-square">Rendição</div>
-              </div>
-          </div>
+          <section class = "two">
+            <div id="map" class="map"><div id="popup"></div></div>
+            <div class="pin_text"></div>
+            <div class = "text">
+              <h2 class = "title">Shelter Locations</h2>
+              <h3 class = "subtitle">Discover nearby shelters!</h3>
+              <p class = "description"> Each marker on the map shows a shelter with animals ready for adoption. Click on a location to learn more and find your new friend today.</p>
+            </div>
+          </section>
 
-          <!-- Section 3: Four Buttons -->
-          <div class="section" id = "part_3">
-              <div class="section3-buttons">
-                  <div class="button-square">Nome</div>
-                  <div class="button-square">Nome</div>
-                  <div class="button-square">Nome</div>
-                  <div class="button-square">Nome</div>
-              </div>
+
+          <section class = "three">
+            <div class="buttons">
+              <div class="button-square">Adopt Now</div> <!--Add bone or wool ball-->
+              <div class="button-square">Donations</div> <!--Add money-->
+              <div class="button-square">Surrender</div> <!--Add hands ou health-->
+            </div>
+          </section>
+
+                <!-- Section with Swiper -->
+    <h2 class = "four_text">Suggestions</h2>
+    <section class="four">
+      <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 1" style="width: 100%; height: auto;border-radius: 2px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 2" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 3" style="width: 100%; height: auto; border-radius: 2px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 4" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 5" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 6" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 7" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest.jpeg" alt="Dog 8" style="width: 100%; height: auto; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="dogtest4.jpeg" alt="Dog 9" style="width: 100%; height: auto; border-radius: 10px;"></div>
           </div>
-      </div>
+        </div>
+        <div class="swiper-pagination"></div> <!-- Moved outside of the Swiper container -->
+    </section>
 
 
   <!--Footer-->
   <div class="clearfix">
     <footer class="footer">
-        <div class="container-footer">
-            <div class="row-footer">
-                <div id="footer-logo" class="footer-col">
-                    <ol>
-                        <div id="logo">
-                            <a class="a" href="../php/HomePageLogIN.php"><img id="logo1" src="buscapatas.png" style="width: 40%;"></a>
-                            <div class="copyright"><i></i>Copyright © 2023 "Web Project". </div>
-                        </div>
-                    </ol>
-                </div>
-                <div id="footer-mid" class="footer-col">
-                    <h4>empresa</h4>
-                    <ol>
-                        <div class="f"><a href="../html/Introduction.html">Adotar</a></div>
-                        <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Abrigos</a></div>
-                        <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Entrega</a></div>
-                        <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Perdidos e Achados</a></div>
-                    </ol>
-                </div>
-                <div id="footer-mid" class="footer-col">
-                    <h4>menu</h4>
-                    <ol>
-                        <div class="f"><a href="../php/GuidesPage.php">Matchmaking</a></div>
-                        <div class="f"><a href="../php/TravelersHubnew.php">Merch</a></div>
-                        <div class="f"><a href="../php/Profilepage.php">Ajuda</a></div>
-                        <div class="f"><a href="../php/Profilepage.php">Termos e Políticas</a></div>
-                    </ol>
-                </div>
-                <div id="footer-mid" class="footer-col">
-                    <h4>siga-nos</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+      <div class="container-footer">
+        <div class="row-footer">
+          <div id="footer-logo" class="footer-col">
+            <ol>
+              <div id="logo">
+                <a class="a" href="../php/HomePageLogIN.php"><img id="logo1" src="buscapatas.png"
+                    style="width: 40%;"></a>
+                <div class="copyright"><i></i>Copyright © 2023 "Web Project" All rights reserved.</div>
+              </div>
+            </ol>
+          </div>
+          <div id="footer-mid" class="footer-col">
+            <h4>company</h4>
+            <ol>
+              <div class="f"><a href="../html/Introduction.html">Adopt</a></div>
+              <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Shelters</a></div>
+              <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Surrender</a></div>
+              <div class="f"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Lost & Found</a></div>
+            </ol>
+          </div>
+          <div id="footer-mid" class="footer-col">
+            <h4>menu</h4>
+            <ol>
+              <div class="f"><a href="../php/GuidesPage.php">Matchmaking</a></div>
+              <div class="f"><a href="../php/TravelersHubnew.php">Merch</a></div>
+              <div class="f"><a href="../php/Profilepage.php">Help</a></div>
+              <div class="f"><a href="../php/Profilepage.php">Terms & Policies</a></div>
+            </ol>
+          </div>
+          <div id="footer-mid" class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
+          </div>
         </div>
-    </footer>
-</div>
+      </div>
 
-    <!-- Scripts -->
-    <script src="Introduction.js"></script>
-    <script src="navbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+    </footer>
+
+        <!-- Scripts -->
+        <script src="Introduction.js"></script>
+        <script src="navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper only for the section with class "three"
+            var swiper = new Swiper(".four .mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+        <!--(quando tivermos dominio, restringir a api key ao www.buscapatas.pt)-->
+        <script type="module" src="map.js"></script>
 </body>
 </html>
+
+
