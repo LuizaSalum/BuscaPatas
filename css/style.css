@@ -23,10 +23,12 @@
 5.  Product Section
 6.  Banner Section
 7.  Countdown Section
-8.  Instagram
-9.  Contact
-10.  Footer Style
-11.  Rendição
+8.  Shelter Section
+9.  Instagram
+10.  Contact
+11.  Footer Style
+12.  Rendição
+13.  Lost and Found
 -------------------------------------------------------------------*/
 
 /*----------------------------------------*/
@@ -939,6 +941,73 @@ ol {
 }
 
 /*---------------------
+  Shelter Section
+-----------------------*/
+
+/* Shelter Section */
+.shelter__item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.shelter__item__pic {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.shelter__item__pic .shelter__hover {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shelter__item__pic .shelter__hover li {
+    margin-bottom: 8px;
+}
+
+.shelter__item__text {
+    padding: 20px;
+}
+
+.shelter__item__text h6 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.shelter__item__text p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.shelter-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #FF823A;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.shelter-btn:hover {
+    background-color: #FFAD7E;
+}
+
+
+/*---------------------
   Instagram
 -----------------------*/
 
@@ -1714,6 +1783,188 @@ ol {
     margin-right: -15px;
     margin-left: -15px;
 }
+
+/*---------------------
+  Abrigos
+-----------------------*/
+
+.shelter__item {
+	margin-bottom: 35px;
+}
+
+.shelter__item:hover .shelter__hover li {
+	opacity: 1;
+	top: 0;
+}
+
+.shelter__item.sale .shelter__item__pic .label {
+	background: #FFB550;
+}
+
+.shelter__item.sale .shelter__item__text .shelter__price {
+	color: #FFB550;
+}
+
+.shelter__item__pic {
+	height: 360px;
+	position: relative;
+	overflow: hidden;
+}
+
+.shelter__item__pic .label {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: 500;
+	display: inline-block;
+	padding: 2px 8px;
+	text-transform: uppercase;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.shelter__item__pic .label.new {
+	background: #36a300;
+}
+
+.shelter__item__pic .label.stockout {
+	background: #111111;
+}
+
+.shelter__item__pic .label.stockblue {
+	background: #0066bd !important;
+}
+
+.shelter__item__pic .label.sale {
+	background: #FFB550;
+}
+
+.shelter__hover {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 30px;
+	text-align: center;
+}
+
+.shelter__hover li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 100px;
+	opacity: 0;
+}
+
+.shelter__hover li:nth-child(1) {
+	-webkit-transition: all 0.4s ease 0.1s;
+	-o-transition: all 0.4s ease 0.1s;
+	transition: all 0.4s ease 0.1s;
+}
+
+.shelter__hover li:nth-child(2) {
+	-webkit-transition: all 0.4s ease 0.15s;
+	-o-transition: all 0.4s ease 0.15s;
+	transition: all 0.4s ease 0.15s;
+}
+
+.shelter__hover li:nth-child(3) {
+	-webkit-transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	transition: all 0.4s ease 0.2s;
+}
+
+.shelter__hover li:last-child {
+	margin-right: 0;
+}
+
+.shelter__hover li:hover a {
+	background: #FFB550;
+}
+
+.shelter__hover li:hover a span {
+	color: #ffffff;
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.shelter__hover li a {
+	font-size: 18px;
+	color: #111111;
+	display: block;
+	height: 45px;
+	width: 45px;
+	background: #ffffff;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-transition: all, 0.5s;
+	-o-transition: all, 0.5s;
+	transition: all, 0.5s;
+}
+
+.shelter__hover li a span {
+	position: relative;
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	display: inline-block;
+}
+
+.shelter__item__text {
+	text-align: left;
+	padding-top: 10px;
+}
+
+.shelter__item__text h6 a {
+	font-size: 22px;
+	color: #111111;
+
+}
+
+.shelter__item__text .rating {
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+.shelter__item__text .rating i {
+	font-size: 10px;
+	color: #e3c01c;
+	margin-right: -4px;
+}
+
+.shelter__item__text .rating i:last-child {
+	margin-right: 0;
+}
+
+.shelter__item__text .shelter__price {
+	color: #111111;
+	font-weight: 600;
+}
+
+.shelter__item__text .shelter__price span {
+	font-size: 14px;
+	color: #b1b0b0;
+	text-decoration: line-through;
+	margin-left: 4px;
+}
+
+.shelter__item__text button{
+	font-size: 14px;
+	color: #111111;
+	font-weight: 600;
+	border: none;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 12px 30px;
+	border-radius: 50px;
+	background: #FFB550;
+}
+
 
 /*---------------------
   Shop
@@ -3567,7 +3818,7 @@ ol {
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border-color: #009688;
+    border-color: #FF823A;
     outline: none;
 }
 
@@ -3612,6 +3863,116 @@ ol {
     text-align: center;
     margin-bottom: 30px;
 }
+
+/*---------------------
+  Lost and Found
+-----------------------*/
+
+/* Lost and Found Section Styles */
+.lost-found__form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.lost-found__form h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lost-found__form input[type="text"],
+.lost-found__form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.lost-found__form input[type="text"]:focus,
+.lost-found__form textarea:focus {
+    border-color: #FF823A;
+    outline: none;
+}
+
+.lost-found__form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.lost-found__form .site-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #FF823A;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.lost-found__form .site-btn:hover {
+    background-color: #FFAD7E ;
+}
+
+/* Lost and Found Items Display */
+.lost-found__item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.lost-found__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.lost-found__item h5 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.lost-found__item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Section Title */
+.section-title h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 
 
 

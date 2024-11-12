@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="BuscaPatas Abrigos">
+    <meta name="keywords" content="BuscaPatas, Abrigos, Adoção">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BuscaPatas | Abrigos</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./adotar.html">Adotar</a>
+                                <ul class="dropdown">
+                                    <li><a href="./page-caes.html">Cães</a></li>
+                                    <li><a href="./page-gatos.html">Gatos</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./rendicao.html">Rendição</a></li>
+                            <li class="active"><a href="abrigos.html">Abrigos</a></li>
+                            <li><a href="./blog.html">Perdidos e Achados</a></li>
+                            <li><a href="./contact.html">Contato</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </div>
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="#"><span class="icon_bag_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Abrigos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Shelter Section Begin -->
+    <section class="shelter spad">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar for Filter Options -->
+                <div class="col-lg-3 col-md-3">
+                    <div class="sidebar">
+                        <div class="sidebar__categories">
+                            <div class="section-title">
+                                <h4>Filtros</h4>
+                            </div>
+                            <div class="categories__accordion">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-heading active">
+                                            <a data-toggle="collapse" data-target="#collapseLocation">Localização</a>
+                                        </div>
+                                        <div id="collapseLocation" class="collapse show"
+                                            data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><a href="#">Lisboa</a></li>
+                                                    <li><a href="#">Porto</a></li>
+                                                    <li><a href="#">Faro</a></li>
+                                                    <li><a href="#">Coimbra</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a data-toggle="collapse" data-target="#collapseCapacity">Capacidade</a>
+                                        </div>
+                                        <div id="collapseCapacity" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><a href="#">Pequena (até 50 animais)</a></li>
+                                                    <li><a href="#">Média (50-100 animais)</a></li>
+                                                    <li><a href="#">Grande (mais de 100 animais)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a data-toggle="collapse" data-target="#collapseType">Tipo de Abrigo</a>
+                                        </div>
+                                        <div id="collapseType" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><a href="#">Geral</a></li>
+                                                    <li><a href="#">Específico para cães</a></li>
+                                                    <li><a href="#">Específico para gatos</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Shelter Cards -->
+                <div class="col-lg-9 col-md-9">
+                    <div class="row">
+                        <!-- Example Shelter Card -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo.jpg" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="./details-abrigo.html">Abrigo Esperança</a></h6>
+                                    <p>Localização: Lisboa | Capacidade: Grande | Tipo: Geral</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo2.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo2.jpg" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="#">Abrigo Refúgio Animal</a></h6>
+                                    <p>Localização: Porto | Capacidade: Média | Tipo: Específico para cães</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo3.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo3.jpg" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="#">Abrigo São Francisco</a></h6>
+                                    <p>Localização: Coimbra | Capacidade: Pequena | Tipo: Específico para gatos</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo4.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo4.jpg" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="#">Abrigo Esperança Nova</a></h6>
+                                    <p>Localização: Faro | Capacidade: Grande | Tipo: Geral</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo5.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo5.jpg" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="#">Abrigo Amizade</a></h6>
+                                    <p>Localização: Lisboa | Capacidade: Média | Tipo: Específico para cães</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="shelter__item">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo6.jpg">
+                                    <ul class="shelter__hover">
+                                        <li><a href="img/shelters/logos/abrigo6.png" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
+                                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="shelter__item__text">
+                                    <h6><a href="#">Abrigo Esperança Felina</a></h6>
+                                    <p>Localização: Porto | Capacidade: Pequena | Tipo: Específico para gatos</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Section Begin -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-7">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="./index.html"><img src="img/logo.png" alt="BuscaPatas"></a>
+                                </div>
+                                <p>BuscaPatas - Plataforma de apoio para adoção e rendição de animais em Portugal.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-5">
+                            <div class="footer__widget">
+                                <h6>Links Rápidos</h6>
+                                <ul>
+                                    <li><a href="#">Sobre Nós</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Políticas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4">
+                            <div class="footer__widget">
+                                <h6>Redes Sociais</h6>
+                                <ul>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8 col-sm-8">
+                            <div class="footer__newslatter">
+                                <h6>NEWSLETTER</h6>
+                                <form action="#">
+                                    <input type="text" placeholder="Email">
+                                    <button type="submit" class="site-btn">Inscrever-se</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Section End -->
+
+            <!-- Js Plugins -->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <script src="js/jquery-ui.min.js"></script>
+            <script src="js/mixitup.min.js"></script>
+            <script src="js/jquery.countdown.min.js"></script>
+            <script src="js/jquery.slicknav.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.nicescroll.min.js"></script>
+            <script src="js/main.js"></script>
+</body>
+
+</html>
