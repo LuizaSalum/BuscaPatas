@@ -26,6 +26,7 @@
 8.  Instagram
 9.  Contact
 10.  Footer Style
+11.  Rendição
 -------------------------------------------------------------------*/
 
 /*----------------------------------------*/
@@ -1387,6 +1388,12 @@ ol {
 	color: #ffffff;
 	font-weight: 600;
 
+}
+
+/*zoom in when hover*/
+.split-section:hover {
+	transform: scale(1.02);
+	transition: transform 0.5s;
 }
 
 .categories__item {
@@ -3531,6 +3538,82 @@ ol {
 .contact__map iframe {
 	width: 100%;
 }
+
+/*---------------------
+  Rendição
+-----------------------*/
+
+/* Form Container */
+.contact-form {
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #009688;
+    outline: none;
+}
+
+/* Textarea Field */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.contact-form .site-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #FF823A;
+    color: #ffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form .site-btn:hover {
+    background-color: #FFAD7E;
+}
+
+/* Section Title */
+.section-title h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
