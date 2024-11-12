@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
 /******************************************************************
   Template Name: Ashion
   Description: Ashion ecommerce template
@@ -506,6 +508,155 @@ ol {
 
 .canvas__open {
 	display: none;
+}
+
+/*---------------------
+  Section 1
+-----------------------*/
+.text_{
+	
+}
+
+.text_1 .title{
+	font-size: 350%;
+  	font-family: "Modak", serif;
+}
+
+.text_1 .description{
+	width: 63%;
+	font-family: "Happy Monkey", system-ui;
+	font-size: 18px;
+  }
+
+.click1{
+	display: inline-block;
+	font-size: 16px; /* Adjust font size as needed */
+	font-family: "Happy Monkey", system-ui;
+	transform: rotate(-30deg); /* Rotates the text */
+	position: relative;
+	right: 135px;
+	top: 80px
+  }
+  
+.click2{
+	display: inline-block;
+	font-size: 16px; /* Adjust font size as needed */
+	font-family: "Happy Monkey", system-ui;
+	transform: rotate(25deg); /* Rotates the text */
+	position: relative;
+	right: 75px;
+	bottom: 115px
+  }
+  
+.click3{
+	display: inline-block;
+	font-size: 16px; /* Adjust font size as needed */
+	font-family: "Happy Monkey", system-ui;
+	transform: rotate(-35deg); /* Rotates the text */
+	position: relative;
+	left: 105px;
+	bottom: 25px;
+  }
+
+
+.quiz-button {
+	
+    width: 100%;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+}
+  
+
+.image-button {
+    display: inline-block;
+    position: relative;
+    width: 425px; /* Fixed width in viewport height */
+    height: 259px; /* Fixed height in viewport height */
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    font-size: 1.5rem;
+	
+}
+
+  
+  .image-button:hover {
+	transform: translateY(-10px); 
+  }
+  
+  .image-button span {
+	position: absolute;
+	top: 68%;
+	left: 55%;
+	transform: translate(-50%, -50%); 
+	font-size: 32px;
+	font-weight: bold;
+	color: white; 
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+
+
+#map {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+  }
+  
+  .pin_text {
+	background: white; 
+	padding: 5px; 
+	border: 1px solid black; 
+	border-radius: 5px; 
+	display: none;
+  }
+  
+  .pin_text.show {
+	display: block; /* Show when .show class is added */
+  }
+  
+  .categories__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Aligns the content (image) to the bottom of the container */
+    
+}
+
+.categories__item {
+    position: relative; 
+}
+
+.dog_peak{
+	position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: auto;
+	transform: translateX(7%);
+}
+
+
+.cat_peaking {   
+	position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 60%; 
+    height: auto; 
+	transform: rotate(180deg) translateX(-60%);
+}
+
+.cat_peaking_2 {
+	position: absolute;
+    top: 50%; 
+    right: 0; 
+    width: 80%; 
+    height: auto;
+	transform: translateY(-50%);
 }
 
 /*---------------------
@@ -1029,6 +1180,195 @@ ol {
   Categories
 -----------------------*/
 
+.categories {
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.categories .container-fluid {
+	padding-right: 5px;
+}
+
+.categories__item_big {
+	height: 314px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item_map {
+	height: 314px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item {
+	height: 314px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item_big.categories__large__item {
+	height: 638px;
+	/*padding-left: 70px;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.categories__item_big.categories__large__item .categories__text {
+	/*max-width: 480px;*/
+}
+
+.categories__item_big.categories__large__item .categories__text p {
+	margin-bottom: 15px;
+}
+
+.categories__text h1 {
+	font-family: "Cookie", cursive;
+	color: #111111;
+	margin-bottom: 5px;
+}
+
+.categories__text h4 {
+	color: #111111;
+	font-weight: 700;
+}
+
+.categories__text p {
+	margin-bottom: 10px;
+}
+
+.categories__text a {
+	font-size: 14px;
+	color: #111111;
+	text-transform: uppercase;
+	font-weight: 600;
+	position: relative;
+	padding: 0 0 3px;
+	display: inline-block;
+}
+
+.categories__text a:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	background: #ca1515;
+	content: "";
+}
+
+.categories {
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.categories .container-fluid {
+	padding-right: 5px;
+}
+
+.categories__item_big {
+	height: 314px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item_map {
+	height: 314px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item {
+	height: 314px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.categories__item_big.categories__large__item {
+	height: 638px;
+	/*padding-left: 70px;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.categories__item_big.categories__large__item .categories__text {
+	/*max-width: 480px;*/
+}
+
+.categories__item_big.categories__large__item .categories__text p {
+	margin-bottom: 15px;
+}
+
+.categories__text h1 {
+	font-family: "Cookie", cursive;
+	color: #111111;
+	margin-bottom: 5px;
+}
+
+.categories__text h4 {
+	color: #111111;
+	font-weight: 700;
+}
+
+.categories__text p {
+	margin-bottom: 10px;
+}
+
+.categories__text a {
+	font-size: 14px;
+	color: #111111;
+	text-transform: uppercase;
+	font-weight: 600;
+	position: relative;
+	padding: 0 0 3px;
+	display: inline-block;
+}
+
+.categories__text a:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	background: #ca1515;
+	content: "";
+}
 .categories {
 	overflow: hidden;
 	margin-top: 10px;
