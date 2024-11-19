@@ -186,23 +186,89 @@ ol {
 	border-radius: 50px;
 }
 
-/* Custom style for the close button */
-.custom-close-btn {
-	background: transparent;
-	border: none;
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: #ff6f61;
-	/* Customize the color */
-	cursor: pointer;
-	outline: none;
-}
 
-.custom-close-btn:hover {
-	color: #ff3c2f;
-	/* Customize hover color */
-	text-decoration: none;
+/* Modal styling */
+
+.header__right__auth button {
+	background-color: #FFB550;
+	border-color: #FFB550;
 }
+.header__right__auth button {
+	background-color: #FFB550;
+	border-color: #FFB550;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #FFB550;
+    border-color: #FFB550;
+}
+.btn-primary:hover {
+	color: #fff;
+	background-color: #FF823A;
+	border-color: #FF823A;
+}
+.modal-content {
+	border-radius: 20px;
+	overflow: hidden;
+	border: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-body {
+	display: flex;
+	flex-wrap: nowrap;
+  }
+  
+  .modal-body .w-50 {
+	flex: 1;
+  }
+  
+  .modal-body img {
+	border-radius: 0 20px 20px 0;
+  }
+  
+/* Custom Close Button */
+
+.custom-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    color: #FFB550;
+    cursor: pointer;
+    z-index: 1050;
+}
+  
+  .custom-close-btn:hover {
+	color: #FF823A; /* Customize the hover color */
+	text-decoration: none;
+  }
+
+  
+  /* Form visibility */
+  #loginForm,
+  #registerForm {
+	animation: fadeIn 0.3s ease;
+  }
+  
+  #registerForm.d-none,
+  #loginForm.d-none {
+	display: none !important;
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(10px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
 
 /* Mobile view for the close button */
 
