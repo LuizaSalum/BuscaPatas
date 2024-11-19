@@ -115,59 +115,72 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <div class="categories__item_big categories__large__item set-bg" data-setbg="img/background2.png">
-                        <div class="categories__text d-flex flex-column justify-content-center align-items-center h-100">
-                            <div class = "text_1">
-                                <h1 class="title">Find your soul buddy!</h1>
-                                <p class="description"> Welcome to our virtual shelter! Click on the Dachshund button to discover your perfect pet match: </p>
-                            </div>
-                            <div class="quiz-button mt-4 d-flex justify-content-center">
-                                <button class="btn image-button" style="background-image: url('img/sausagebutton1.png');">
-                                    <p class="click1 mb-1">Click!</p>
-                                    <p class="click2 mb-1">Click!</p>
-                                    <p class="click3 mb-1">Click!</p>
-                                    <span class="font-weight-bold">QUIZZ</span>
-                                </button>
-                            </div>
+                    <div class="categories__item_big categories__large__item" style="background-color:#f4f4f4">
+                        <div class="categories__text">
+                            <h4>Surrender</h4>
+                            <h3>Do you need help rehoming your beloved pet? We understand that life can bring unexpected challenges, 
+                                and finding the best solution for your furry friend is our priority. Use this section to safely and 
+                                responsibly surrender your pet to our network of caring shelters, ensuring they find a loving and suitable home.</h3>
+                            <p></p>
+                            <a href="#">Learn More...</a>
+                            <p  id = "upper"></p>
+                            <button class="btn btn-catg1">Surrender</button>
+                            <!--<a class="a1" id = "button_sec_1" href="#">Surrender now</a>-->
                         </div>
+                        <img src="img/cat_peaking.png" class="cat_peaking_2">
                     </div>
                 </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item" style="background-color:#A6CFD5 ;">
-                            <div class="categories__text">
-                                <h4>Adopt</h4>
-                                <p></p>
-                                <a href="#">Adopt now</a>
+                    <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+                        <div class="categories__item_big" style="background-color:#f4f4f4 ;"> <!--dbdfda-->
+                            <div class="categories__text d-flex flex-column justify-content-center align-items-center h-100">
+                                <div class = "text_1">
+                                    <h3 class="title">Find your soul buddy!</h3>
+                                    <p></p>
+                                    <h3 class="subtitle">Take our Quizz!</h3>
+                                    <p></p>
+                                    <p class="description"> Welcome to our virtual shelter! Click on the Dachshund button to discover your perfect pet match: </p>
+                                    <p></p>
+                                    <a href="...">Learn More...</a>
+                                </div>
+                                <div class="quiz-button mt-4 d-flex justify-content-center">
+                                    <button class="btn image-button" style="background-image: url('img/sausagebutton1.png');">
+                                        <div class="glitch-wrapper">
+                                            <div id = "click1" class="glitch" data-text="Click!">Click!</div>
+                                        </div>
+                                        <div class="glitch-wrapper">
+                                            <div id = "click2" class="glitch" data-text="Click!">Click!</div>
+                                        </div>
+                                        <div class="glitch-wrapper">
+                                            <div id = "click3" class="glitch" data-text="Click!">Click!</div>
+                                        </div>
+                                        <span class="font-weight-bold">QUIZZ</span>
+                                    </button>
+                                </div>
                             </div>
-                            <img src="img/black_cat_peaking.png" class="cat_peaking">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item"  style="background-color:#E7E89A ;">
+                        <div class="categories__item" style="background-color:#f4f4f4 ;">
                             <div class="categories__text">
-                                <h4>Surrender</h4>
+                                <h4 id="small">Dogs</h4>
                                 <p></p>
-                                <a href="#">Surrender now</a>
-                            </div>
-                            <img src="img/cat_peaking.png" class="cat_peaking_2">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item" style="background-color:#C4F1BE ;">
-                            <div class="categories__text">
-                                <h4>Donations</h4>
-                                <p></p>
-                                <a href="#">Donate now</a>
+                                <!--<button class="btn btn-catg2">Adopt Now</button>-->
+                                <a class="a2" id = "button_sec_1" href="#">Adopt now</a>
                             </div>
                             <img src="img/dog_peaking.png" class="dog_peak">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item_map">
-                            <div id="map" class="map"><div id="popup"></div></div>
-                            <div class="pin_text"></div>
+                        <div class="categories__item" style="background-color:#f4f4f4 ;">
+                            <div class="categories__text">
+                                <h4 id="small">Cats</h4>
+                                <p></p>
+                                <!--<button class="btn btn-catg2">Adopt Now</button>-->
+                                <a class="a3" id = "button_sec_1" href="#">Adopt now</a>
+                            </div>
+                            <img src="img/black_cat_peaking.png" class="cat_peaking">
                         </div>
                     </div>
                 </div>
@@ -177,13 +190,216 @@
 </section>
 <!-- Categories Section End -->
 
+<!--Shelter Locations-->
+<section class="shelter_location">
+    <div class="container"> 
+        <div class="container-fluid"> <!-- Use container-fluid for full-width layout -->
+            <div class="row mt-5 justify-content-center"> 
+                <div class="col-lg-12"> <!-- Use col-lg-12 to span the full width -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                                <div class="text_2">
+                                    <h2 class="title">Shelter Locations</h2>
+                                    <h3 class="subtitle">Discover nearby shelters!</h3>
+                                    <p></p>
+                                    <p class="description">
+                                        Each marker on the map shows a shelter with animals ready for adoption.
+                                        Click on a location to learn more and find your new friend today.
+                                    </p>
+                                    <button class="btn btn-hover">Shelters</button>
+                                </div>
+                            </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item_map">
+                                <div id="map" class="map">
+                                    <div id="popup"></div>
+                                </div>
+                                <div class="pin_text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Suggestions Section Begin -->
+<section class="suggestion spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="suggestion__content">
+                    <div class="section-title">
+                        <h4>New Arrivals</h4>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>John</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest3.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Elder</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest2.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Ruffos</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="suggestion__content">
+                    <div class="section-title">
+                        <h4>Most Popular</h4>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest4.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Kit-Kat</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest2.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Pringle</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Oscar</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="suggestion__content">
+                    <div class="section-title">
+                        <h4>Youngest</h4>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest3.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Bingo</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest4.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Hammer</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                    <div class="suggestion__item">
+                        <div class="suggestion__item__pic">
+                            <img src="img/dogtest2.jpeg" alt="">
+                        </div>
+                        <div class="suggestion__item__text">
+                            <h6>Towel</h6>
+                            <h4>1 year old</h4>
+                            <button class="btn btn_sug">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Suggestions Section End -->
+
+
+<!-- Banner Section Begin -->
+<section class="banner set-bg" style="background-color:#f4f4f4; position: relative;"> 
+    <div class="container">
+        <!-- Left and Right Images -->
+        <img src="img/lost_Found2.png" class="left-img" alt="Left Image">
+        <img src="img/lost_dog.png" class="right-img" alt="Right Image">
+
+        <!-- Text Slider -->
+        <div class="row">
+            <div class="col-xl-7 col-lg-8 m-auto">
+                <div class="banner__slider owl-carousel">
+                    <div class="banner__item">
+                        <div class="banner__text">
+                            <span>Register a lost animal</span>
+                            <h1>Lost Animal Registry</h1>
+                            <button class="btn btn_lf">Register</button>
+                        </div>
+                    </div>
+                    <div class="banner__item">
+                        <div class="banner__text">
+                            <span>View lost animals</span>
+                            <h1>Found Animal Listings</h1>
+                            <button class="btn btn_lf">View</button>
+                        </div>
+                    </div>
+                    <div class="banner__item">
+                        <div class="banner__text">
+                            <span>Tell us if you have seen a lost animal</span>
+                            <h1>Sightings Log</h1>
+                            <button class="btn btn_lf">Report</button>
+                        </div>
+                    </div>
+                    <div class="banner__item">
+                        <div class="banner__text">
+                            <span>Generate a poster with all your animal's vital information</span>
+                            <h1>Lost Pet Poster Generator</h1>
+                            <button class="btn btn_lf">Generate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banner Section End -->
+
 <!-- Product Section Begin -->
 <section class="product spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="section-title">
-                    <h4>New product</h4>
+                    <h4>New Products</h4>
                 </div>
             </div>
             <div class="col-lg-8 col-md-8">
@@ -191,25 +407,26 @@
                     <li class="active" data-filter="*">All</li>
                     <li data-filter=".women">Women’s</li>
                     <li data-filter=".men">Men’s</li>
-                    <li data-filter=".kid">Kid’s</li>
-                    <li data-filter=".accessories">Accessories</li>
-                    <li data-filter=".cosmetic">Cosmetics</li>
+                    <li data-filter=".kid">Cat’s</li>
+                    <li data-filter=".accessories">Dog's</li>
+                    <li data-filter=".accessories">Toys</li>
+                    <li data-filter=".cosmetic">Accessories</li>
                 </ul>
             </div>
         </div>
         <div class="row property__gallery">
             <div class="col-lg-3 col-md-4 col-sm-6 mix women">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch1.png">
                         <div class="label new">New</div>
                         <ul class="product__hover">
-                            <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch1.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
+                        <h6><a href="#">Dog Sweat (black)</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -223,15 +440,15 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix men">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch2.png">
                         <ul class="product__hover">
-                            <li><a href="img/product/product-2.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch2.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Flowy striped skirt</a></h6>
+                        <h6><a href="#">Dog sweat (grey)</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -245,16 +462,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch3.png">
                         <div class="label stockout">out of stock</div>
                         <ul class="product__hover">
-                            <li><a href="img/product/product-3.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch3.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Cotton T-Shirt</a></h6>
+                        <h6><a href="#">Cat T-Shirt (black)</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -268,15 +485,15 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch4.png">
                         <ul class="product__hover">
-                            <li><a href="img/product/product-4.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch4.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Slim striped pocket shirt</a></h6>
+                        <h6><a href="#">Cat T-Shirt (grey)</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -290,15 +507,15 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-5.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch5.png">
                         <ul class="product__hover">
-                            <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch5.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Fit micro corduroy shirt</a></h6>
+                        <h6><a href="#">Kitty Fit</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -312,16 +529,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
                 <div class="product__item sale">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-6.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch7.png">
                         <div class="label sale">Sale</div>
                         <ul class="product__hover">
-                            <li><a href="img/product/product-6.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch7.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Tropical Kimono</a></h6>
+                        <h6><a href="#">Doggo Fit</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -335,15 +552,15 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch6.png">
                         <ul class="product__hover">
-                            <li><a href="img/product/product-7.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch6.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Contrasting sunglasses</a></h6>
+                        <h6><a href="#">Cat Singer</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -357,16 +574,16 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
                 <div class="product__item sale">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
+                    <div class="product__item__pic set-bg" data-setbg="img/Merch8.png">
                         <div class="label">Sale</div>
                         <ul class="product__hover">
-                            <li><a href="img/product/product-8.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="img/Merch8.png" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                             <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#">Water resistant backpack</a></h6>
+                        <h6><a href="#">Dog Bitter</a></h6>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -383,259 +600,87 @@
 </section>
 <!-- Product Section End -->
 
-<!-- Banner Section Begin -->
-<section class="banner set-bg" data-setbg="img/banner/banner-1.jpg">
-    <div class="container">
+<!-- Donations -->
+<section class="donations">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-xl-7 col-lg-8 m-auto">
-                <div class="banner__slider owl-carousel">
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
+            <!-- Donation Section -->
+            <div class="col-lg-8">
+                <div class="donation-section">
+                    <h1>Donations</h1>
+                    <h4 class="mb-3">Support Our Solidarity Fund</h4>
+                    <p class="mb-4">
+                        Thank you for supporting our mission to help shelters and rescues provide care, safety, and love to animals in need. 
+                        Your generous contribution plays a vital role in supporting shelter operations and helping animals find their forever homes.
+                    </p>
+                    <h5>Donation Amount</h5>
+                    <div class="donation-buttons">
+                        <div class="row">
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">50€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">100€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">250€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">500€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">1.000€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">1.500€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">2.000€</button>
+                            </div>
+                            <div class="col-4 col-sm-3 mb-3">
+                                <button class="btn donation-btn">2.500€</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
-                        </div>
-                    </div>
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
-                        </div>
+                        <div class="custom-amount d-flex align-items-center mt-3">
+                            <label for="customAmount" class="me-2">€</label>
+                            <input type="number" id="customAmount" class="form-control me-3" placeholder="Enter custom amount">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input custom-checkbox" id="makeMonthly">
+                                <label class="form-check-label custom-label" for="makeMonthly">Make it monthly!</label>
+                            </div>
+                        </div>                        
+                        <button class="btn btn-donate ">Donate</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- Banner Section End -->
 
-<!-- Trend Section Begin -->
-<section class="trend spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="trend__content">
-                    <div class="section-title">
-                        <h4>Hot Trend</h4>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/ht-1.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Chain bucket bag</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/ht-2.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Pendant earrings</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/ht-3.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Cotton T-Shirt</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="trend__content">
-                    <div class="section-title">
-                        <h4>Best seller</h4>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/bs-1.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Cotton T-Shirt</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/bs-2.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Zip-pockets pebbled tote <br />briefcase</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/bs-3.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Round leather bag</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="trend__content">
-                    <div class="section-title">
-                        <h4>Feature</h4>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/f-1.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Bow wrap skirt</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/f-2.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Metallic earrings</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                    <div class="trend__item">
-                        <div class="trend__item__pic">
-                            <img src="img/trend/f-3.jpg" alt="">
-                        </div>
-                        <div class="trend__item__text">
-                            <h6>Flap cross-body bag</h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar_homepage">
+                    <h5>About Us</h5>
+                    <ul>
+                        <li><a href="#">Board of Directors</a></li>
+                        <li><a href="#">Advisory Council</a></li>
+                        <li><a href="#">Staff Members</a></li>
+                        <li><a href="#">Our Donors</a></li>
+                    </ul>
+                    <h5>News & Resources</h5>
+                    <ul>
+                        <li><a href="#">Fund Updates</a></li>
+                        <li><a href="#">Newsletters</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Trend Section End -->
 
-<!-- Discount Section Begin -->
-<section class="discount">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 p-0">
-                <div class="discount__pic">
-                    <img src="img/discount.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 p-0">
-                <div class="discount__text">
-                    <div class="discount__text__title">
-                        <span>Discount</span>
-                        <h2>Summer 2019</h2>
-                        <h5><span>Sale</span> 50%</h5>
-                    </div>
-                    <div class="discount__countdown" id="countdown-time">
-                        <div class="countdown__item">
-                            <span>22</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>18</span>
-                            <p>Hour</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>46</span>
-                            <p>Min</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>05</span>
-                            <p>Sec</p>
-                        </div>
-                    </div>
-                    <a href="#">Shop now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Discount Section End -->
 
 <!-- Services Section Begin -->
 <section class="services spad">
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="services__item">
@@ -666,7 +711,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </section>
 <!-- Services Section End -->
 
@@ -675,7 +720,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-1.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta1.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -683,7 +728,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-2.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta2.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -691,7 +736,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-3.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta3.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -699,7 +744,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-4.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta4.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -707,7 +752,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-5.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta5.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -715,7 +760,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="img/instagram/insta-6.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/insta6.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="#">@ ashion_shop</a>
@@ -726,6 +771,7 @@
     </div>
 </div>
 <!-- Instagram End -->
+
 
 <!-- Footer Section Begin -->
 <footer class="footer">

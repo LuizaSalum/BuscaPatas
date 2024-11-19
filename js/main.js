@@ -233,3 +233,30 @@ Created: Colorib
     });
 
 })(jQuery);
+
+/*-------------------
+		Donation Btn
+	--------------------- */
+// Select all donation buttons and the custom amount input
+const buttons = document.querySelectorAll('.donation-buttons .donation-btn');
+const customAmountInput = document.getElementById('customAmount');
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove the 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add the 'active' class to the clicked button
+        button.classList.add('active');
+        // Update the custom amount input with the button's value
+        const value = button.textContent.replace('€', '').replace('.', '').trim(); // Remove '€' and dots, trim whitespace
+        customAmountInput.value = parseInt(value, 10); // Convert to number and set as input value
+    });
+});
+
+// Add event listener to the input to clear the active state when typing a custom amount
+customAmountInput.addEventListener('input', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+});
+
+

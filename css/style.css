@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /******************************************************************
   Template Name: Ashion
@@ -39,7 +40,7 @@
 html,
 body {
 	height: 100%;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Nunito", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -52,7 +53,7 @@ h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 400;
-	font-family: "Montserrat", sans-serif;
+	font-family:"Nunito", sans-serif;
 }
 
 h1 {
@@ -82,7 +83,7 @@ h6 {
 
 p {
 	font-size: 14px;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Nunito", sans-serif;
 	color: #666666;
 	font-weight: 400;
 	line-height: 24px;
@@ -516,66 +517,132 @@ ol {
 /*---------------------
   Section 1
 -----------------------*/
-.text_{
-	
+.text_1{
+	position: absolute;
+	top: 20px;
+	left: 30px;
 }
 
 .text_1 .title{
-	font-size: 350%;
-  	font-family: "Modak", serif;
+	font-size: 250%;
+  	font-family: "Nunito", sans-serif;
+	font-weight: 900;
 }
 
 .text_1 .description{
-	width: 63%;
-	font-family: "Happy Monkey", system-ui;
+	width: 35%;
+	font-family: "Nunito", sans-serif;
 	font-size: 18px;
   }
 
-.click1{
+#click1{
 	display: inline-block;
-	font-size: 16px; /* Adjust font size as needed */
-	font-family: "Happy Monkey", system-ui;
-	transform: rotate(-30deg); /* Rotates the text */
+	font-size: 16px; 
+	font-family: "Nunito", sans-serif;
+	transform: rotate(-30deg); 
 	position: relative;
-	right: 135px;
-	top: 80px
+	right: 139px;
+	top: 75px
   }
   
-.click2{
+#click2{
 	display: inline-block;
-	font-size: 16px; /* Adjust font size as needed */
-	font-family: "Happy Monkey", system-ui;
-	transform: rotate(25deg); /* Rotates the text */
+	font-size: 16px; 
+	font-family: "Nunito", sans-serif;
+	transform: rotate(25deg);
 	position: relative;
-	right: 75px;
-	bottom: 115px
+	right: 40px;
+	bottom: 84px
   }
   
-.click3{
+#click3{
 	display: inline-block;
-	font-size: 16px; /* Adjust font size as needed */
-	font-family: "Happy Monkey", system-ui;
-	transform: rotate(-35deg); /* Rotates the text */
+	font-size: 16px; 
+	font-family: "Nunito", sans-serif;
+	transform: rotate(-35deg); 
 	position: relative;
-	left: 105px;
-	bottom: 25px;
+	left: 110px;
+	bottom: 55px;
   }
 
+  .glitch-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.glitch {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.glitch:before {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #00FFFF;
+    z-index: -1;
+}
+
+.glitch:after {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #FF00FF;
+    z-index: -2;
+}
+
+@keyframes glitch-it {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+  
 .quiz-button {
 	
-    width: 100%;
+    width: 60%;
 	justify-items: center;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	bottom: 55px;
+	right: 20px;
 }
   
 
 .image-button {
     display: inline-block;
     position: relative;
-    width: 425px; /* Fixed width in viewport height */
-    height: 259px; /* Fixed height in viewport height */
+    width: 325px; 
+    height: 200px; 
     background-size: cover;
     background-position: center;
     border: none;
@@ -588,9 +655,8 @@ ol {
 	
 }
 
-  
-  .image-button:hover {
-	transform: translateY(-10px); 
+  .image-button:hover, #button_sec_1:hover {
+	transform: translateY(-5px); 
   }
   
   .image-button span {
@@ -604,11 +670,103 @@ ol {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
 
+.text_2 .title{
+	font-size: 350%;
+	font-family: "Nunito", sans-serif;
+	font-weight: 900;
+}
+
+.text_2 .subtitle {
+	font-size: 200%;
+  	font-family: "Nunito", sans-serif;
+}
+
+.text_2 .description{
+	width:85%;
+	font-family: "Nunito", sans-serif;
+	font-size: 18px;
+  }
+
+.btn-catg1 {
+	background-color: #67BFCC	; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 35%; 
+	height: 50px;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	
+}
+
+.btn-catg1:hover {
+	background-color: #8DE5F2; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn-catg1:active{
+	background-color: #3280d9; 
+	color: #ffffff; 
+}
+
+.btn-catg2 {
+	background-color: #fcbc64	; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 100%; 
+	height: 40px;
+	font-size: 18px;
+	font-weight: 600;	
+}
+
+.btn-catg2:hover {
+	background-color: #FFCD89; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn-catg2:active{
+	background-color: #fc980c; 
+	color: #ffffff; 
+}
+
+.btn-hover {
+	background-color: #75CE89; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 35%; 
+	height: 50px;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+
+.btn-hover:hover {
+	background-color: #A2D2AD; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn-hover:active{
+	background-color: #00c52e	; 
+	color: #ffffff; 
+}
+
+.categories__item_map{
+	margin-left: 10px;
+	border-radius: 12px; 
+    overflow: hidden; 
+}
+
+.shelter_location{
+	margin-left: 100px;
+}
 
 #map {
 	width: 100%;
 	height: 100%;
-	border-radius: 10px;
   }
   
   .pin_text {
@@ -638,7 +796,7 @@ ol {
 	position: absolute;
     bottom: 0; 
     left: 0; 
-    width: 100%; 
+    width: 85%; 
     height: auto;
 	transform: translateX(7%);
 }
@@ -656,12 +814,11 @@ ol {
 .cat_peaking_2 {
 	position: absolute;
     top: 50%; 
-    right: 0; 
+    right: 10px; 
     width: 80%; 
     height: auto;
 	transform: translateY(-50%);
 }
-
 /*---------------------
   Banner
 -----------------------*/
@@ -670,17 +827,19 @@ ol {
 	height: 500px;
 }
 
+
 .banner__text span {
 	font-size: 18px;
-	color: #FFB550;
+	color: #FF823A;
 	text-transform: uppercase;
 }
 
 .banner__text h1 {
-	font-size: 80px;
+	font-size: 50px;
 	color: #111111;
-	font-family: "Cookie", cursive;
+	font-family: "Nunito", sans-serif; 
 	margin-bottom: 15px;
+	font-weight: 700;
 }
 
 .banner__text a {
@@ -699,7 +858,7 @@ ol {
 	bottom: 0;
 	height: 2px;
 	width: 100%;
-	background: #FFB550;
+	background: #FF823A;
 	content: "";
 }
 
@@ -725,12 +884,164 @@ ol {
 }
 
 .banner__slider.owl-carousel .owl-dots button.active {
-	background: #FFB550;
+	background: #FF823A;
 }
 
 .banner__slider.owl-carousel .owl-dots button:last-child {
 	margin-right: 0;
 }
+
+.btn_lf {
+	background-color: #FF823A; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 25%; 
+	height: 50px;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 5px;
+}
+
+.btn_lf:hover {
+	background-color: #FFAD7E; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn_lf:active{
+	background-color: #ff5d00; 
+	color: #ffffff; 
+}
+
+
+.banner .left-img {
+    position: absolute;
+    top: 50%; 
+    left: -150px; 
+    transform: translate(0, -30%) rotate(-20deg);
+    max-width: 400px; 
+    height: auto;
+}
+
+.banner .right-img {
+    position: absolute;
+    top: 50%; 
+    right: -150px;
+    transform: translate(0, -30%) rotate(10deg); 
+    max-width: 350px; 
+    height: auto;
+}
+
+.container {
+    position: relative;
+}
+
+/*---------------------
+  Suggestions
+-----------------------*/
+
+.suggestion {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	margin-left: 135px;
+}
+
+.suggestion__content .section-title h4 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.suggestion__content .section-title h4:after {
+	bottom: -6px;
+}
+
+.suggestion__item {
+	overflow: hidden;
+	margin-bottom: 35px;
+}
+
+.suggestion__item__pic {
+	float: left;
+	margin-right: 25px;
+}
+
+.suggestion__item__pic img {
+	width: 100px; 
+	height: 100px; 
+	display: block; 
+	object-fit: cover;
+}
+
+.suggestion__item__text {
+	overflow: hidden;
+}
+
+.suggestion__item__text h6 {
+	font-size: 22px;
+	color: #111111;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.suggestion__item__text h4 {
+	line-height: 18px;
+	margin-bottom: 6px;
+	font-size: 15px;
+	color: #111111;
+	font-weight: 600;
+}
+
+.suggestion__item__text .rating {
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+
+.suggestion__item__text .rating i {
+	font-size: 10px;
+	color: #e3c01c;
+	margin-right: -4px;
+}
+
+.suggestion__item__text .rating i:last-child {
+	margin-right: 0;
+}
+
+.suggestion__item__text .product__price {
+	color: #111111;
+	font-weight: 600;
+}
+
+.suggestion__item__text .product__price span {
+	font-size: 14px;
+	color: #b1b0b0;
+	text-decoration: line-through;
+	margin-left: 4px;
+}
+
+.btn_sug {
+	background-color: #fcbc64; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 40%; 
+	height: 35px;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 5px;
+}
+
+.btn_sug:hover {
+	background-color: #FFCD89; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn_sug:active{
+	background-color: #fc980c; 
+	color: #ffffff; 
+}
+
 
 /*---------------------
   Trend
@@ -862,7 +1173,7 @@ ol {
 .discount__text__title h2 {
 	font-size: 60px;
 	color: #FFB550;
-	font-family: "Cookie", cursive;
+	font-family: "Nunito", sans-serif;
 	line-height: 46px;
 	margin-bottom: 10px;
 }
@@ -938,6 +1249,152 @@ ol {
 
 .services__item p {
 	margin-bottom: 0;
+}
+
+/*---------------------
+  Donations
+-----------------------*/
+
+.donation-section {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.donation-section h1{
+	font-family: "Nunito", sans-serif;
+	font-weight: 900;
+	font-size: 70px;
+}
+
+.donation-buttons .donation-btn {
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: bold;
+	background-color: #FFFFFF; 
+	color: #fcbc64; 
+	transition: all 0.3s ease;
+	border: 1px solid #fcbc64
+}
+
+.donation-buttons .donation-btn:hover{
+	background-color: #FFCD89; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.donation-buttons .donation-btn.active{
+	background-color: #fcbc64	; 
+	color: #ffffff;
+}
+
+.donation-buttons .custom-amount {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	width: 30%;
+}
+
+.donation-buttons .custom-amount #customAmount{
+	margin-left: 10px;
+}
+
+.donation-buttons .custom-amount .me-2{
+	position: relative;
+	top: 4px;
+	font-size: 20px;
+}
+
+.donation-buttons .custom-amount .form-check{
+	position: absolute;
+	right: 40px;
+}
+
+.donation-buttons .custom-amount input {
+	flex: 1;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; 
+	top: 5px;
+}
+
+.custom-checkbox:checked {
+    background-color: #FF823A; 
+}
+
+.custom-checkbox:checked::after {
+    content: '✔';
+    display: block;
+    color: #ffffff; 
+    font-size: 16px;
+    position: absolute;
+    left: 3px; 
+    top: 1px; 
+    line-height: 1; 
+    width: 100%;
+} 
+
+
+
+.btn-donate {
+	background-color: #75CE89; 
+	color: white; 
+	transition: all 0.3s ease;
+	width: 100%; 
+	height: 40px;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 10px;
+}
+
+.btn-donate:hover {
+	background-color: #A2D2AD; 
+	color: #ffffff; 
+	transform: scale(1.05); 
+}
+
+.btn-donate:active{
+	background-color: #00c52e	; 
+	color: #ffffff; 
+}
+
+.sidebar_homepage {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	background-color: #f8f9fa;
+}
+.sidebar_homepage h5 {
+	margin-bottom: 20px;
+}
+.sidebar_homepage ul {
+	list-style-type: none;
+	padding: 0;
+}
+.sidebar_homepage ul li {
+	margin-bottom: 10px;
+}
+.sidebar_homepage ul li a {
+	text-decoration: none;
+	color: #67BFCC;
+	font-weight: bold;
+}
+.sidebar_homepage ul li a:hover {
+	text-decoration: underline;
 }
 
 /*---------------------
@@ -1232,7 +1689,7 @@ ol {
 	right: -14px;
 	top: 0;
 	content: "";
-	font-family: "FontAwesome";
+	font-family: "Nunito", sans-serif;
 }
 
 .breadcrumb__links a i {
@@ -1303,26 +1760,53 @@ ol {
 }
 
 .categories__item_big.categories__large__item .categories__text {
-	/*max-width: 480px;*/
+	position: absolute;
+	top: 50px;
+	left: 50px;
 }
 
 .categories__item_big.categories__large__item .categories__text p {
 	margin-bottom: 15px;
 }
 
+.categories__item_big.categories__large__item .categories__text h4 {
+	font-size: 500%;
+  	font-family: "Nunito", sans-serif;
+	font-weight: 0;
+}
+
+.categories__text{
+	z-index: 2;
+}
+
 .categories__text h1 {
-	font-family: "Cookie", cursive;
+	font-family: "Nunito", sans-serif;
 	color: #111111;
 	margin-bottom: 5px;
 }
+
+.categories__text h3{
+	width: 80%;
+	font-size: 27px;
+  }
+
 
 .categories__text h4 {
 	color: #111111;
 	font-weight: 700;
 }
 
+.categories__text #small {
+	color: #111111;
+	font-weight: 700;
+}
+
 .categories__text p {
 	margin-bottom: 10px;
+}
+
+.categories__text #upper {
+	margin-bottom: 100px;
 }
 
 .categories__text a {
@@ -1335,117 +1819,34 @@ ol {
 	display: inline-block;
 }
 
-.categories__text a:after {
+.categories__text .a1:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	height: 2px;
 	width: 100%;
-	background: #ca1515;
+	background: #67BFCC;
 	content: "";
 }
 
-.categories {
-	overflow: hidden;
-	margin-top: 10px;
-}
-
-.categories .container-fluid {
-	padding-right: 5px;
-}
-
-.categories__item_big {
-	height: 314px;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding-left: 30px;
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-
-.categories__item_map {
-	height: 314px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-
-.categories__item {
-	height: 314px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding-left: 30px;
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-
-.categories__item_big.categories__large__item {
-	height: 638px;
-	/*padding-left: 70px;*/
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-}
-
-.categories__item_big.categories__large__item .categories__text {
-	/*max-width: 480px;*/
-}
-
-.categories__item_big.categories__large__item .categories__text p {
-	margin-bottom: 15px;
-}
-
-.categories__text h1 {
-	font-family: "Cookie", cursive;
-	color: #111111;
-	margin-bottom: 5px;
-}
-
-.categories__text h4 {
-	color: #111111;
-	font-weight: 700;
-}
-
-.categories__text p {
-	margin-bottom: 10px;
-}
-
-.categories__text a {
-	font-size: 14px;
-	color: #111111;
-	text-transform: uppercase;
-	font-weight: 600;
-	position: relative;
-	padding: 0 0 3px;
-	display: inline-block;
-}
-
-.categories__text a:after {
+.categories__text .a2:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	height: 2px;
 	width: 100%;
-	background: #ca1515;
+	background: #75CE89;
 	content: "";
 }
-.categories {
-	overflow: hidden;
-	margin-top: 10px;
-}
 
-.categories .container-fluid {
-	padding-right: 5px;
+.categories__text .a3:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	background: #FF823A	;
+	content: "";
 }
 
 .container-fluid-adotar {
@@ -1457,12 +1858,6 @@ ol {
 	color: #ffffff;
 	font-weight: 600;
 
-}
-
-/*zoom in when hover*/
-.split-section:hover {
-	transform: scale(1.02);
-	transition: transform 0.5s;
 }
 
 .categories__item {
@@ -1492,7 +1887,7 @@ ol {
 }
 
 .categories__text h1 {
-	font-family: "Cookie", cursive;
+	font-family: "Nunito", sans-serif;
 	color: #111111;
 	margin-bottom: 5px;
 }
@@ -1539,14 +1934,21 @@ ol {
 	background-position: center;
 }
 
-/* Dark overlay */
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+/*hover effect*/
+.split-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    transition: background 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+    z-index: 1; /* Ensure it overlays content */
+}
+
+.split-section:hover::before {
+    background: rgba(0, 0, 0, 0); /* Remove dark overlay */
 }
 
 /* Text styling */
@@ -2044,7 +2446,7 @@ ol {
 .categories__accordion .card-heading>a.active[aria-expanded=false]:after {
 	content: "";
 	font-size: 14px;
-	font-family: "FontAwesome";
+	font-family: "Nunito", sans-serif;
 	color: #666666;
 	position: absolute;
 	right: 30px;
@@ -2054,7 +2456,7 @@ ol {
 .categories__accordion .card-heading.active a:after {
 	content: "";
 	font-size: 14px;
-	font-family: "FontAwesome";
+	font-family: "Nunito", sans-serif;
 	color: #666666;
 	position: absolute;
 	right: 30px;
@@ -2065,7 +2467,7 @@ ol {
 .categories__accordion .card-heading>a.active:after {
 	content: "";
 	font-size: 14px;
-	font-family: "FontAwesome";
+	font-family: "Nunito", sans-serif;
 	color: #666666;
 	position: absolute;
 	right: 30px;
