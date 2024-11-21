@@ -1381,7 +1381,7 @@ section{
 	transform: scale(1.05); 
 }
 
-.donation-buttons .donation-btn.active{
+.donation-btn.active{
 	background-color: #fcbc64	; 
 	color: #ffffff;
 }
