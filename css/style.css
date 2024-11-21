@@ -117,10 +117,6 @@ ol {
   Helper CSS
 -----------------------*/
 
-section{
-	margin-top: 120px;
-}
-
 .section-title {
 	margin-bottom: 45px;
 }
@@ -1352,6 +1348,7 @@ section{
 	padding: 20px;
 	background-color: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 120px;
 }
 
 .donation-section h1{
@@ -2542,7 +2539,7 @@ section{
 .categories__accordion .card-heading>a.active[aria-expanded=false]:after {
 	content: "";
 	font-size: 14px;
-	font-family: "Nunito", sans-serif;
+	font-family: "FontAwesome";
 	color: #666666;
 	position: absolute;
 	right: 30px;
@@ -2552,7 +2549,7 @@ section{
 .categories__accordion .card-heading.active a:after {
 	content: "";
 	font-size: 14px;
-	font-family: "Nunito", sans-serif;
+	font-family: "FontAwesome";
 	color: #666666;
 	position: absolute;
 	right: 30px;
@@ -2563,7 +2560,7 @@ section{
 .categories__accordion .card-heading>a.active:after {
 	content: "";
 	font-size: 14px;
-	font-family: "Nunito", sans-serif;
+	font-family: "FontAwesome";
 	color: #666666;
 	position: absolute;
 	right: 30px;
