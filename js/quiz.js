@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 question: "Faixa etária ideal para o seu gato.",
                 options: [
-                    { value: "1", label: "Gatinho", details: "Gatinho: 0-1 ano" },
+                    { value: "1", label: "Filhote", details: "Filhote: 0-1 ano" },
                     { value: "2", label: "Jovem adulto", details: "Jovem adulto: 1-3 anos" },
                     { value: "3", label: "Adulto", details: "Adulto: 3-8 anos" },
                     { value: "4", label: "Sénior", details: "Sênior: 8+ anos" },
@@ -405,9 +405,9 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 question: "Estaria confortável com a queda de pelo?",
                 options: [
-                    { value: "1", label: "Prefiro queda mínima." },
-                    { value: "2", label: "Alguma queda é aceitável." },
-                    { value: "3", label: "Queda intensa é aceitável." },
+                    { value: "1", label: "Prefiro queda de pelo mínima." },
+                    { value: "2", label: "Não me importo com queda de pelo moderada." },
+                    { value: "3", label: "Não me importo de todo com queda de pelo." },
                 ],
                 allowNoPreference: false,
                 group: "shedding",
@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 question: "Estaria confortável com um gato que requer cuidados de higiene, como escova e banho?",
                 options: [
                     { value: "1", label: "Não, prefiro baixa manutenção." },
-                    { value: "2", label: "Sim, disposto a cuidar regularmente." },
+                    { value: "2", label: "Sim, tenho disposição para cuidar regularmente da higiene do gato." },
                 ],
                 allowNoPreference: false,
                 group: "grooming",
@@ -700,18 +700,36 @@ document.addEventListener("DOMContentLoaded", function () {
             optionsContainer.classList.add(`${group}-options`);
 
             // Add options
-            options.forEach((option) => {
-                const label = document.createElement("label");
-                label.classList.add(`${group}-option`, "d-block");
+            // If noPreference is allowed, the other options are checkboxes and "No Preference" is a radio button. If not, all options are radio buttons and only one can be selected.
+            options.forEach((optionData) => {
+                const { value, label, details, example } = optionData;
 
-                const input = document.createElement("input");
-                input.type = "checkbox"; // Default to checkbox
-                input.name = group;
-                input.value = option.value;
+                const optionLabel = document.createElement("label");
+                optionLabel.classList.add("form-check-label", "d-block", "mb-2");
 
-                label.appendChild(input);
-                label.appendChild(document.createTextNode(option.label));
-                optionsContainer.appendChild(label);
+                const optionInput = document.createElement("input");
+                optionInput.type = allowNoPreference ? "checkbox" : "radio";
+                optionInput.name = `${group}Preference`;
+                optionInput.value = value;
+
+                optionLabel.appendChild(optionInput);
+                optionLabel.appendChild(document.createTextNode(label));
+
+                if (details) {
+                    const detailsSpan = document.createElement("span");
+                    detailsSpan.classList.add("text-muted", "ms-2");
+                    detailsSpan.textContent = details;
+                    optionLabel.appendChild(detailsSpan);
+                }
+
+                if (example) {
+                    const exampleSpan = document.createElement("span");
+                    exampleSpan.classList.add("text-muted", "ms-2");
+                    exampleSpan.textContent = example;
+                    optionLabel.appendChild(exampleSpan);
+                }
+
+                optionsContainer.appendChild(optionLabel);
             });
 
             // Add "No Preference" radio button if applicable
@@ -768,7 +786,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        groupOptions.forEach((option) => {
+        groupOptions.forEach((option) => {  
             option.addEventListener("change", function () {
                 if (!this.checked) {
                     noPreferenceOption.checked = false;
