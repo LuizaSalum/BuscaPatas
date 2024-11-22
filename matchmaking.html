@@ -176,25 +176,28 @@
 
 <!-- Quiz Section Begin -->
 <div id="speciesSelection" class="container text-center py-5">
-    <h2>Find Your Perfect Pet</h2>
-    <p class="mb-4">Please select the type of pet you are looking to adopt:</p>
-    <button id="selectDog" class="btn btn-primary btn-lg mx-2">Dog</button>
-    <button id="selectCat" class="btn btn-secondary btn-lg mx-2">Cat</button>
+    <h2>Encontre o seu Match</h2>
+    <p class="mb-4">Para começar, escolha a espécie do animal:</p>
+    <button id="selectDog" class="btn btn-primary btn-lg mx-2">Cão</button>
+    <button id="selectCat" class="btn btn-secondary btn-lg mx-2">Gato</button>
 </div>
 
 <div id="quizSection" class="container py-5 d-none">
     <div id="backToSelection" class="back-arrow d-none">
-        &#8592; Back to Species Selection
-    </div>    
+        &#8592; Voltar para a Seleção de Espécie
+    </div>
     <!-- Quiz will dynamically load here -->
     <form id="quizForm">
-        <!-- Questions will be inserted dynamically based on species -->
         <div id="quizQuestions"></div>
         <div class="text-center mt-4">
-            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+            <!-- Navigation Buttons -->
+            <button id="prevButton" type="button" class="btn btn-secondary btn-lg d-none">Anterior</button>
+            <button id="nextButton" type="button" class="btn btn-primary btn-lg d-none">Próximo</button>
+            <button id="submitButton" type="submit" class="btn btn-success btn-lg d-none">Submeter</button>
         </div>
     </form>
 </div>
+
 <!-- Quiz Species Selection Ends -->
 
 <!-- Footer Section Begin -->
