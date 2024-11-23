@@ -211,4 +211,55 @@ document.addEventListener("DOMContentLoaded", () => {
         // Replace this with actual save logic, like a POST request
         alert("Resultados salvos com sucesso!");
     });
+
+    // Handle "Refazer o Quiz" button click
+    document.getElementById("retakeQuizBtn").addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default behavior
+
+        // 1. Hide the current step (Results section)
+        const resultsStep = document.getElementById("quizResults");
+        resultsStep.classList.remove("form-step-active");
+        resultsStep.classList.add("d-none");
+
+        // 2. Reset the form (clear all inputs and reset the form state)
+        const form = document.querySelector(".form");
+        form.reset();
+
+        // 3. Re-enable all disabled inputs
+        const allInputs = form.querySelectorAll("input, select, textarea");
+        allInputs.forEach((input) => {
+            input.disabled = false; // Ensure all inputs are enabled
+        });
+
+        // 4. Hide all steps except the species selection step
+        const formSteps = document.querySelectorAll(".form-step");
+        formSteps.forEach((step) => {
+            step.classList.add("d-none");
+            step.classList.remove("form-step-active");
+        });
+
+        // 5. Reset progress bar
+        const progressSteps = document.querySelectorAll(".progress-step");
+        progressSteps.forEach((step) => {
+            step.classList.remove("progress-step-active");
+        });
+
+        const progressBar = document.getElementById("progress");
+        progressBar.style.width = "0%";
+
+        // 6. Hide the progress bar container
+        const progressBarContainer = document.querySelector(".progressbar");
+        progressBarContainer.style.display = "none";
+
+        // 7. Show the species selection step
+        const speciesStep = formSteps[0]; // Assuming the species selection is the first form-step
+        speciesStep.classList.remove("d-none");
+        speciesStep.classList.add("form-step-active");
+
+        // 8. Reset global variables
+        currentStep = 0; // First step index
+        selectedSpecies = null; // Clear previously selected species
+        activeSteps = []; // Clear the active steps array
+    });
+
 });

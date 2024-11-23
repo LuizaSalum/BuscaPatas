@@ -71,6 +71,19 @@
     background-color: #531a79;
 }
 
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #aaa;
+}
+
 .breed-select-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
