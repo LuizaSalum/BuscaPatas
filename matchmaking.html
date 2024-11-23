@@ -15,6 +15,7 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="css/quiz.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -205,7 +206,7 @@
 
     <!-- Characteristics Selection Step -->
     <!-- Dog Characteristics Selection Step -->
-    <div class="form-step" id="petCharacteristicsDog">  <!-- Add class d-none to hide like "form-step d-none"-->
+    <div class="form-step d-none" id="petCharacteristicsDog">  <!-- Add class d-none to hide like "form-step d-none"-->
         <div class="form-step-header">
             <h3 class="form-step-title">Características</h3>
             <p class="form-step-description">Selecione as características que deseja no seu cão</p>
@@ -298,25 +299,15 @@
                 <div class="form-check"><label><input type="radio" name="allergies" value="3">Não.</label></div>
                 <div class="form-check"><label><input type="radio" name="allergies" value="4">Incerto, mas preferia um cão hipoalergénico.</label></div>
             </div>
-            <!-- Question: Preferia um cão de uma raça específica? -->
-            <div class="question">
-                <h5>Preferia um cão de uma raça específica?</h5>
-                <div class="form-check"><label><input type="radio" name="breed" value="1" id="specificBreedOption">Sim, especificar raça.</label></div>
-                <div class="form-check"><label><input type="radio" name="breed" value="2">Sem preferência.</label></div>
-                <div id="breedDropdown" class="dropdown d-none">
-                    <label for="breedSelect">Selecione uma raça:</label>
-                    <input type="text" id="breedSearch" placeholder="Digite para buscar..." />
-                    <select id="breedSelect" name="breedSelect">
-                        <!-- Breed options will be populated dynamically -->
-                    </select>
-                </div>
         </div>
-
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
         </div>
     </div>
     <!-- Dog Characteristics Selection Step Ends -->
     <!-- Cat Characteristics Selection Step -->
-    <div class="form-step" id="petCharacteristicsCat">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petCharacteristicsCat">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Características</h3>
             <p class="form-step-description">Selecione as características que deseja no seu gato</p>
@@ -414,19 +405,10 @@
                 <div class="form-check"><label><input type="radio" name="allergies" value="3">Não.</label></div>
                 <div class="form-check"><label><input type="radio" name="allergies" value="4">Incerto, mas preferia um gato hipoalergénico.</label></div>
             </div>
-            <!-- Question: Preferia um gato de uma raça específica? -->
-            <div class="question">
-                <h5>Preferia um gato de uma raça específica?</h5>
-                <div class="form-check"><label><input type="radio" name="breed" value="1" id="specificBreedOption">Sim, especificar raça.</label></div>
-                <div class="form-check"><label><input type="radio" name="breed" value="2">Sem preferência.</label></div>
-                <div id="breedDropdown" class="dropdown d-none">
-                    <label for="breedSelect">Selecione uma raça:</label>
-                    <input type="text" id="breedSearch" placeholder="Digite para buscar..." />
-                    <select id="breedSelect" name="breedSelect">
-                        <!-- Breed options will be populated dynamically -->
-                    </select>
-                </div>
-            </div>
+        </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
         </div>
     </div>
     <!-- Cat Characteristics Selection Step Ends -->
@@ -434,7 +416,7 @@
 
     <!-- Lifestyle Step -->
     <!-- Dog Lifestyle Step -->
-    <div class="form-step" id="petLifestyleDog">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petLifestyleDog">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Estilo de Vida</h3>
             <p class="form-step-description">Selecione o estilo de vida que deseja para o seu cão</p>
@@ -504,10 +486,14 @@
                 <div class="form-check"><label><input type="radio" name="noise" value="4">Variável (depende do horário ou dia).</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
+        </div>
     </div>
     <!-- Dog Lifestyle Step Ends -->
     <!-- Cat Lifestyle Step -->
-    <div class="form-step" id="petLifestyleCat">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petLifestyleCat">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Estilo de Vida</h3>
             <p class="form-step-description">Selecione o estilo de vida que deseja para o seu gato</p>
@@ -569,13 +555,17 @@
                 <div class="form-check"><label><input type="radio" name="noise" value="4">Variável (depende do horário ou dia).</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
+        </div>
     </div>
     <!-- Cat Lifestyle Step Ends -->
     <!-- Lifestyle Step Ends -->
 
     <!-- Commitment Step -->
     <!-- Dog Commitment Step -->
-    <div class="form-step" id="petCommitmentDog">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petCommitmentDog">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Compromisso</h3>
             <p class="form-step-description">Selecione o nível de compromisso que deseja ter com o seu cão</p>
@@ -624,10 +614,14 @@
                 <div class="form-check"><label><input type="radio" name="special-diet" value="3">Posso fornecer refeições caseiras ou especializadas</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
+        </div>
     </div>
     <!-- Dog Commitment Step Ends -->
     <!-- Cat Commitment Step -->
-    <div class="form-step" id="petCommitmentCat">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petCommitmentCat">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Compromisso</h3>
             <p class="form-step-description">Selecione o nível de compromisso que deseja ter com o seu gato</p>
@@ -669,13 +663,17 @@
                 <div class="form-check"><label><input type="radio" name="special-diet" value="3">Posso fornecer refeições caseiras ou especializadas</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="button" class="btn btn-next">Próximo</button>
+        </div>
     </div>
     <!-- Cat Commitment Step Ends -->
     <!-- Commitment Step Ends -->
 
     <!-- Relationship Step -->
     <!-- Dog Relationship Step -->
-    <div class="form-step" id="petRelationshipDog">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petRelationshipDog">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Relacionamento</h3>
             <p class="form-step-description">Mostre o relacionamento que deseja ter com o seu cão</p>
@@ -703,10 +701,14 @@
                 <div class="form-check"><label><input type="radio" name="day" value="3">A acompanhar-me durante o dia.</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="submit" class="btn btn-submit">Submeter</button>
+        </div>
     </div>
     <!-- Dog Relationship Step Ends -->        
     <!-- Cat Relationship Step -->
-    <div class="form-step" id="petRelationshipCat">  <!-- Add class d-none to hide -->
+    <div class="form-step d-none" id="petRelationshipCat">  <!-- Add class d-none to hide -->
         <div class="form-step-header">
             <h3 class="form-step-title">Relacionamento</h3>
             <p class="form-step-description">Mostre o relacionamento que deseja ter com o seu gato</p>
@@ -734,22 +736,32 @@
                 <div class="form-check"><label><input type="radio" name="day" value="3">A acompanhar-me durante o dia.</label></div>
             </div>
         </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-prev">Anterior</button>
+            <button type="submit" class="btn btn-submit">Submeter</button>
+        </div>
     </div>
     <!-- Cat Relationship Step Ends -->
     <!-- Relationship Step Ends -->
 
-    <!-- Submit Button -->
-    <div class="form-step" id="submit">
+    <!-- Results Section -->
+    <div class="form-step d-none" id="quizResults">
         <div class="form-step-header">
             <h3 class="form-step-title">Resultados</h3>
-            <p class="form-step-description">Clique no botão para ver os resultados</p>
+            <p class="form-step-description">Aqui estão os animais mais compatíveis</p>
         </div>
         <div class="form-step-body">
-            <button type="submit" class="btn btn-primary">Ver Resultados</button>
+            <div id="resultsContainer">
+                <!-- Results will be dynamically inserted here -->
+                <p>A carregar...</p>
+            </div>
+        </div>
+        <div class="form-step-footer">
+            <button type="button" class="btn btn-primary" id="saveResultsBtn">Salvar Resultados</button>
         </div>
     </div>
-    <!-- Submit Button Ends -->
-
+    <!-- Results Section Ends -->
+ 
     <!-- Steps End -->
     </form>
 </div>

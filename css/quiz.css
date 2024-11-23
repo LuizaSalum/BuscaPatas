@@ -1,0 +1,132 @@
+/* Hide all steps by default */
+.form-step {
+    display: none; /* Steps are hidden unless active */
+}
+
+/* Display the active step */
+.form-step-active {
+    display: block; /* Only active step is visible */
+}
+
+.progressbar {
+    display: none; /* Hidden by default */
+    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
+    counter-reset: step;
+}
+
+.progressbar .progress-step {
+    width: 20px;
+    height: 20px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.progressbar .progress-step:before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    top: 30px;
+    font-size: 12px;
+}
+
+.progressbar .progress-step-active {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.progressbar .progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    background-color: #6a1b9a;
+    z-index: 1;
+    transition: width 0.3s;
+    transform: translateY(-50%);
+}
+
+.form-step-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #531a79;
+}
+
+.breed-select-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px; /* Spacing between items */
+    max-height: 300px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling if content exceeds max height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/* Individual breed option */
+.breed-select-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.breed-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 50px;
+}
+
+.breed-option:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.05);
+}
+
+.breed-option.selected {
+    background-color: #6a1b9a;
+    color: #fff;
+    font-weight: bold;
+    border-color: #531a79;
+}
+
+/* Make the box responsive */
+@media (max-width: 768px) {
+    .breed-select-box {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .breed-select-box {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
