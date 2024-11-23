@@ -5193,6 +5193,8 @@ ol {
     font-size: 16px; 
     color: #FF823A; 
     margin-bottom: 8px; 
+	margin-right: 10px;
+
 }
 
 #lostPhoto {
@@ -5218,6 +5220,7 @@ ol {
 textarea.form-control {
     resize: none; 
     min-height: 120px; 
+	margin-bottom: 20px;
 }
 
 button.btn {
