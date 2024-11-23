@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscapatas</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./adotar.html">Adotar</a>
+                                <ul class="dropdown">
+                                    <li><a href="./page-caes.html">Cães</a></li>
+                                    <li><a href="./page-gatos.html">Gatos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./abrigos.html">Abrigos</a></li>
+                            <li><a href="./matchmaking.html">Matchmaking</a></li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
+                            <li><a href="./merch.html">Merch</a></li>
+                            <li><a href="./contactos.html">Contactos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <!--    
+                            <li><a href="#"><span class="icon_bag_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                            -->
+                            <li><a href="user-profile.html"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Perfil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- User Profile Section Begin -->
+    <div class="container py-5 perfil-container">
+        <!-- User Info Section -->
+        <div class="card card-perfil shadow-sm mb-5">
+            <div class="card-perfil-header d-flex justify-content-between align-items-center">
+                <h5>Perfil do Usuário</h5>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#modal-perfil-editar">Editar Perfil</button>
+            </div>
+            <div class="card-perfil-body">
+                <p><strong>Nome:</strong> João Silva</p>
+                <p><strong>Email:</strong> joao.silva@example.com</p>
+                <p><strong>Telefone:</strong> +351 912345678</p>
+                <p><strong>Endereço:</strong> Rua das Flores, 123, Lisboa</p>
+            </div>
+        </div>
+
+
+
+        <!-- Saved Quizzes Section -->
+        <div class="card card-perfil shadow-sm mb-5">
+            <div class="card-perfil-header">
+                <h5>Quizzes Guardados</h5>
+            </div>
+            <div class="card-perfil-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Quiz de Compatibilidade com Gatos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Quiz de Raças de Cães</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liked Animals Section -->
+        <div class="card card-perfil shadow-sm">
+            <div class="card-perfil-header">
+                <h5>Animais Marcados como Favoritos</h5>
+            </div>
+            <div class="card-perfil-body">
+                <div class="row">
+                    <!-- Animal Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card animal-card">
+                            <a href="details-cao.html">
+                                <img src="img/dogtest.jpeg" class="card-img-top" alt="Dog 1">
+                                <div class="card-body">
+                                    <h6 class="animal-card-title">Buddy</h6>
+                                    <p class="animal-card-text">Amadora, Lisboa</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Animal Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card animal-card">
+                            <a href="details-cao.html">
+                                <img src="img/splitscreen/gato-adotar.jpg" class="card-img-top" alt="Dog 2">
+                                <div class="card-body">
+                                    <h6 class="animal-card-title">Luna</h6>
+                                    <p class="animal-card-text">Porto</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Animal Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card animal-card">
+                            <a href="details-cao.html">
+                                <img src="img/dogtest2.jpeg" class="card-img-top" alt="Dog 3">
+                                <div class="card-body">
+                                    <h6 class="animal-card-title">Milo</h6>
+                                    <p class="animal-card-text">Lisboa</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Animal Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card animal-card">
+                            <a href="details-cao.html">
+                                <img src="img/dogtest4.jpeg" class="card-img-top" alt="Dog 4">
+                                <div class="card-body">
+                                    <h6 class="animal-card-title">Bella</h6>
+                                    <p class="animal-card-text">Porto</p>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Profile Modal -->
+        <div class="modal modal-perfil fade" id="modal-perfil-editar" tabindex="-1"
+            aria-labelledby="modal-perfil-editar-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-perfil-content">
+                    <div class="modal-perfil-header">
+                        <h5 class="modal-title" id="modal-perfil-editar-label">Editar Perfil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-perfil-body">
+                        <!-- Nav Tabs -->
+                        <ul class="profile-tabs mb-3" id="profileTab" role="tablist">
+                            <li class="profile-tab-item" role="presentation">
+                                <button class="profile-tab-link active" id="edit-info-tab" data-bs-toggle="tab"
+                                    data-bs-target="#edit-info" type="button" role="tab" aria-controls="edit-info"
+                                    aria-selected="true">Editar Informações</button>
+                            </li>
+                            <li class="profile-tab-item" role="presentation">
+                                <button class="profile-tab-link" id="change-password-tab" data-bs-toggle="tab"
+                                    data-bs-target="#change-password" type="button" role="tab"
+                                    aria-controls="change-password" aria-selected="false">Alterar Senha</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Edit Info Tab -->
+                            <div class="tab-pane fade show active" id="edit-info" role="tabpanel"
+                                aria-labelledby="edit-info-tab">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="userName" value="João Silva">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="userEmail"
+                                            value="joao.silva@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userPhone" class="form-label">Telefone</label>
+                                        <input type="text" class="form-control" id="userPhone" value="+351 912345678">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userAddress" class="form-label">Endereço</label>
+                                        <input type="text" class="form-control" id="userAddress"
+                                            value="Rua das Flores, 123, Lisboa">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Salvar Alterações</button>
+                                </form>
+                            </div>
+
+                            <!-- Change Password Tab -->
+                            <div class="tab-pane fade" id="change-password" role="tabpanel"
+                                aria-labelledby="change-password-tab">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="currentPassword" class="form-label">Senha Atual</label>
+                                        <input type="password" class="form-control" id="currentPassword"
+                                            placeholder="Digite sua senha atual" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newPassword" class="form-label">Nova Senha</label>
+                                        <input type="password" class="form-control" id="newPassword"
+                                            placeholder="Digite a nova senha" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmNewPassword" class="form-label">Confirme a Nova Senha</label>
+                                        <input type="password" class="form-control" id="confirmNewPassword"
+                                            placeholder="Confirme a nova senha" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Alterar Senha</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Edit Profile Modal -->
+        <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editProfileModalLabel">Editar Perfil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="userName" value="João Silva">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="userEmail" value="joao.silva@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userPhone" class="form-label">Telefone</label>
+                                <input type="text" class="form-control" id="userPhone" value="+351 912345678">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userAddress" class="form-label">Endereço</label>
+                                <input type="text" class="form-control" id="userAddress"
+                                    value="Rua das Flores, 123, Lisboa">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- User Profile Section End -->
+
+        <!-- Footer Section Begin -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-7">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer__widget">
+                            <h6>Empresa</h6>
+                            <ul>
+                                <li><a href="adotar.html">Adotar</a></li>
+                                <li><a href="#">Abrigos</a></li>
+                                <li><a href="#">Entregas</a></li>
+                                <li><a href="#">Perdidos e Achados</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Menu</h6>
+                            <ul>
+                                <li><a href="#">Matchmaking</a></li>
+                                <li><a href="#">Merch</a></li>
+                                <li><a href="#">Ajuda</a></li>
+                                <li><a href="#">Termos E Políticas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>About us</h6>
+                            <ul>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Donors</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Fund Updates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-8 col-sm-8">
+                        <div class="footer__newslatter">
+                            <h6>NEWSLETTER</h6>
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <button type="submit" class="site-btn">Inscrever-se</button>
+                            </form>
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                This
+                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </p>
+                        </div>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+        <!-- Search Begin -->
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">+</div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Search here.....">
+                </form>
+            </div>
+        </div>
+        <!-- Search End -->
+
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+        <script type="module" src="js/map.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+</body>
+
+</html>

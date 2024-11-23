@@ -71,8 +71,8 @@
                                     <li><a href="./page-gatos.html">Gatos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./abrigos.html">Abrigos</a></li> 
-                            <li><a href="./matchmaking.html">Matchmaking</a></li>                           
+                            <li><a href="./abrigos.html">Abrigos</a></li>
+                            <li><a href="./matchmaking.html">Matchmaking</a></li>
                             <li class="active"><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
                             <li><a href="./merch.html">Merch</a></li>
@@ -87,15 +87,15 @@
 
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="#"><span class="icon_heart_alt"></span>
-                                <div class="tip">2</div>
-                            </a></li>
+                                    <div class="tip">2</div>
+                                </a></li>
                             <!--    
                             <li><a href="#"><span class="icon_bag_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
                             -->
                             <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
-                                data-bs-target="#authModal"></span></a></li>
+                                        data-bs-target="#authModal"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -190,32 +190,148 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Shop Section Begin -->
-    <section class="spad">
+    <!-- Text before form -->
+
+    <section class="spad-entrega">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h2>Formulário para entrega animal</h2>
+                <div class="col-lg-10">
+                    <div class="section-title-entrega">
+                        <h2>Entrega Responsável de Animais</h2>
+                        <p>
+                            Entendemos que a decisão de entregar um animal pode ser emocionalmente difícil e muitas
+                            vezes está associada a circunstâncias inesperadas ou desafiadoras. Nossa missão é ajudar a
+                            garantir que esses animais sejam cuidados com o maior respeito, carinho e responsabilidade,
+                            enquanto trabalhamos para encontrar novos lares que ofereçam segurança e amor.
+                        </p>
+                        <p>
+                            A "Entrega Animal" é um serviço destinado a pessoas que, por diversos motivos, não conseguem
+                            mais cuidar de seus animais de estimação. Sabemos que cada caso é único, e é por isso que
+                            levamos essa etapa com a seriedade e empatia que ela merece.
+                        </p>
+                        <p>
+                            Ao preencher este formulário, você estará fornecendo informações valiosas sobre o seu
+                            animal. Esses dados nos ajudarão a conhecer melhor suas características e necessidades,
+                            permitindo que ele seja direcionado para o ambiente mais adequado ou para a adoção mais
+                            apropriada.
+                        </p>
+                        <p>
+                            Lembre-se de que este processo é feito com total confidencialidade e com o único propósito
+                            de assegurar que o bem-estar do animal esteja em primeiro lugar. Agradecemos pela sua
+                            transparência e por confiar em nossa equipa neste momento delicado.
+                        </p>
+                        <p>
+                            Se tiver dúvidas, entre em contato com nossa equipa através do e-mail <a
+                                href="mailto:ajuda@buscapatas.com">ajuda@buscapatas.com</a> Estamos aqui para ajudar!
+                        </p>
+                        <p class="text-center"><strong>Por favor, preencha os dados abaixo com atenção para submeter a
+                                entrega responsável.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Formulário de Entrega de Animal -->
+    <section class="spad-entrega-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title-entrega">
+                        <h2>Formulário para entrega de animal</h2>
                         <p>Por favor, preencha os detalhes abaixo para submeter uma rendição.</p>
                     </div>
-                    <form action="#" method="post" class="contact-form">
+                    <form action="#" method="post" enctype="multipart/form-data" class="contact-form">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Nome" required>
+                            <!-- Informações do Dono -->
+                            <div class="col-lg-12">
+                                <h4>Informações do Dono</h4>
                             </div>
                             <div class="col-lg-6">
-                                <input type="email" placeholder="Email" required>
+                                <input type="text" name="owner_name" placeholder="Nome Completo do Dono" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Endereço">
+                                <input type="email" name="owner_email" placeholder="Email do Dono" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Telefone">
+                                <input type="text" name="owner_address" placeholder="Endereço" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="owner_phone" placeholder="Telefone" required>
+                            </div>
+
+                            <!-- Informações do Animal -->
+                            <div class="col-lg-12">
+                                <h4>Informações do Animal</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="animal_name" placeholder="Nome do Animal" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <select name="animal_species" required>
+                                    <option value="" disabled selected>Selecione a Espécie</option>
+                                    <option value="cachorro">Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="animal_breed" placeholder="Raça">
+                            </div>
+                            <div class="col-lg-6">
+                                <select name="animal_sex" required>
+                                    <option value="" disabled selected>Selecione o Sexo</option>
+                                    <option value="macho">Macho</option>
+                                    <option value="fêmea">Fêmea</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="number" name="animal_age" placeholder="Idade (em anos)" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <select name="animal_size" required>
+                                    <option value="" disabled selected>Porte do Animal</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="médio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
+
+                            <!-- Saúde e Personalidade -->
+                            <div class="col-lg-12">
+                                <h4>Saúde e Personalidade</h4>
                             </div>
                             <div class="col-lg-12">
-                                <textarea placeholder="Detalhes sobre a rendição" required></textarea>
+                                <textarea name="health_status" placeholder="Estado de saúde do animal"
+                                    required></textarea>
                             </div>
+                            <div class="col-lg-12">
+                                <textarea name="personality"
+                                    placeholder="Descrição da personalidade do animal"></textarea>
+                            </div>
+
+                            <!-- Upload de Imagens -->
+                            <div class="col-lg-12">
+                                <h4>Upload de Imagens</h4>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="animal_images">Envie até 3 imagens do animal:</label>
+                                <input type="file" name="animal_images[]" id="animal_images" accept="image/*" multiple
+                                    required>
+                            </div>
+
+                            <!-- Justificativa -->
+                            <div class="col-lg-12">
+                                <h4>Justificativa</h4>
+                            </div>
+                            <div class="col-lg-12">
+                                <textarea name="surrender_reason"
+                                    placeholder="Explique o motivo para a entrega do animal" required></textarea>
+                            </div>
+
+                            <!-- Botão de Envio -->
                             <div class="col-lg-12 text-center">
                                 <button type="submit" class="site-btn">Submeter Rendição</button>
                             </div>
@@ -225,7 +341,8 @@
             </div>
         </div>
     </section>
-    <!-- Shop Section End -->
+
+    <!-- End of the Form -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -292,7 +409,11 @@
                 <div class="col-lg-12">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     <div class="footer__copyright__text">
-                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <p>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
                     </div>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
@@ -326,7 +447,7 @@
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
-    
+
 </body>
 
 </html>

@@ -146,7 +146,7 @@ ol {
 }
 
 .spad {
-	padding-top: 100px;
+	padding-top: 70px;
 	padding-bottom: 100px;
 }
 
@@ -206,6 +206,36 @@ ol {
 	color: #fff;
 	background-color: #FF823A;
 	border-color: #FF823A;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #FF823A;
+    --bs-btn-border-color: #FF823A;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #FF823A;
+    --bs-btn-hover-border-color: #FF823A;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #FF823A;
+    --bs-btn-active-border-color: #FF823A;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #FF823A;
+    --bs-btn-disabled-border-color: #FF823A;
+}
+
+.btn-primary:active {
+	color: #fff;
+	background-color: #FF823A;
+	border-color: #FF823A;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #FF823A;
+    border-color: #FF823A;
+    box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5);
 }
 .modal-content {
 	border-radius: 20px;
@@ -3206,9 +3236,221 @@ ol {
 	margin-bottom: 35px;
 }
 
+/* ---------------------
+  User Profile
+-----------------------*/
+
+/* Container geral */
+.perfil-container {
+    padding: 20px;
+}
+
+/* Card de Perfil */
+.card-perfil {
+    border-radius: 10px;
+}
+
+.card-perfil-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-perfil-body {
+    padding: 15px;
+}
+
+/* Modal Geral */
+.modal-perfil .modal-perfil-content {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-perfil .modal-perfil-header {
+    border-bottom: 1px solid;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.modal-perfil .modal-perfil-body {
+    padding: 15px;
+}
+
+/* Estilo do Cross Button */
+.modal-perfil .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal-perfil .btn-close:hover {
+    color: #ff6b6b;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Inputs dentro do modal */
+.modal-perfil .modal-perfil-body input {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+}
+
+
+/* Modal do Perfil */
+.modal-perfil .modal-perfil-content {
+    border-radius: 10px;
+}
+
+.modal-perfil .modal-perfil-header {
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px;
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.modal-perfil .modal-perfil-body input {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Estilo das abas */
+.nav-tabs .nav-link {
+    color: #333;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #FFAD7E;
+    border-color: #FFAD7E;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+/* Profile Tabs Container */
+.profile-tabs {
+    border-bottom: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex; /* Ensures the tabs are aligned horizontally */
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Individual Tab Items */
+.profile-tab-item {
+    margin-right: 46px;
+}
+
+.profile-tab-item:last-child {
+    margin-right: 0;
+}
+
+/* Tab Links */
+.profile-tab-link {
+    font-size: 18px;
+    color: #666666;
+    font-weight: 600;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Active Tab Styling */
+.profile-tab-link.active {
+    color: #FFAD7E;
+}
+
+/* Optional: Add hover effect */
+.profile-tab-link:hover {
+    color: #333;
+}
+
+
+/* Espaçamento interno no modal */
+.modal-perfil-body {
+    padding: 20px;
+}
+
+/* Botões do formulário */
+.modal-perfil-body .btn {
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* mudar a cor do butao ao fechar */
+.modal-perfil-body .btn-close:hover {
+	color: #e620cb;
+}
+
+/* Botão de fechar */
+.btn-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	font-size: 1.2rem;
+	color: #333;
+	cursor: pointer;
+}
+
+
+/* Animal Card */
+.animal-card {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+	margin-bottom: 30px;
+}
+
+.animal-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.animal-card-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.animal-card-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
 /*---------------------
   Shelter Details
-
 -----------------------*/
 
 /* Geral */
@@ -4438,14 +4680,38 @@ ol {
 }
 
 /*---------------------
-  Rendição
+  Entrega Animal
 -----------------------*/
+
+.spad-entrega {
+	padding-top: 50px;
+}
+
+.spad-entrega-form {
+	padding-top: 40px;
+}
 
 /* Form Container */
 .contact-form {
+	padding: 30px;
     background: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+}
+
+.section-title-entrega h2 {
+    font-size: 32px;
+    color: #FF823A;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-title-entrega p {
+    font-size: 16px;
+    color: #666;
+    text-align: left;
 }
 
 /* Input Fields */
@@ -4494,11 +4760,47 @@ ol {
 .contact-form .site-btn:hover {
     background-color: #FFAD7E;
 }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form button.site-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button.site-btn:hover {
+    background-color: #e56b3b;
+}
+
+.contact-form h4
+{
+	font-size: 24px;
+	color: #ff7f50;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
 
 /* Section Title */
 .section-title h2 {
     font-size: 32px;
-    color: #333;
+    color: #FF823A;
     font-weight: 700;
     margin-bottom: 10px;
     text-align: center;
@@ -4604,23 +4906,69 @@ ol {
     line-height: 1.6;
 }
 
-/* Section Title */
-.section-title h2 {
-    font-size: 32px;
+/*---------------------
+  Termos e Politicas
+-----------------------*/
+
+/* Estilo da Seção de Termos e Políticas */
+.spad-termos-politicas {
+    padding: 60px 20px;
+    background-color: #fff;
     color: #333;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.section-title p {
-    font-size: 16px;
-    color: #666;
+.spad-termos-politicas .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
+    color: #ff7f50; /* Destaque para o título principal */
 }
 
+.spad-termos-politicas .terms-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ff7f50; /* Destaque para subtítulos */
+}
 
+.spad-termos-politicas .terms-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.spad-termos-politicas .terms-content a {
+    color: #007bff; /* Azul padrão para links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.spad-termos-politicas .terms-content a:hover {
+    color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+.spad-termos-politicas .terms-content .text-center {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/*---------------------
+  404 Page
+-----------------------*/
+
+/* 404 Page Section Styles */
+.error__text {
+	text-align: center;
+	margin-top: 50px;
+}
 
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
