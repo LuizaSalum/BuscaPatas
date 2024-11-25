@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
 </head>
 
 <body>
@@ -65,36 +66,37 @@
                 <div class="col-xl-7 col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar</a>
+                            <li class="active"><a href="./adotar.html">Adotar</a>
                                 <ul class="dropdown">
                                     <li><a href="./page-caes.html">Cães</a></li>
                                     <li><a href="./page-gatos.html">Gatos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./rendicao.html">Rendição</a></li>
-                            <li><a href="abrigos.html">Abrigos</a>
-                            </li>
+                            <li><a href="./abrigos.html">Abrigos</a></li> 
+                            <li><a href="./matchmaking.html">Matchmaking</a></li>                           
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
                             <li><a href="./merch.html">Merch</a></li>
-                            <li><a href="./contatos.html">Contactos</a></li>
+                            <li><a href="./contactos.html">Contactos</a></li>
 
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-2">
                     <div class="header__right">
-                        <div class="header__right__auth">
-                            <a href="#">Login</a>
-                            <a href="#">Register</a>
-                        </div>
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="#"><span class="icon_heart_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
+                            <!--    
                             <li><a href="#"><span class="icon_bag_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
+                            -->
+                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
+                                data-bs-target="#authModal"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +174,6 @@
             </div>
         </div>
     </div>
-
     <!-- Login Register Model Ends -->
 
     <!-- Breadcrumb Begin -->
@@ -259,7 +260,6 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/dogtest4.jpg">
-                                    <div class="label new">Novo</div>
                                     <ul class="product__hover">
                                         <li><a href="img/product/details/dogtest4.jpg" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
@@ -277,7 +277,6 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/dogtest3.jpg">
-                                    <div class="label new">Novo</div>
                                     <ul class="product__hover">
                                         <li><a href="img/product/details/dogtest3.jpg" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>

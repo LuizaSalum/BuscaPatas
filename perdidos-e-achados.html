@@ -71,30 +71,31 @@
                                     <li><a href="./page-gatos.html">Gatos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./rendicao.html">Rendição</a></li>
-                            <li><a href="abrigos.html">Abrigos</a>
-                            </li>
-                            <li><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
+                            <li><a href="./abrigos.html">Abrigos</a></li>
+                            <li><a href="./matchmaking.html">Matchmaking</a></li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li class="active"><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
                             <li><a href="./merch.html">Merch</a></li>
-                            <li><a href="./contatos.html">Contactos</a></li>
+                            <li><a href="./contactos.html">Contactos</a></li>
 
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-2">
                     <div class="header__right">
-                        <div class="header__right__auth">
-                            <a href="#">Login</a>
-                            <a href="#">Register</a>
-                        </div>
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="#"><span class="icon_heart_alt"></span>
-                                <div class="tip">2</div>
-                            </a></li>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <!--    
                             <li><a href="#"><span class="icon_bag_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
+                            -->
+                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +173,6 @@
             </div>
         </div>
     </div>
-
     <!-- Login Register Model Ends -->
 
     <!-- Breadcrumb Begin -->
@@ -195,68 +195,146 @@
         <div class="container">
             <div class="section-title text-center">
                 <h2>Perdidos e Achados</h2>
-                <p>Encontre animais perdidos ou ajude a devolver um animal achado ao seu dono.</p>
             </div>
-            <div class="row">
-                <!-- Form for Reporting Lost Pets -->
-                <div class="col-lg-6">
-                    <div class="lost-found__form">
-                        <h4>Reportar Animal Perdido</h4>
-                        <form action="#" method="post">
-                            <input type="text" placeholder="Nome do Animal" required>
-                            <input type="text" placeholder="Raça" required>
-                            <input type="text" placeholder="Localização onde foi visto pela última vez" required>
-                            <input type="text" placeholder="Contato" required>
-                            <textarea placeholder="Descrição do Animal"></textarea>
-                            <button type="submit" class="site-btn">Reportar</button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Form for Reporting Found Pets -->
-                <div class="col-lg-6">
-                    <div class="lost-found__form">
-                        <h4>Reportar Animal Achado</h4>
-                        <form action="#" method="post">
-                            <input type="text" placeholder="Descrição do Animal" required>
-                            <input type="text" placeholder="Localização onde foi encontrado" required>
-                            <input type="text" placeholder="Contato" required>
-                            <textarea placeholder="Detalhes adicionais"></textarea>
-                            <button type="submit" class="site-btn">Reportar</button>
-                        </form>
-                    </div>
+            <p>
+                Nossa página de Perdidos e Achados foi desenvolvida para conectar donos de animais de estimação com
+                pessoas que encontraram animais perdidos.
+                Aqui você pode reportar um animal que perdeu ou encontrou, visualizar animais reportados e entrar em
+                contato com as pessoas que encontraram ou perderam animais.
+                Nosso objetivo é reunir o máximo de informações úteis para que esses animais retornem rapidamente às
+                suas famílias.
+            </p>
+            <div class="container text-center">
+                <div class="cta-buttons">
+                    <button class="btn-lost" onclick="window.location.href='reportar-perdido.html'">Perdi o meu
+                        animal</button>
+                    <button class="btn-found" onclick="window.location.href='reportar-encontrado.html'">Encontrei um
+                        animal</button>
                 </div>
             </div>
-            <!-- Display of Lost and Found Animals -->
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <h3>Animais Recentemente Reportados</h3>
-                    </div>
-                    <div class="row">
-                        <!-- Example of a Lost or Found Animal -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="lost-found__item">
-                                <img src="img/lost-found/dog1.jpg" alt="Animal Perdido">
-                                <h5>Animal Perdido</h5>
-                                <p>Nome: Max<br>Último visto: Parque Eduardo VII, Lisboa<br>Contato: +351 123 456 789
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="lost-found__item">
-                                <img src="img/lost-found/cat1.jpg" alt="Animal Achado">
-                                <h5>Animal Achado</h5>
-                                <p>Descrição: Gato cinza, olhos verdes<br>Encontrado em: Rua Augusta, Lisboa<br>Contato:
-                                    +351 987 654 321</p>
-                            </div>
-                        </div>
-                        <!-- More entries can be added here -->
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
     <!-- Lost and Found Section End -->
+
+    <!-- Lost and Found List Section Begin -->
+    <section class="animal-list">
+        <div class="container">
+            <h3 class="text-center mb-4">Animais Perdidos e Achados</h3>
+    
+            <!-- Barra de Filtros -->
+            <div class="filter-bar-advanced mb-4">
+                <div class="row g-3">
+                    <!-- Tipo de Animal -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="animalTypeFilter">Tipo de Animal</label>
+                            <select id="animalTypeFilter" class="form-select" onchange="applyFilters()">
+                                <option value="">Todos</option>
+                                <option value="Cão">Cão</option>
+                                <option value="Gato">Gato</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Sexo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="sexFilter">Sexo</label>
+                            <select id="sexFilter" class="form-select" onchange="applyFilters()">
+                                <option value="">Todos</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Fêmea">Fêmea</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Idade -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="ageFilter">Idade</label>
+                            <select id="ageFilter" class="form-select" onchange="applyFilters()">
+                                <option value="">Todas</option>
+                                <option value="Novo">Novo</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Velho">Velho</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Tamanho -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="sizeFilter">Tamanho</label>
+                            <select id="sizeFilter" class="form-select" onchange="applyFilters()">
+                                <option value="">Todos</option>
+                                <option value="Pequeno">Pequeno</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Grande">Grande</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- Raça -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="breedFilter">Raça</label>
+                            <input type="text" id="breedFilter" class="form-control" placeholder="Digite a raça" onkeyup="applyFilters()">
+                        </div>
+                    </div>
+    
+                    <!-- Localização -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group-advanced">
+                            <label for="locationFilter">Localização</label>
+                            <input type="text" id="locationFilter" class="form-control" placeholder="Digite a localização" onkeyup="applyFilters()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Lista de Animais -->
+            <div id="animalGrid" class="row">
+                <!-- Exemplo de Animal -->
+                <div class="col-lg-4 col-md-6 animal-item" 
+                    data-type="Cão"
+                    data-sex="Macho"
+                    data-age="Novo"
+                    data-size="Grande"
+                    data-breed="Labrador"
+                    data-location="Lisboa">
+                    <div class="animal-card">
+                        <img src="img/dogtest2.jpeg" alt="Cão Perdido">
+                        <div class="animal-info">
+                            <h5>Cão Perdido</h5>
+                            <p><strong>Nome:</strong> Max</p>
+                            <p><strong>Local:</strong> Lisboa</p>
+                            <p><strong>Descrição:</strong> Labrador castanho, visto no Parque Eduardo VII.</p>
+                            <button class="btn btn-primary btn-sm">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 animal-item" 
+                    data-type="Gato"
+                    data-sex="Fêmea"
+                    data-age="Médio"
+                    data-size="Pequeno"
+                    data-breed="Siamês"
+                    data-location="Porto">
+                    <div class="animal-card">
+                        <img src="img/splitscreen/gato-adotar.jpg" alt="Gato Perdido">
+                        <div class="animal-info">
+                            <h5>Gato Econtrado</h5>
+                            <p><strong>Nome:</strong> Mia</p>
+                            <p><strong>Local:</strong> Porto</p>
+                            <p><strong>Descrição:</strong> Gata siamês, vista na Rua de Santa Catarina.</p>
+                            <button class="btn btn-primary btn-sm">Detalhes</button>
+                        </div>
+            </div>
+        </div>
+    </section>
+    <!-- Lost and Found List Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -323,7 +401,11 @@
                 <div class="col-lg-12">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     <div class="footer__copyright__text">
-                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <p>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
                     </div>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
@@ -335,11 +417,19 @@
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script type="module" src="js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
-    
+
 </body>
 
 </html>
