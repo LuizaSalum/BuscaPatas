@@ -714,67 +714,6 @@ ol {
 	background-image: url('../img/banner/Welcome_Banner.png');
 }
 
-@media (max-width: 1200px) {
-	.carousel-text-1 {
-		margin-left: -300px;
-	}
-
-	.carousel-text-1 h2 {
-		font-size: 48px;
-	}
-
-	.carousel-text-1 p {
-		font-size: 20px;
-	}
-
-	.carousel-text-1 .btn {
-		font-size: 24px;
-	}
-}
-
-@media (max-width: 768px) {
-	.carousel-text-1 {
-		text-align: right;
-		margin: auto;
-		padding: 15px 20px;
-		margin-top: 70px;
-	}
-
-	.carousel-slide.slide-welcome {
-		background-image: url('../img/banner/Welcome_Banner_Mobile.png');
-		background-position-y: -150px;
-		background-position-x: 0px;
-	}
-
-	.carousel-text-1 h2 {
-		font-size: 36px;
-	}
-
-	.carousel-text-1 p {
-		font-size: 18px;
-	}
-
-	.carousel-text-1 .btn {
-		font-size: 18px;
-		padding: 10px 15px;
-	}
-}
-
-@media (max-width: 576px) {
-	.carousel-text-1 h2 {
-		font-size: 28px;
-	}
-
-	.carousel-text-1 p {
-		font-size: 16px;
-	}
-
-	.carousel-text-1 .btn {
-		font-size: 16px;
-		padding: 8px 12px;
-	}
-}
-
 
 /* ----------------- 
 	Carousel Text #2
@@ -815,7 +754,20 @@ ol {
 	font-weight: 800;
 	border-radius: 80px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	--bs-btn-bg: #FF823A;
+	--bs-btn-border-color: #FF823A;
+	--bs-btn-hover-bg: #FF823A;
+	--bs-btn-hover-border-color: #FF823A;
+	--bs-btn-focus-shadow-rgb: 49, 132, 253;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #FF823A;
+	--bs-btn-active-border-color: #FF823A;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #FF823A;
+	--bs-btn-disabled-border-color: #FF823A;
 }
+
 
 .carousel-text-2 .btn:hover {
 	background-color: #c6802b;
@@ -823,68 +775,6 @@ ol {
 
 .carousel-slide.slide-matchmaking {
 	background-image: url('../img/banner/matchmaking_banner.png');
-}
-
-@media (max-width: 1200px) {
-	.carousel-text-2 {
-		margin-left: -300px;
-	}
-
-	.carousel-text-2 h2 {
-		font-size: 48px;
-	}
-
-	.carousel-text-2 p {
-		font-size: 20px;
-	}
-
-	.carousel-text-2 .btn {
-		font-size: 24px;
-	}
-}
-
-@media (max-width: 768px) {
-	.carousel-text-2 {
-		text-align: right;
-		margin: auto;
-		padding: 15px 20px;
-		margin-top: 70px;
-	}
-
-	.carousel-slide.slide-matchmaking {
-		background-image: url('../img/banner/Matchmaking_Banner_Mobile.png');
-		background-position-y: -150px;
-		background-position-x: 0px;
-	}
-
-
-	.carousel-text-2 h2 {
-		font-size: 36px;
-	}
-
-	.carousel-text-2 p {
-		font-size: 18px;
-	}
-
-	.carousel-text-2 .btn {
-		font-size: 18px;
-		padding: 10px 15px;
-	}
-}
-
-@media (max-width: 576px) {
-	.carousel-text-2 h2 {
-		font-size: 28px;
-	}
-
-	.carousel-text-2 p {
-		font-size: 16px;
-	}
-
-	.carousel-text-2 .btn {
-		font-size: 16px;
-		padding: 8px 12px;
-	}
 }
 
 /* ----------------- 
@@ -936,66 +826,6 @@ ol {
 	background-image: url('../img/banner/surrender_banner.png');
 }
 
-@media (max-width: 1200px) {
-	.carousel-text-3 {
-		margin-left: -300px;
-	}
-
-	.carousel-text-3 h2 {
-		font-size: 48px;
-	}
-
-	.carousel-text-3 p {
-		font-size: 20px;
-	}
-
-	.carousel-text-3 .btn {
-		font-size: 24px;
-	}
-}
-
-@media (max-width: 768px) {
-	.carousel-text-3 {
-		text-align: left;
-		margin: auto;
-		padding: 15px 20px;
-		margin-top: 70px;
-	}
-	
-	.carousel-slide.slide-surrender {
-		background-image: url('../img/banner/Surrender_Banner_Mobile.png');
-		background-position-y: -150px;
-	}
-
-	.carousel-text-3 h2 {
-		font-size: 36px;
-	}
-
-	.carousel-text-3 p {
-		font-size: 18px;
-	}
-
-	.carousel-text-3 .btn {
-		font-size: 18px;
-		padding: 10px 15px;
-	}
-}
-
-@media (max-width: 576px) {
-	.carousel-text-3 h2 {
-		font-size: 28px;
-	}
-
-	.carousel-text-3 p {
-		font-size: 16px;
-	}
-
-	.carousel-text-3 .btn {
-		font-size: 16px;
-		padding: 8px 12px;
-	}
-}
-
 /* ----------------- 
 	Carousel Text #4
 ---------------- */
@@ -1026,11 +856,12 @@ ol {
 }
 
 .carousel-buttons {
-    display: flex;
-    justify-content: right;
-    gap: 10px;
-    margin-top: 15px; 
+	display: flex;
+	justify-content: right;
+	gap: 10px;
+	margin-top: 15px;
 }
+
 /* houver um botão dentro de .carousel-buttons */
 
 .carousel-buttons .btn {
@@ -1051,68 +882,6 @@ ol {
 
 .carousel-slide.slide-lost-found {
 	background-image: url('../img/banner/lostnfound_banner.png');
-}
-
-@media (max-width: 1200px) {
-	.carousel-text-4 {
-		margin-left: -300px;
-	}
-
-	.carousel-text-4 h2 {
-		font-size: 48px;
-	}
-
-	.carousel-text-4 p {
-		font-size: 20px;
-	}
-
-	.carousel-text-4 .btn {
-		font-size: 24px;
-	}
-}
-
-@media (max-width: 768px) {
-	.carousel-text-4 {
-		text-align: left;
-		margin: auto;
-		padding: 15px 20px;
-		margin-top: 70px;
-		margin-left: 10px;
-	}
-
-	.carousel-slide.slide-lost-found {
-		background-image: url('../img/banner/LostNFound_Banner_Mobile.png');
-		background-position-y: -150px;
-		background-position-x: 0px;
-	}
-
-	.carousel-text-4 h2 {
-		font-size: 36px;
-	}
-
-	.carousel-text-4 p {
-		font-size: 18px;
-	}
-
-	.carousel-text-4 .btn {
-		font-size: 18px;
-		padding: 10px 15px;
-	}
-}
-
-@media (max-width: 576px) {
-	.carousel-text-4 h2 {
-		font-size: 28px;
-	}
-
-	.carousel-text-4 p {
-		font-size: 16px;
-	}
-
-	.carousel-text-4 .btn {
-		font-size: 16px;
-		padding: 8px 12px;
-	}
 }
 
 /* ----------------- 
@@ -1164,6 +933,69 @@ ol {
 }
 
 @media (max-width: 1200px) {
+	.carousel-text-1 {
+		margin-left: -300px;
+	}
+
+	.carousel-text-1 h2 {
+		font-size: 48px;
+	}
+
+	.carousel-text-1 p {
+		font-size: 20px;
+	}
+
+	.carousel-text-1 .btn {
+		font-size: 24px;
+	}
+	.carousel-text-2 {
+		margin-left: -300px;
+	}
+
+	.carousel-text-2 h2 {
+		font-size: 48px;
+	}
+
+	.carousel-text-2 p {
+		font-size: 20px;
+	}
+
+	.carousel-text-2 .btn {
+		font-size: 24px;
+	}
+
+	.carousel-text-3 {
+		margin-left: -300px;
+	}
+
+	.carousel-text-3 h2 {
+		font-size: 48px;
+	}
+
+	.carousel-text-3 p {
+		font-size: 20px;
+	}
+
+	.carousel-text-3 .btn {
+		font-size: 24px;
+	}
+
+	.carousel-text-4 {
+		margin-left: -300px;
+	}
+
+	.carousel-text-4 h2 {
+		font-size: 48px;
+	}
+
+	.carousel-text-4 p {
+		font-size: 20px;
+	}
+
+	.carousel-text-4 .btn {
+		font-size: 24px;
+	}
+
 	.carousel-text-5 {
 		margin-left: -300px;
 	}
@@ -1182,6 +1014,112 @@ ol {
 }
 
 @media (max-width: 768px) {
+
+	.carousel-text-1 {
+		text-align: right;
+		margin: auto;
+		padding: 15px 20px;
+		margin-top: 70px;
+	}
+
+	.carousel-slide.slide-welcome {
+		background-image: url('../img/banner/Welcome_Banner_Mobile.png');
+		background-position-y: -150px;
+		background-position-x: 0px;
+	}
+
+	.carousel-text-1 h2 {
+		font-size: 36px;
+	}
+
+	.carousel-text-1 p {
+		font-size: 18px;
+	}
+
+	.carousel-text-1 .btn {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.carousel-text-2 {
+		text-align: right;
+		margin: auto;
+		padding: 15px 20px;
+		margin-top: 70px;
+	}
+
+	.carousel-slide.slide-matchmaking {
+		background-image: url('../img/banner/Matchmaking_Banner_Mobile.png');
+		background-position-y: -150px;
+		background-position-x: 0px;
+	}
+
+
+	.carousel-text-2 h2 {
+		font-size: 36px;
+	}
+
+	.carousel-text-2 p {
+		font-size: 18px;
+	}
+
+	.carousel-text-2 .btn {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.carousel-text-3 {
+		text-align: left;
+		margin: auto;
+		padding: 15px 20px;
+		margin-top: 70px;
+	}
+
+	.carousel-slide.slide-surrender {
+		background-image: url('../img/banner/Surrender_Banner_Mobile.png');
+		background-position-y: -150px;
+	}
+
+	.carousel-text-3 h2 {
+		font-size: 36px;
+	}
+
+	.carousel-text-3 p {
+		font-size: 18px;
+	}
+
+	.carousel-text-3 .btn {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.carousel-text-4 {
+		text-align: left;
+		margin: auto;
+		padding: 15px 20px;
+		margin-top: 70px;
+		margin-left: 10px;
+	}
+
+	.carousel-slide.slide-lost-found {
+		background-image: url('../img/banner/LostNFound_Banner_Mobile.png');
+		background-position-y: -150px;
+		background-position-x: 0px;
+	}
+
+	.carousel-text-4 h2 {
+		font-size: 36px;
+	}
+
+	.carousel-text-4 p {
+		font-size: 18px;
+	}
+
+	.carousel-text-4 .btn {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
 	.carousel-text-5 {
 		text-align: left;
 		margin: auto;
@@ -1211,6 +1149,59 @@ ol {
 }
 
 @media (max-width: 576px) {
+
+	.carousel-text-1 h2 {
+		font-size: 28px;
+	}
+
+	.carousel-text-1 p {
+		font-size: 16px;
+	}
+
+	.carousel-text-1 .btn {
+		font-size: 16px;
+		padding: 8px 12px;
+	}
+
+	.carousel-text-2 h2 {
+		font-size: 28px;
+	}
+
+	.carousel-text-2 p {
+		font-size: 16px;
+	}
+
+	.carousel-text-2 .btn {
+		font-size: 16px;
+		padding: 8px 12px;
+	}
+
+	.carousel-text-3 h2 {
+		font-size: 28px;
+	}
+
+	.carousel-text-3 p {
+		font-size: 16px;
+	}
+
+	.carousel-text-3 .btn {
+		font-size: 16px;
+		padding: 8px 12px;
+	}
+
+	.carousel-text-4 h2 {
+		font-size: 28px;
+	}
+
+	.carousel-text-4 p {
+		font-size: 16px;
+	}
+
+	.carousel-text-4 .btn {
+		font-size: 16px;
+		padding: 8px 12px;
+	}
+
 	.carousel-text-5 h2 {
 		font-size: 28px;
 	}
@@ -1225,6 +1216,8 @@ ol {
 	}
 }
 
+
+@media screen {}
 
 /* Owl Carousel Navigation Arrows */
 .owl-carousel .arrow-left,
@@ -4066,8 +4059,8 @@ ol {
 	color: #fff;
 	background-color: #FFAD7E;
 	border-color: #FFAD7E;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* Profile Tabs Container */
