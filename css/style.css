@@ -674,9 +674,8 @@ ol {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	display: flex;
+	display: grid;
 	align-items: center;
-	justify-content: center;
 	position: relative;
 	color: white;
 }
@@ -686,28 +685,45 @@ ol {
 ---------------- */
 
 .carousel-text-1 {
-	text-align: right;
+	text-align: center;
+	justify-self: center;
 	z-index: 10;
-	padding: 20px 40px;
+	padding: 2% 4%;
 	border-radius: 8px;
-	margin-left: 700px;
+	margin-left: 0px;
 	font-family: 'Nunito', sans-serif;
-	margin-bottom: 125px;
 }
 
 .carousel-text-1 h2 {
-	font-size: 66px;
-	font-weight: 900;
-	margin-bottom: 10px;
 	color: #ffffff;
+	font-size: 64px;
+	font-weight: 900;
+	margin-bottom: 3%;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-1 p {
+	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 2%;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-1 .btn {
+	margin-top: 3%;
+	font-size: 30px;
+	padding: 2% 2%;
+	border-radius: 80px;
+	background-color: #8ce4f1;
+	border: #8ce4f1;
+	color: #ffffff;
+	font-weight: 800;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-1 .btn:hover {
+	background-color: #459ca9;
 }
 
 .carousel-slide.slide-welcome {
@@ -781,44 +797,45 @@ ol {
 ---------------- */
 
 .carousel-text-2 {
-	text-align: right;
+	text-align: center;
+	justify-self: center;
 	z-index: 10;
-	padding: 20px 40px;
+	padding: 2% 4%;
 	border-radius: 8px;
-	margin-left: 600px;
+	margin-left: 0px;
 	font-family: 'Nunito', sans-serif;
-	margin-bottom: 125px;
 }
 
 .carousel-text-2 h2 {
-	font-size: 66px;
-	font-weight: 900;
-	margin-bottom: 10px;
 	color: #ffffff;
+	font-size: 64px;
+	font-weight: 900;
+	margin-bottom: 3%;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-2 p {
+	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 2%;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-2 .btn {
+	margin-top: 3%;
 	font-size: 30px;
-	padding: 10px 20px;
-	border-radius: 5px;
-	background-color: #ffcc89;
-	border: #ffcc89;
+	padding: 2% 2%;
+	border-radius: 80px;
+	background-color: #FFCD89;
+	border: #FFCD89;
 	color: #ffffff;
 	font-weight: 800;
-	border-radius: 80px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-2 .btn:hover {
-	background-color: #c6802b;
+	background-color: #ff8c05;
 }
 
 .carousel-slide.slide-matchmaking {
@@ -893,43 +910,43 @@ ol {
 
 .carousel-text-3 {
 	text-align: left;
+	justify-self: left;
 	z-index: 10;
-	padding: 20px 40px;
+	padding: 2% 4%;
 	border-radius: 8px;
-	margin-left: -600px;
 	font-family: 'Nunito', sans-serif;
-	margin-bottom: 125px;
 }
 
 .carousel-text-3 h2 {
-	font-size: 66px;
-	font-weight: 900;
-	margin-bottom: 10px;
 	color: #ffffff;
+	font-size: 64px;
+	font-weight: 900;
+	margin-bottom: 3%;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-3 p {
+	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 2%;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-3 .btn {
+	margin-top: 3%;
 	font-size: 30px;
-	padding: 10px 20px;
-	border-radius: 5px;
+	padding: 2% 2%;
+	border-radius: 80px;
 	background-color: #8ce4f1;
 	border: #8ce4f1;
 	color: #ffffff;
 	font-weight: 800;
-	border-radius: 80px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-3 .btn:hover {
-	background-color: #21808e;
+	background-color: #459ca9;
 }
 
 .carousel-slide.slide-surrender {
@@ -1002,51 +1019,44 @@ ol {
 
 .carousel-text-4 {
 	text-align: right;
+	justify-self: right;
 	z-index: 10;
-	padding: 20px 40px;
+	padding: 2% 4%;
 	border-radius: 8px;
-	margin-left: 600px;
+	margin-left: 0px;
 	font-family: 'Nunito', sans-serif;
-	margin-bottom: 125px;
 }
 
 .carousel-text-4 h2 {
-	font-size: 66px;
-	font-weight: 900;
-	margin-bottom: 10px;
 	color: #ffffff;
+	font-size: 64px;
+	font-weight: 900;
+	margin-bottom: 3%;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-4 p {
+	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 2%;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-buttons {
-    display: flex;
-    justify-content: right;
-    gap: 10px;
-    margin-top: 15px; 
-}
-/* houver um botão dentro de .carousel-buttons */
-
-.carousel-buttons .btn {
+.carousel-text-4 .btn {
+	margin-top: 3%;
 	font-size: 30px;
-	padding: 10px 20px;
-	border-radius: 5px;
+	padding: 2% 2%;
+	border-radius: 80px;
 	background-color: #97dca7;
 	border: #97dca7;
 	color: #ffffff;
 	font-weight: 800;
-	border-radius: 80px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-buttons .btn:hover {
-	background-color: #2d9455;
+.carousel-text-4 .btn:hover {
+	background-color: #5b9c6b;
 }
 
 .carousel-slide.slide-lost-found {
@@ -1121,42 +1131,44 @@ ol {
 
 .carousel-text-5 {
 	text-align: left;
+	justify-self: left;
 	z-index: 10;
-	padding: 20px 40px;
+	padding: 2% 4%;
 	border-radius: 8px;
-	margin-left: -600px;
+	margin-left: 0px;
 	font-family: 'Nunito', sans-serif;
-	margin-bottom: 125px;
 }
 
 .carousel-text-5 h2 {
-	font-size: 66px;
-	font-weight: 900;
-	margin-bottom: 10px;
 	color: #ffffff;
+	font-size: 64px;
+	font-weight: 900;
+	margin-bottom: 3%;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-5 p {
+	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 2%;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-5 .btn {
+	margin-top: 3%;
 	font-size: 30px;
-	padding: 10px 20px;
-	border-radius: 5px;
-	background-color: #FF823A;
+	padding: 2% 2%;
+	border-radius: 80px;
+	background-color: #ff9254;
+	border: #ff9254;
 	color: #ffffff;
 	font-weight: 800;
-	border-radius: 80px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-5 .btn:hover {
-	background-color: #c15111;
+	background-color: #d24c00;
 }
 
 .carousel-slide.slide-adoption {
