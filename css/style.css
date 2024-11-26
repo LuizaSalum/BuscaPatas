@@ -715,15 +715,15 @@ ol {
 	font-size: 30px;
 	padding: 2% 2%;
 	border-radius: 80px;
-	background-color: #8ce4f1;
-	border: #8ce4f1;
+	background-color: #459ca9;
+	border: #459ca9;
 	color: #ffffff;
 	font-weight: 800;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-1 .btn:hover {
-	background-color: #459ca9;
+	background-color: #8ce4f1;
 }
 
 .carousel-slide.slide-welcome {
@@ -766,28 +766,16 @@ ol {
 	font-size: 30px;
 	padding: 2% 2%;
 	border-radius: 80px;
-	background-color: #FFCD89;
-	border: #FFCD89;
+	background-color: #ff8c05;
+	border: #ff8c05;
 	color: #ffffff;
 	font-weight: 800;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	--bs-btn-bg: #FF823A;
-	--bs-btn-border-color: #FF823A;
-	--bs-btn-hover-bg: #FF823A;
-	--bs-btn-hover-border-color: #FF823A;
-	--bs-btn-focus-shadow-rgb: 49, 132, 253;
-	--bs-btn-active-color: #fff;
-	--bs-btn-active-bg: #FF823A;
-	--bs-btn-active-border-color: #FF823A;
-	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-	--bs-btn-disabled-color: #fff;
-	--bs-btn-disabled-bg: #FF823A;
-	--bs-btn-disabled-border-color: #FF823A;
 }
 
 
 .carousel-text-2 .btn:hover {
-	background-color: #ff8c05;
+	background-color: #ffcd89;
 }
 
 .carousel-slide.slide-matchmaking {
@@ -828,15 +816,15 @@ ol {
 	font-size: 30px;
 	padding: 2% 2%;
 	border-radius: 80px;
-	background-color: #8ce4f1;
-	border: #8ce4f1;
+	background-color: #459ca9;
+	border: #459ca9;
 	color: #ffffff;
 	font-weight: 800;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-3 .btn:hover {
-	background-color: #459ca9;
+	background-color: #8ce4f1;
 }
 
 .carousel-slide.slide-surrender {
@@ -878,15 +866,15 @@ ol {
 	font-size: 30px;
 	padding: 2% 2%;
 	border-radius: 80px;
-	background-color: #97dca7;
-	border: #97dca7;
+	background-color: #5b9c6b;
+	border: #5b9c6b;
 	color: #ffffff;
 	font-weight: 800;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-4 .btn:hover {
-	background-color: #5b9c6b;
+	background-color: #97dca7;
 }
 
 .carousel-slide.slide-lost-found {
@@ -928,15 +916,15 @@ ol {
 	font-size: 30px;
 	padding: 2% 2%;
 	border-radius: 80px;
-	background-color: #ff9254;
-	border: #ff9254;
+	background-color: #FF823A;
+	border: #FF823A;
 	color: #ffffff;
 	font-weight: 800;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-text-5 .btn:hover {
-	background-color: #d24c00;
+	background-color: #ff9e66;
 }
 
 .carousel-slide.slide-adoption {
