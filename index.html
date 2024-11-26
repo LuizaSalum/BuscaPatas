@@ -191,7 +191,7 @@
             <div class="item">
                 <div class="carousel-slide slide-matchmaking">
                     <div class="carousel-text-2">
-                        <h2>Encontre o Animal Perfeito</h2>
+                        <h2>Encontra o Animal Perfeito</h2>
                         <p>Responda ao nosso questionário para descobrir o companheiro perfeito para sua casa.</p>
                         <a href="matchmaking.html" class="btn btn-primary">Iniciar Quiz</a>
                     </div>
@@ -209,8 +209,8 @@
             <div class="item">
                 <div class="carousel-slide slide-lost-found">
                     <div class="carousel-text-4">
-                        <h2>Perdidos e Achados</h2>
-                        <p>Ajude a reunir animais perdidos com seus donos.</p>
+                        <h2>Perdidos e Encontrados</h2>
+                        <p>Ajuda a reunir animais perdidos com seus donos.</p>
                     <div class="carousel-buttons">
                         <a href="reportar-perdido.html" class="btn btn-primary">Perdi um Animal</a>
                         <a href="reportar-encontrado.html" class="btn btn-primary">Encontrei um Animal</a>
@@ -221,8 +221,8 @@
             <div class="item">
                 <div class="carousel-slide slide-adoption">
                     <div class="carousel-text-5">
-                        <h2>Adote um Amigo de Quatro Patas</h2>
-                        <p>Encontre o companheiro perfeito e ofereça-lhe uma casa cheia de amor.</p>
+                        <h2>Adota um Amigo de Quatro Patas</h2>
+                        <p>Encontra o companheiro perfeito e ofereça-lhe uma casa cheia de amor.</p>
                         <a href="adotar.html" class="btn btn-primary">Adotar Agora</a>
                     </div>
                 </div>
@@ -233,35 +233,36 @@
 
     <!--Shelter Locations-->
     <section class="shelter_location">
-        <div class="container">
-            <div class="container-fluid"> <!-- Use container-fluid for full-width layout -->
-                <div class="row mt-5 justify-content-center">
-                    <div class="col-lg-12"> <!-- Use col-lg-12 to span the full width -->
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                                <div class="text_2">
-                                    <h2 class="title">Mapa de Serviços</h2>
-                                    <h3 class="subtitle">Encontra abrigos, pet shops e hospitais veterinários próximos!</h3>
-                                    <p></p>
-                                    <p class="description">
-                                        Filtra por tipo de serviço e encontra o local mais próximo de você.
-                                    </p>
-                                    <button class="btn btn-hover" id="button-shelter-index" onclick="window.location.href='abrigos.html';">Abrigos</button>
-                                </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-12"> <!-- Use col-lg-12 to span the full width -->
+                <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                    <div class="text_2">
+                        <h2 class="title">Mapa de Serviços</h2>
+                        <h3 class="subtitle">Encontra abrigos, pet shops e hospitais veterinários próximos!</h3>
+                        <p></p>
+                        <p class="description">Filtra por tipo de serviço e encontra o local mais próximo de você.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtrar por
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Abrigos</a></li>
+                                <li><a class="dropdown-item" href="#">Pet Shops</a></li>
+                                <li><a class="dropdown-item" href="#">Hospitais Veterinários</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories__item_map">
+                            <div id="map" class="map">
+                                <div id="popup"></div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                                <div class="categories__item_map">
-                                    <div id="map" class="map">
-                                        <div id="popup"></div>
-                                    </div>
-                                    <div class="pin_text"></div>
-                                </div>
-                            </div>
+                            <div class="pin_text"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -483,7 +484,7 @@
                             <li><a href="adotar.html">Adotar</a></li>
                             <li><a href="#">Abrigos</a></li>
                             <li><a href="#">Entregas</a></li>
-                            <li><a href="#">Perdidos e Achados</a></li>
+                            <li><a href="#">Perdidos e Encontrados</a></li>
                         </ul>
                     </div>
                 </div>
