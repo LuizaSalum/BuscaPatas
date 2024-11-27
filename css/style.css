@@ -2270,70 +2270,180 @@ ol {
 	background-color: #FFAD7E;
 }
 
-
 /*---------------------
-  Instagram
+  About Us
 -----------------------*/
 
-.instagram__item {
-	height: 320px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	position: relative;
-	z-index: 1;
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    background: #fff;
 }
 
-.instagram__item:hover:after {
-	opacity: 1;
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+	color:	#FF823A;
+	font-weight: 800;
 }
 
-.instagram__item:hover .instagram__text {
-	opacity: 1;
-	visibility: visible;
+.about-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: justify;
+	text-align: left;
 }
 
-.instagram__item:after {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.9);
-	content: "";
-	opacity: 0;
-	z-index: -1;
-	-webkit-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
+.about-values h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+	color:	#FF823A;
+	font-weight: 800;
 }
 
-.instagram__text {
-	text-align: center;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
+.about-values ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
 }
 
-.instagram__text i {
-	font-size: 30px;
-	color: #0d0d0d;
+.about-values ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: left;
 }
 
-.instagram__text a {
-	font-size: 16px;
-	color: #0d0d0d;
-	font-weight: 500;
-	display: block;
-	margin-top: 10px;
+/* Mission and Vision Section */
+.vision-mission {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.vision-mission h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+	color:	#FF823A;
+	font-weight: 800;
+}
+
+.vision-mission p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Team Section */
+.team {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.team h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+		color:	#FF823A;
+	font-weight: 800;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+	color:	#FF823A;
+	font-weight: 800;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    padding: 50px 20px;
+    background: #ffffff;
+    color: #fff;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+	color:	#FF823A;
+	font-weight: 800;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.call-to-action .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+    }
 }
 
 /*---------------------
@@ -6654,3 +6764,10 @@ button.btn-secondary:hover {
 		font-size: 24px;
 	}
 }
+
+/*---------------------
+  Cores
+
+Laranja Tiutlos - FF823A
+
+-----------------------*/
