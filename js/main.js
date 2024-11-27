@@ -400,3 +400,60 @@ function addPetDetails(pdf, startY) {
     pdf.text(`Email: ${document.getElementById("email")?.value || "N/A"}`, 20, startY + 110);
     pdf.text(`Telefone: ${document.getElementById("telefone")?.value || "N/A"}`, 20, startY + 120);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchOverlay = document.querySelector(".search-model");
+    const searchCloseSwitch = document.querySelector(".search-close-switch");
+    const searchInput = document.querySelector("#search-input");
+    const searchForm = document.querySelector(".search-model-form");
+
+    // Open the search overlay
+    const openSearchOverlay = () => {
+        if (searchOverlay) {
+            searchOverlay.classList.add("active");
+            searchInput.focus(); // Automatically focus the input
+        }
+    };
+
+    // Close the search overlay
+    const closeSearchOverlay = () => {
+        if (searchOverlay) {
+            searchOverlay.classList.remove("active");
+        }
+    };
+
+    // Listen for Enter key or form submission
+    if (searchForm) {
+        searchForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `search-result.html?query=${encodeURIComponent(query)}`;
+            }
+        });
+    }
+
+    // Close the search overlay when the close button is clicked
+    if (searchCloseSwitch) {
+        searchCloseSwitch.addEventListener("click", closeSearchOverlay);
+    }
+
+    // Open the search overlay when the search icon is clicked
+    document.querySelector(".search-switch")?.addEventListener("click", openSearchOverlay);
+
+    // Close the overlay when the user presses the Escape key
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeSearchOverlay();
+        }
+    });
+
+    // Handle setting the placeholder on the search-result page #search-input-bar
+    const searchInputBar = document.querySelector("#search-input-bar");
+    if (searchInputBar) {
+        const query = new URLSearchParams(window.location.search).get("query");
+        if (query) {
+            searchInputBar.value = query;
+        }
+    }   
+});
