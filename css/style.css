@@ -3288,6 +3288,22 @@ ol {
 	background: #FFB550;
 }
 
+/*----------------------
+  Matchmaking
+------------------------*/
+
+.title-section-quiz h2{
+	font-size: 40px;
+	color: #FF823A;
+	font-weight: 600;
+	margin: 20px 0;
+}
+
+.title-section-quiz  p{
+	font-size: 18px;
+	color: #181307;
+}
+
 
 /*---------------------
   Shop

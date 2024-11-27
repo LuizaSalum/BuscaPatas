@@ -100,11 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("btn-submit")) {
             e.preventDefault();
-
+    
             // Collect form data
-            const form = document.querySelector(".form");
+            const form = document.querySelector(".form-quiz");
             const formData = new FormData(form);
-
+    
             const results = {};
             formData.forEach((value, key) => {
                 if (!results[key]) {
@@ -115,26 +115,41 @@ document.addEventListener("DOMContentLoaded", () => {
                     results[key] = [results[key], value];
                 }
             });
-
+    
             console.log("Quiz Results:", results);
+    
+            // Hide current step
+            const currentActiveStep = document.querySelector(".form-step-active");
+            if (currentActiveStep) {
+                currentActiveStep.classList.remove("form-step-active");
+                currentActiveStep.classList.add("d-none");
+            }
+    
+            // Show results section
+            const resultsStep = document.getElementById("quizResults");
+            if (resultsStep) {
+                resultsStep.classList.remove("d-none");
+                resultsStep.classList.add("form-step-active");
+                console.log("Results step made visible");
+            } else {
+                console.error("Results step not found");
+            }
 
-            // Transition to the Results section
-            activeSteps[currentStep].classList.remove("form-step-active");
-            activeSteps[currentStep].classList.add("d-none");
+            // put the #quizresults display to block
+            document.getElementById("quizResults").style.display = "block";
 
-            currentStep++;
-            activeSteps[currentStep].classList.remove("d-none");
-            activeSteps[currentStep].classList.add("form-step-active");
-
-            updateProgressBar(currentStep);
-
-            // Simulate loading results
+            // Display results
             displayResults(results);
+    
 
-            // Disable all form inputs to prevent editing
+            updateProgressBar(activeSteps.length - 1); 
+
+    
+            // Disable inputs to prevent edits
             disableFormInputs(form);
         }
     });
+    
 
     // Allow radio buttons to be unchecked
     document.querySelectorAll("input[type='radio']").forEach((radio) => {

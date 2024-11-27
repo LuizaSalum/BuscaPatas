@@ -8,12 +8,27 @@
     display: block; /* Only active step is visible */
 }
 
+.d-none {
+    display: none !important;
+}
+
+.quiz {
+    background-color: #f0eee88e;
+    padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .quiz {
+        padding: 20px;
+    }
+}
 .progressbar {
     display: none; /* Hidden by default */
     justify-content: space-between;
     margin: 20px 0;
     position: relative;
     counter-reset: step;
+    margin-bottom: 60px;
 }
 
 .progressbar .progress-step {
@@ -25,20 +40,28 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    position: relative;
 }
 
 .progressbar .progress-step:before {
     counter-increment: step;
-    content: counter(step);
+    content: attr(data-title);
     position: absolute;
     top: 30px;
-    font-size: 12px;
+    font-size: 17px;
+    color: #6a1b9a;
+}
+
+@media screen and (max-width: 767px) {
+    .progressbar .progress-step:before {
+        content: counter(step); /* Switch to step count */
+        font-size: 16px;
+        color: #555;
+    }
 }
 
 .progressbar .progress-step-active {
     background-color: #6a1b9a;
-    color: white;
+    color: #d3d3d3;
 }
 
 .progressbar .progress {
@@ -53,13 +76,159 @@
 }
 
 .form-step-footer {
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     margin-top: 20px;
+    padding: 10px; 
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa; 
 }
 
+.form-step-footer .btn {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.form-step-footer .btn-prev {
+    background-color: #f0f0f0; 
+    color: #555; 
+}
+
+.form-step-footer .btn-prev:hover {
+    background-color: #e0e0e0;
+}
+
+.form-step-footer .btn-next {
+    background-color: #FF823A; 
+    color: #fff; 
+}
+
+.form-step-footer .btn-next:hover {
+    background-color: #f19f70; 
+}
+
+.form-step-footer .btn-submit {
+    background-color: #FF823A; 
+    color: #fff; 
+}
+
+.form-step-footer .btn-submit:hover {
+    background-color: #f19f70; 
+}
+
+.form-step-footer .btn-pre-submit {
+    background-color: #ffffff;
+    border: 2px solid #FF823A; 
+    color: #555; 
+}
+.form-step-footer .btn-pre-submit:hover {
+    background-color: #f19f70; 
+}
+
+/* Estilo geral para a seção de resultados */
+#quizResults {
+    display: none; /* Por padrão, escondido */
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: "Nunito", sans-serif; /* Fonte do tema */
+}
+
+/* Título dos resultados */
+#quizResults h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF823A; /* Cor de destaque */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Parágrafo introdutório */
+#quizResults p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Contêiner para os resultados */
+#resultsContainer {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: left;
+    max-height: 400px; /* Limita a altura */
+    overflow-y: auto; /* Ativa scroll caso necessário */
+}
+
+/* Estilo para cada item de resultado */
+#resultsContainer div {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Chave (key) destacada */
+#resultsContainer div span {
+    font-weight: bold;
+    color: #FF823A; /* Destaque para as chaves */
+}
+
+/* Botões na seção de resultados */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Estilo do botão para refazer o quiz */
+.action-buttons .btn#retakeQuizBtn {
+    background-color: #FF823A;
+    color: #fff;
+}
+
+.action-buttons .btn#retakeQuizBtn:hover {
+    background-color: #f19f70;
+}
+
+/* Estilo do botão para salvar os resultados */
+.action-buttons .btn#saveResultsBtn {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 2px solid #FF823A;
+}
+
+.action-buttons .btn#saveResultsBtn:hover {
+    background-color: #FF823A;
+    color: #fff;
+}
+
+
 .btn {
-    background-color: #6a1b9a;
+    background-color: #FF823A;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -68,7 +237,7 @@
 }
 
 .btn:hover {
-    background-color: #531a79;
+    background-color: #FF823A;
 }
 
 .btn-secondary {
@@ -125,11 +294,223 @@
 }
 
 .breed-option.selected {
-    background-color: #6a1b9a;
+    background-color: #FF823A;
     color: #fff;
     font-weight: bold;
-    border-color: #531a79;
+    border-color: #FF823A;
 }
+
+.species-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.species-select img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.species-select:hover {
+    background-color: #FF823A;
+    color: #fff;
+    border-color: #FFB550;
+}
+
+.species-select:hover img {
+    transform: scale(1.05);
+}
+
+/* Style for Radio Buttons and Checkboxes */
+.form-check input[type="radio"],
+.form-check input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #FFB550; /* Match primary color */
+    border-radius: 50%; /* Rounded edges for radio buttons */
+    background-color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.form-check input[type="checkbox"] {
+    border-radius: 4px; /* Square shape for checkboxes */
+}
+
+.form-check input[type="radio"]:checked,
+.form-check input[type="checkbox"]:checked {
+    background-color: #FFB550; /* Filled background when selected */
+    border-color: #FF823A; /* Slightly darker color for the selected state */
+}
+
+.form-check label {
+    font-size: 16px;
+    color: #181307;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.question {
+    margin-bottom: 20px; 
+    padding: 15px;
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .question {
+        padding: 10px;
+    }
+
+    .question h5 {
+        font-size: 18px;
+    }
+
+    .question p {
+        font-size: 16px;
+    }
+    
+}
+
+/* Style for h5 Elements */
+.question h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FF823A; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: left;
+    border-left: 4px solid #FFB550;
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif; /* Font used across the theme */
+}
+
+/* Style the species selection section */
+#species-selection {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#species-selection .form-step-header {
+    margin-bottom: 20px;
+}
+
+#species-selection .form-step-title {
+    font-size: 28px;
+    color: #FF823A;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#species-selection .form-step-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#species-selection .form-step-body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#species-selection .species-select {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+#species-selection .species-select img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+#species-selection .species-select:hover {
+    background-color: #FF823A;
+    color: #fff;
+    border-color: #FFB550;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#species-selection .species-select:hover img {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    #species-selection{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #species-selection .species-select img {
+        margin-bottom: 5px;
+    }
+
+    .form-step-footer .btn-pre-submit {
+        padding: 10px 15px;
+        
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .species-select {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .species-img {
+        width: 150px; /* Ajusta o tamanho para telas menores */
+        font-size: 14px;
+    }
+}
+
+
 
 /* Make the box responsive */
 @media (max-width: 768px) {
