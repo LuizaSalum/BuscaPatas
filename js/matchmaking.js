@@ -305,3 +305,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-next")) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-prev")) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }
+}
+);

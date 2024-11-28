@@ -1,11 +1,3 @@
-/*  ---------------------------------------------------
-Template Name: Ashion
-Description: Ashion ecommerce template
-Author: Colorib
-Author URI: https://colorlib.com/
-Version: 1.0
-Created: Colorib
----------------------------------------------------------  */
 
 'use strict';
 
@@ -451,9 +443,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle setting the placeholder on the search-result page #search-input-bar
     const searchInputBar = document.querySelector("#search-input-bar");
     if (searchInputBar) {
-        const query = new URLSearchParams(window.location.search).get("query");
+        const query = new URLSearchParams(window.location.search).get(query);
         if (query) {
             searchInputBar.value = query;
         }
-    }   
+    }
+    console.log(searchOverlay, searchCloseSwitch, searchInput, searchForm);   
 });
