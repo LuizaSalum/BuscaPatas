@@ -13,28 +13,25 @@
 }
 
 .quiz {
-    background-color: #f0eee88e;
-    padding: 40px;
+    margin-top: 2%;
+    background-color: #FFEBCE;
+    padding: 1%;
 }
 
-@media screen and (max-width: 768px) {
-    .quiz {
-        padding: 20px;
-    }
-}
 .progressbar {
     display: none; /* Hidden by default */
     justify-content: space-between;
     margin: 20px 0;
     position: relative;
     counter-reset: step;
-    margin-bottom: 60px;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .progressbar .progress-step {
     width: 20px;
     height: 20px;
-    background-color: #d3d3d3;
+    background-color: #FFCD89;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -48,20 +45,24 @@
     position: absolute;
     top: 30px;
     font-size: 17px;
-    color: #6a1b9a;
+    color: #FF8C05;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .progressbar .progress-step:before {
         content: counter(step); /* Switch to step count */
         font-size: 16px;
-        color: #555;
+    }
+
+    .progressbar {
+        margin-top: 5%;
+        margin-bottom: 50px;
     }
 }
 
 .progressbar .progress-step-active {
-    background-color: #6a1b9a;
-    color: #d3d3d3;
+    font-weight: bold;
+    background-color: #FF8C05;
 }
 
 .progressbar .progress {
@@ -69,10 +70,25 @@
     top: 50%;
     left: 0;
     height: 5px;
-    background-color: #6a1b9a;
+    background-color: #FF8C05;
     z-index: 1;
-    transition: width 0.3s;
+    transition: width 0.5s;
     transform: translateY(-50%);
+}
+
+.form-step-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #181307;
+    margin-bottom: 5px;
+    margin-top: 80px;
+}
+
+.form-step-description {
+    font-size: 16px;
+    color: #3F392B;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .form-step-footer {
@@ -81,14 +97,14 @@
     align-items: center; 
     margin-top: 20px;
     padding: 10px; 
-    border-top: 1px solid #e0e0e0;
-    background-color: #fafafa; 
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    background-color: #FFFFFF; 
 }
 
 .form-step-footer .btn {
     padding: 10px 20px; 
-    border: none;
-    border-radius: 5px; 
+    border-radius: 8px; 
     font-size: 16px; 
     font-weight: bold;
     cursor: pointer;
@@ -96,97 +112,76 @@
 }
 
 .form-step-footer .btn-prev {
-    background-color: #f0f0f0; 
-    color: #555; 
+    background-color: #F3F0F0; 
+    color: #3F392B; 
 }
 
 .form-step-footer .btn-prev:hover {
-    background-color: #e0e0e0;
+    background-color: #D8D4D4;
 }
 
 .form-step-footer .btn-next {
-    background-color: #FF823A; 
-    color: #fff; 
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
 }
 
 .form-step-footer .btn-next:hover {
-    background-color: #f19f70; 
+    background-color: #FFCD89; 
 }
 
 .form-step-footer .btn-submit {
-    background-color: #FF823A; 
-    color: #fff; 
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
 }
 
 .form-step-footer .btn-submit:hover {
-    background-color: #f19f70; 
+    background-color: #FFCD89; 
 }
 
 .form-step-footer .btn-pre-submit {
-    background-color: #ffffff;
-    border: 2px solid #FF823A; 
-    color: #555; 
+    background-color: #FFFFFF;
+    border: 2px solid #FF8C05; 
+    color: #3F392B; 
 }
 .form-step-footer .btn-pre-submit:hover {
-    background-color: #f19f70; 
+    background-color: #FFCD89; 
 }
 
-/* Estilo geral para a seção de resultados */
 #quizResults {
-    display: none; /* Por padrão, escondido */
-    background-color: #f9f9f9;
+    display: none;
+    background-color: #FFFFFF;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 800px;
-    margin: 20px auto;
-    font-family: "Nunito", sans-serif; /* Fonte do tema */
 }
 
-/* Título dos resultados */
 #quizResults h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #FF823A; /* Cor de destaque */
+    color: #FF8C05;
     margin-bottom: 20px;
-    text-transform: uppercase;
 }
 
-/* Parágrafo introdutório */
 #quizResults p {
     font-size: 16px;
-    color: #555;
+    color: #3F392B;
     margin-bottom: 30px;
     line-height: 1.6;
 }
 
-/* Contêiner para os resultados */
 #resultsContainer {
-    background: #fff;
+    background: #FFFFFF;
     padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    text-align: left;
-    max-height: 400px; /* Limita a altura */
-    overflow-y: auto; /* Ativa scroll caso necessário */
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    max-height: 1000px;
+    overflow-y: auto;
 }
 
-/* Estilo para cada item de resultado */
-#resultsContainer div {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #333;
-    line-height: 1.4;
-}
-
-/* Chave (key) destacada */
 #resultsContainer div span {
     font-weight: bold;
-    color: #FF823A; /* Destaque para as chaves */
+    color: #FF8C05;
 }
 
-/* Botões na seção de resultados */
 .action-buttons {
     margin-top: 20px;
     display: flex;
@@ -197,107 +192,11 @@
 .action-buttons .btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
-}
-
-/* Estilo do botão para refazer o quiz */
-.action-buttons .btn#retakeQuizBtn {
-    background-color: #FF823A;
-    color: #fff;
-}
-
-.action-buttons .btn#retakeQuizBtn:hover {
-    background-color: #f19f70;
-}
-
-/* Estilo do botão para salvar os resultados */
-.action-buttons .btn#saveResultsBtn {
-    background-color: #f0f0f0;
-    color: #555;
-    border: 2px solid #FF823A;
-}
-
-.action-buttons .btn#saveResultsBtn:hover {
-    background-color: #FF823A;
-    color: #fff;
-}
-
-
-.btn {
-    background-color: #FF823A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #FF823A;
-}
-
-.btn-secondary {
-    background-color: #ccc;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-secondary:hover {
-    background-color: #aaa;
-}
-
-.breed-select-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px; /* Spacing between items */
-    max-height: 300px; /* Limit height */
-    overflow-y: auto; /* Enable scrolling if content exceeds max height */
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #fff;
-    margin-top: 5px;
-    border-radius: 5px;
-}
-
-/* Individual breed option */
-.breed-select-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.breed-option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    height: 50px;
-}
-
-.breed-option:hover {
-    background-color: #e6e6e6;
-    transform: scale(1.05);
-}
-
-.breed-option.selected {
-    background-color: #FF823A;
-    color: #fff;
-    font-weight: bold;
-    border-color: #FF823A;
 }
 
 .species-select {
@@ -305,30 +204,29 @@
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    background-color: #f9f9f9;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
     padding: 15px;
     width: 180px;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    color: #333;
     font-weight: 600;
 }
 
 .species-select img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
 
 .species-select:hover {
-    background-color: #FF823A;
-    color: #fff;
-    border-color: #FFB550;
+    background-color: #FFCD89;
+    color: #FFFFFF;
+    border-color: #FFCD89;
 }
 
 .species-select:hover img {
@@ -343,20 +241,8 @@
     height: 20px;
     margin-right: 10px;
     cursor: pointer;
-    border: 2px solid #FFB550; /* Match primary color */
-    border-radius: 50%; /* Rounded edges for radio buttons */
-    background-color: #FFF;
+    background-color: #FFFFFF;
     transition: all 0.3s ease;
-}
-
-.form-check input[type="checkbox"] {
-    border-radius: 4px; /* Square shape for checkboxes */
-}
-
-.form-check input[type="radio"]:checked,
-.form-check input[type="checkbox"]:checked {
-    background-color: #FFB550; /* Filled background when selected */
-    border-color: #FF823A; /* Slightly darker color for the selected state */
 }
 
 .form-check label {
@@ -371,14 +257,14 @@
 .question {
     margin-bottom: 20px; 
     padding: 15px;
-    border: 1px solid #e0e0e0; 
+    border: 1px solid #FFCD89; 
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
     text-align: left;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .question {
         padding: 10px;
     }
@@ -393,24 +279,21 @@
     
 }
 
-/* Style for h5 Elements */
 .question h5 {
     font-size: 20px;
     font-weight: 600;
-    color: #FF823A; 
+    color: #FF8C05; 
     margin-bottom: 20px;
     margin-top: 10px;
     text-align: left;
     border-left: 4px solid #FFB550;
     padding-left: 10px;
-    text-transform: capitalize;
-    font-family: "Nunito", sans-serif; /* Font used across the theme */
+    font-family: "Nunito", sans-serif;
 }
 
-/* Style the species selection section */
 #species-selection {
-    background-color: #f9f9f9;
-    border-radius: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -418,22 +301,12 @@
     max-width: 800px;
 }
 
+#species-selection .form-step-title {
+    margin-top: 0px !important;
+}
+
 #species-selection .form-step-header {
     margin-bottom: 20px;
-}
-
-#species-selection .form-step-title {
-    font-size: 28px;
-    color: #FF823A;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#species-selection .form-step-description {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.5;
 }
 
 #species-selection .form-step-body {
@@ -446,9 +319,9 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #F3F0F0;
+    border-radius: 8px;
     padding: 15px;
     width: 200px;
     transition: all 0.3s ease;
@@ -461,14 +334,14 @@
 #species-selection .species-select img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
 
 #species-selection .species-select:hover {
-    background-color: #FF823A;
-    color: #fff;
+    background-color: #FFB550;
+    color: #FFFFFF;
     border-color: #FFB550;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -477,7 +350,40 @@
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 768px) {
+#quizResults .form-step-title {
+    margin-top: 0px !important;
+}
+
+#retakeQuizBtn {
+    background-color: #F3F0F0; 
+    color: #3F392B; 
+}
+
+#retakeQuizBtn:hover {
+    background-color: #D8D4D4;
+}
+
+#saveResultsBtn {
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
+}
+
+#saveResultsBtn:hover {
+    background-color: #FFCD89; 
+}
+
+#quizResults .form-step-footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+    padding: 10px; 
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    background-color: #FFFFFF; 
+}
+
+@media screen and (max-width: 1000px) {
     #species-selection{
         font-size: 14px;
         padding: 10px;
@@ -493,26 +399,21 @@
     }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .species-select {
         width: 150px;
         font-size: 14px;
     }
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .species-img {
-        width: 150px; /* Ajusta o tamanho para telas menores */
+        width: 150px;
         font-size: 14px;
     }
 }
 
-
-
-/* Make the box responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .breed-select-box {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }

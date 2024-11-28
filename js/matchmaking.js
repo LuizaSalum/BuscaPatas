@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", (e) => {
             e.preventDefault();
             selectedSpecies = button.dataset.attribute;
+    
+            // Reset current step and progress bar
+            currentStep = 0;
+            updateProgressBar(currentStep);
 
             // Hide the species selection step
             formSteps[0].classList.remove("form-step-active");
@@ -54,14 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("btn-next")) {
             e.preventDefault();
-
+    
             if (currentStep < activeSteps.length - 1) {
                 activeSteps[currentStep].classList.remove("form-step-active");
                 activeSteps[currentStep].classList.add("d-none");
                 currentStep++;
                 activeSteps[currentStep].classList.remove("d-none");
                 activeSteps[currentStep].classList.add("form-step-active");
-
+    
                 updateProgressBar(currentStep);
             }
         }
@@ -71,14 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("btn-prev")) {
             e.preventDefault();
-
+    
             if (currentStep > 0) {
                 activeSteps[currentStep].classList.remove("form-step-active");
                 activeSteps[currentStep].classList.add("d-none");
                 currentStep--;
                 activeSteps[currentStep].classList.remove("d-none");
                 activeSteps[currentStep].classList.add("form-step-active");
-
+    
                 updateProgressBar(currentStep);
             } else if (currentStep === 0) {
                 // Navigate back to the species selection step
@@ -98,8 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle Submit Button
     document.addEventListener("click", (e) => {
-        if (e.target.classList.contains("btn-submit")) {
+        if (e.target.classList.contains("btn-submit") || e.target.classList.contains("btn-pre-submit")) {
             e.preventDefault();
+            
+            // Ensure the progress bar reflects the final step
+            updateProgressBar(progressSteps.length - 1);
+            progressSteps[progressSteps.length - 1].classList.add("progress-step-active");
     
             // Collect form data
             const form = document.querySelector(".form-quiz");
@@ -141,15 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Display results
             displayResults(results);
     
-
-            updateProgressBar(activeSteps.length - 1); 
-
+            updateProgressBar(activeSteps.length - 1); // Ensure progress bar reflects the final step
+            progressSteps[progressSteps.length - 1].classList.add("progress-step-active"); // Mark "Results" as active
     
             // Disable inputs to prevent edits
             disableFormInputs(form);
         }
     });
-    
 
     // Allow radio buttons to be unchecked
     document.querySelectorAll("input[type='radio']").forEach((radio) => {
@@ -191,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update Progress Bar
     function updateProgressBar(stepIndex) {
+        const totalSteps = activeSteps.length; // Use activeSteps for relevant steps
         progressSteps.forEach((step, index) => {
             if (index <= stepIndex) {
                 step.classList.add("progress-step-active");
@@ -198,7 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 step.classList.remove("progress-step-active");
             }
         });
-        progressBar.style.width = ((stepIndex / (progressSteps.length - 1)) * 100) + "%";
+
+        const progressPercentage = ((stepIndex + 1) / totalSteps) * 100; // +1 to include the current step
+        progressBar.style.width = progressPercentage + "%";
     }
 
     // Display Results (Placeholder Logic)
@@ -230,51 +239,69 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle "Refazer o Quiz" button click
     document.getElementById("retakeQuizBtn").addEventListener("click", (e) => {
         e.preventDefault(); // Prevent default behavior
-
+    
         // 1. Hide the current step (Results section)
         const resultsStep = document.getElementById("quizResults");
         resultsStep.classList.remove("form-step-active");
         resultsStep.classList.add("d-none");
-
+    
         // 2. Reset the form (clear all inputs and reset the form state)
-        const form = document.querySelector(".form");
+        const form = document.querySelector(".form-quiz"); // Use the correct form class
         form.reset();
-
+    
         // 3. Re-enable all disabled inputs
         const allInputs = form.querySelectorAll("input, select, textarea");
         allInputs.forEach((input) => {
             input.disabled = false; // Ensure all inputs are enabled
         });
-
+    
         // 4. Hide all steps except the species selection step
         const formSteps = document.querySelectorAll(".form-step");
         formSteps.forEach((step) => {
             step.classList.add("d-none");
             step.classList.remove("form-step-active");
         });
-
+    
         // 5. Reset progress bar
         const progressSteps = document.querySelectorAll(".progress-step");
         progressSteps.forEach((step) => {
             step.classList.remove("progress-step-active");
         });
-
+    
         const progressBar = document.getElementById("progress");
         progressBar.style.width = "0%";
-
+    
         // 6. Hide the progress bar container
         const progressBarContainer = document.querySelector(".progressbar");
         progressBarContainer.style.display = "none";
-
+    
         // 7. Show the species selection step
         const speciesStep = formSteps[0]; // Assuming the species selection is the first form-step
         speciesStep.classList.remove("d-none");
         speciesStep.classList.add("form-step-active");
-
+    
         // 8. Reset global variables
         currentStep = 0; // First step index
         selectedSpecies = null; // Clear previously selected species
         activeSteps = []; // Clear the active steps array
+    });    
+
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-next") || 
+            e.target.classList.contains("btn-prev") || 
+            e.target.classList.contains("btn-submit") || 
+            e.target.classList.contains("btn-pre-submit")) {
+            
+            e.preventDefault();
+    
+            // Scroll to the top of the page
+            window.scrollTo({
+                top: 0,      // Scroll to the very top
+                behavior: "smooth"  // Use smooth scrolling for a better user experience
+            });
+    
+            // Your existing logic for handling buttons goes here...
+        }
     });
 
 });
