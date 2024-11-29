@@ -6295,6 +6295,51 @@ button.btn-secondary:hover {
 	box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
 }
 
+/*---------------------
+  Apoiar
+-----------------------*/
+
+.support p {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 30px;
+	line-height: 1.6;
+	text-align: center;
+}
+
+.support__item h5 {
+	font-size: 32px;
+	font-weight: 700;
+	text-align: left;
+	margin-bottom: 30px;
+	color: #FF823A;
+}
+
+.support__item p {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 30px;
+	line-height: 1.6;
+	text-align: left;
+}
+
+#shelterList {
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#shelterList.d-none {
+    display: none;
+}
+
+#shelterList .list-group-item:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
 
 /*---------------------
   Termos e Politicas
