@@ -202,16 +202,16 @@
                 encontrar um lar e ajudar tutores a cuidar dos seus pets. Se gostaria de apoiar o projeto,
                 existem várias formas de o fazer.
             </p>
-            <div class="support__item">
-                <h5>Adotar um Animal</h5>
+            <div class="support__item adoption">
+                <h3>Adotar um Animal</h3>
                 <p>
                     Ao adotar um animal, estás a dar-lhe uma segunda oportunidade e a ajudar a diminuir o número
                     de animais abandonados em Portugal.
                 </p>
-                <a href="adotar.html" class="btn adoption">Adotar</a>
+                <a href="adotar.html" class="btn btn_lf">Adotar</a>
             </div>
-            <div class="support__item">
-                <h5>Donativos</h5>
+            <div class="support__item donation">
+                <h3>Donativos</h3>
                 <p>
                     Faz um donativo para o projeto BuscaPatas ou seleciona um abrigo ou associação para apoiar.
                 </p>
@@ -219,85 +219,99 @@
                     Para garantir a sustentabilidade financeira da plataforma BuscaPatas, uma percentagem do
                     total dos donativos feitos para nossos parceiros será destinada para a manutenção do site.
                 </p>
+                <button class="btn details" id="details">Saber Mais</button>
+                <div id="moreDetails" class="d-none">
                 <p>
                     Este processo será conduzido de forma justa e transparente:
                 </p>
                 <ul>
                     <li>
-                        Para assegurar que este processo é justo para todos os abrigos e associações parceiras,
-                        10% de todos os donativos recebidos ao longo do mês serão retidos até o final desse
-                        período.
+                    Para assegurar que este processo é justo para todos os abrigos e associações parceiras,
+                    10% de todos os donativos recebidos ao longo do mês serão retidos até o final desse
+                    período.
                     </li>
                     <li>
-                        Apenas o montante necessário será utilizado, sendo este igual ou inferior aos totais
-                        retidos. O valor que não for utilizado para a manutenção será dividido de forma
-                        equitativa entre todas as associações beneficiárias.
+                    Apenas o montante necessário será utilizado, sendo este igual ou inferior aos totais
+                    retidos. O valor que não for utilizado para a manutenção será dividido de forma
+                    equitativa entre todas as associações beneficiárias.
                     </li>
                 </ul>
-    <!-- Donations -->
-    <section class="donations">
-        <div class="container mt-5">
-                <div class="col-lg-8">
-                    <div class="donation-section">
-                        <h1>Donativos</h1>
-                        <h5>Escolha um Valor</h5>
-                        <div class="donation-buttons">
-                            <div class="row">
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">5€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">10€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">25€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">50€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">100€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">250€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">500€</button>
-                                </div>
-                                <div class="col-4 col-sm-3 mb-3">
-                                    <button class="btn donation-btn">1000€</button>
+            </div>
+                <button class="btn btn_lf" id="donation_button">Doar</button>
+                <!-- Donations -->
+                <div id="donationModal" class="modal-overlay d-none">
+                    <div class="modal-content">
+                        <button class="close-button" id="closeModal">&times;</button>
+                        <section class="donations">
+                            <div class="container mt-5">
+                                <div class="col-lg-8">
+                                    <div class="donation-section">
+                                        <h2>Donativos</h2>
+                                        <h5>Escolha um Valor</h5>
+                                        <div class="donation-buttons">
+                                            <div class="row">
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">5€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">10€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">25€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">50€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">100€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">250€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">500€</button>
+                                                </div>
+                                                <div class="col-4 col-sm-3 mb-3">
+                                                    <button class="btn donation-btn">1000€</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <div class="form-group position-relative">
+                                                    <input type="text" id="shelterFilter" class="form-control"
+                                                        placeholder="Escolha o parceiro...">
+                                                    <ul class="list-group position-absolute w-100 d-none"
+                                                        id="shelterList">
+                                                        <li class="list-group-item">Animal Haven</li>
+                                                        <li class="list-group-item">Pet Haven</li>
+                                                        <li class="list-group-item">SPCA</li>
+                                                        <li class="list-group-item">Best Friends Animal Society</li>
+                                                        <li class="list-group-item">Humane Society</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input custom-checkbox"
+                                                        id="directBuscaPatas">
+                                                    <label class="form-check-label custom-label"
+                                                        for="directBuscaPatas">Doar diretamente à BuscaPatas</label>
+                                                </div>
+                                            </div>
+                                            <div class="custom-amount d-flex align-items-center mt-3">
+                                                <label for="customAmount" class="me-2">€</label>
+                                                <input type="number" id="customAmount" class="form-control me-3"
+                                                    placeholder="Inserir valor personalizado">
+                                            </div>
+                                            <button class="btn btn-donate">Donate</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="form-group position-relative">
-                                    <input type="text" id="shelterFilter" class="form-control" placeholder="Escolha o parceiro...">
-                                    <!-- Placeholder (temporary) for the animal shelter selection -->
-                                    <ul class="list-group position-absolute w-100 d-none" id="shelterList">
-                                        <li class="list-group-item">Animal Haven</li>
-                                        <li class="list-group-item">Pet Haven</li>
-                                        <li class="list-group-item">SPCA</li>
-                                        <li class="list-group-item">Best Friends Animal Society</li>
-                                        <li class="list-group-item">Humane Society</li>
-                                    </ul>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input custom-checkbox" id="directBuscaPatas">
-                                    <label class="form-check-label custom-label" for="directBuscaPatas">Doar diretamente à BuscaPatas</label>
-                                </div>
-                            </div>
-                            <div class="custom-amount d-flex align-items-center mt-3">
-                                <label for="customAmount" class="me-2">€</label>
-                                <input type="number" id="customAmount" class="form-control me-3"
-                                    placeholder="Inserir valor personalizado">
-                            </div>
-                            <button class="btn btn-donate ">Donate</button>
-                        </div>
+                        </section>
                     </div>
                 </div>
-    </section>
+
             </div>
-            <div class="support__item">
-                <h5>Comprar Produtos</h5>
+            <div class="support__item merch">
+                <h3>Comprar Produtos</h3>
                 <p>
                     Todos os lucros obtidos com a venda dos produtos são usados para a manutenção da plataforma.
                 </p>

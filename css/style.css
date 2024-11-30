@@ -1918,7 +1918,6 @@ ol {
 	color: white;
 	transition: all 0.3s ease;
 	width: 25%;
-	height: 50px;
 	font-size: 25px;
 	font-weight: 600;
 	letter-spacing: 2px;
@@ -1935,7 +1934,6 @@ ol {
 	background-color: #ff5d00;
 	color: #ffffff;
 }
-
 
 .banner .left-img {
 	position: absolute;
@@ -1966,7 +1964,7 @@ ol {
 .suggestion {
 	padding-top: 3%;
 	padding-bottom: 2%;
-	background-color: #EFEADE;
+	background-color: #FFCD89;
 }
 
 .suggestion__content {
@@ -1976,8 +1974,13 @@ ol {
 }
 
 .suggestion__content .section-title h4 {
-	font-size: 25px;
-	font-weight: 700;
+	padding: 4px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #181307;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	border: 2px solid #FFFFFF;
 }
 
 .suggestion__item {
@@ -1985,10 +1988,11 @@ ol {
 	align-items: center;
 	justify-content: space-between;
 	padding: 5%;
-	border: 2% solid #FFFFFF;
-	border-radius: 2%;
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
 	margin-bottom: 8%;
 	background-color: #FFFFFF;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .suggestion__item__pic {
@@ -2288,6 +2292,41 @@ ol {
 /*---------------------
   Donations
 -----------------------*/
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 .donation-section {
 	border: 1px solid #ddd;
@@ -2696,6 +2735,7 @@ ol {
 .footer {
 	padding: 20px;
 	border-top: 1px solid #e1e1e1;
+	background: #F8F9FA;
 }
 
 .footer__logo {
@@ -6264,35 +6304,46 @@ button.btn-secondary:hover {
   Apoiar
 -----------------------*/
 
-.support p {
-	font-size: 16px;
-	color: #181307;
-	line-height: 1.6;
-	text-align: center;
-}
-
-.support__item h5 {
-	font-size: 32px;
-	font-weight: 700;
-	text-align: left;
-	color: #FF823A;
-}
-
-.support__item p {
-	font-size: 16px;
-	color: #181307;
-	line-height: 1.6;
-	text-align: left;
-}
-
-.support__item .adoption {
+.support__item .btn_lf {
 	background-color: #FF823A;
 	color: #FFFFFF;
 	border-radius: 8px;
+	font-size: 20px;
+	width: 150px;
 }
 
-.support__item .adoption:hover {
+.support__item .btn_lf:hover {
 	background-color: #FFAD7E;
+}
+
+.support__item {
+	background-color: #F8F9FA;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin: 30px 0 30px 0;
+}
+
+.support__item .details {
+	font-size: 14px;
+	padding: 0;
+    display: block;
+    margin: 5px 0 15px 0;
+}
+
+#moreDetails p{
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+#moreDetails li{
+	font-size: 14px;
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+
+#moreDetails{
+	margin: 0 0 20px 0;
 }
 
 #shelterList {

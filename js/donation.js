@@ -32,3 +32,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const donationButton = document.getElementById("donation_button");
+    const donationModal = document.getElementById("donationModal");
+    const closeModal = document.getElementById("closeModal");
+
+    // Open the modal
+    donationButton.addEventListener("click", () => {
+        donationModal.classList.remove("d-none");
+    });
+
+    // Close the modal
+    closeModal.addEventListener("click", () => {
+        donationModal.classList.add("d-none");
+    });
+
+    // Close the modal by clicking outside the modal content
+    donationModal.addEventListener("click", (event) => {
+        if (event.target === donationModal) {
+            donationModal.classList.add("d-none");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const detailsButton = document.getElementById("details");
+    const moreDetails = document.getElementById("moreDetails");
+
+    detailsButton.addEventListener("click", () => {
+        if (moreDetails.classList.contains("d-none")) {
+            moreDetails.classList.remove("d-none");
+            detailsButton.textContent = "Mostrar Menos";
+        } else {
+            moreDetails.classList.add("d-none");
+            detailsButton.textContent = "Saber Mais";
+        }
+    });
+});
