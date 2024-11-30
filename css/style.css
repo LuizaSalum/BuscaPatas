@@ -6335,6 +6335,10 @@ button.btn-secondary:hover {
   Apoiar
 -----------------------*/
 
+.support.spad {
+	padding-bottom: 20px;
+}
+
 .support__item .btn_lf {
 	background-color: #FF823A;
 	color: #FFFFFF;
