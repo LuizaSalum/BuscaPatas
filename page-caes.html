@@ -77,8 +77,8 @@
                             <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
                             <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                <li><a href="./breed-info.html">Raças & Cuidados</a></li>
-                                <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
@@ -206,44 +206,67 @@
                             </div>
                             <div class="categories__accordion">
                                 <div class="accordion" id="accordionExample">
+                                    <!-- Filtros por Raça -->
                                     <div class="card">
-                                        <div class="card-heading active">
-                                            <a data-toggle="collapse" data-target="#collapseBreed">Raça</a>
+                                        <!-- Collapsible Trigger -->
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
+                                                role="button" aria-expanded="true" aria-controls="collapseBreed">
+                                                Raça
+                                            </a>
                                         </div>
+                                        <!-- Collapsible Content -->
                                         <div id="collapseBreed" class="collapse show" data-parent="#accordionExample">
                                             <div class="card-body">
+                                                <!-- Filter Options -->
                                                 <ul>
-                                                    <li><a href="#">Labrador</a></li>
-                                                    <li><a href="#">Bulldog</a></li>
-                                                    <li><a href="#">Poodle</a></li>
+                                                    <li><a class="filter-option" data-type="breed" data-value="Labrador"
+                                                            href="#">Labrador</a></li>
+                                                    <li><a class="filter-option" data-type="breed" data-value="Bulldog"
+                                                            href="#">Bulldog</a></li>
+                                                    <li><a class="filter-option" data-type="breed" data-value="Poodle"
+                                                            href="#">Poodle</a></li>
+                                                    <li><a class="filter-option" data-type="breed" data-value="Husky"
+                                                            href="#">Husky</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Filtros por Idade -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a data-toggle="collapse" data-target="#collapseAge">Idade</a>
+                                            <a class="filter-option" data-toggle="collapse"
+                                                data-target="#collapseAge">Idade</a>
                                         </div>
                                         <div id="collapseAge" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Filhote</a></li>
-                                                    <li><a href="#">Adulto</a></li>
-                                                    <li><a href="#">Idoso</a></li>
+                                                    <li><a class="filter-option" data-type="age"
+                                                            data-value="Filhote">Filhote</a></li>
+                                                    <li><a class="filter-option" data-type="age"
+                                                            data-value="Adulto">Adulto</a></li>
+                                                    <li><a class="filter-option" data-type="age"
+                                                            data-value="Idoso">Idoso</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Filtros por Porte -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a data-toggle="collapse" data-target="#collapseSize">Porte</a>
+                                            <a class="filter-option" data-toggle="collapse"
+                                                data-target="#collapseSize">Porte</a>
                                         </div>
                                         <div id="collapseSize" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Pequeno</a></li>
-                                                    <li><a href="#">Médio</a></li>
-                                                    <li><a href="#">Grande</a></li>
+                                                    <li><a class="filter-option" data-type="size"
+                                                            data-value="Pequeno">Pequeno</a></li>
+                                                    <li><a class="filter-option" data-type="size"
+                                                            data-value="Médio">Médio</a></li>
+                                                    <li><a class="filter-option" data-type="size"
+                                                            data-value="Grande">Grande</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -258,10 +281,10 @@
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/details/dogtest4.jpg">
+                            <div class="product__item" data-breed="Labrador" data-age="Adulto" data-size="Médio">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/details/luna4.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/dogtest4.jpg" class="image-popup"><span
+                                        <li><a href="img/product/details/luna4.png" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
 
@@ -269,25 +292,25 @@
                                 </div>
                                 <div class="product__item__text">
                                     <a href="./details-cao.html">
-                                        <h6>Buddy</h6>
-                                        <p>Raça: Labrador | Idade: 2 anos | Porte: Grande</p>
+                                        <h6>Luna</h6>
+                                        <p>Raça: Labrador Retriever | Idade: 2 anos | Porte: Médio</p>
                                         <button class="adopt-btn">Adotar</button>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/details/dogtest3.jpg">
+                            <div class="product__item" data-breed="Husky" data-age="Adulto" data-size="Médio">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/details/husky.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/dogtest3.jpg" class="image-popup"><span
+                                        <li><a href="img/product/details/husky.png" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Buddy</a></h6>
-                                    <p>Raça: Labrador | Idade: 2 anos | Porte: Grande</p>
+                                    <p>Raça: Husky | Idade: 2 anos | Porte: Grande</p>
                                     <button class="adopt-btn">Adotar</button>
                                 </div>
                             </div>

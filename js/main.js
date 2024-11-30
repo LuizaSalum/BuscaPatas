@@ -448,5 +448,54 @@ document.addEventListener("DOMContentLoaded", () => {
             searchInputBar.value = query;
         }
     }
-    console.log(searchOverlay, searchCloseSwitch, searchInput, searchForm);   
+    console.log(searchOverlay, searchCloseSwitch, searchInput, searchForm);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize filters
+    const filters = {
+        breed: null,
+        age: null,
+        size: null,
+    };
+
+    // Get all filter options and product items
+    const filterOptions = document.querySelectorAll('.filter-option');
+    const productItems = document.querySelectorAll('.product__item');
+
+    // Add event listeners to filter options
+    filterOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            const type = option.getAttribute('data-type'); // Filter type (breed, age, size)
+            const value = option.getAttribute('data-value'); // Filter value (e.g., Labrador)
+
+            // Update active class for the clicked filter
+            const siblings = option.closest('ul').querySelectorAll('.filter-option');
+            siblings.forEach(sibling => sibling.classList.remove('active'));
+            option.classList.add('active');
+
+            // Update the filters object
+            filters[type] = value;
+
+            // Apply the filters
+            applyFilters();
+        });
+    });
+
+    // Function to apply filters
+    function applyFilters() {
+        productItems.forEach(item => {
+            const matchesBreed = !filters.breed || item.getAttribute('data-breed') === filters.breed;
+            const matchesAge = !filters.age || item.getAttribute('data-age') === filters.age;
+            const matchesSize = !filters.size || item.getAttribute('data-size') === filters.size;
+
+            // Show or hide the item based on filter match
+            if (matchesBreed && matchesAge && matchesSize) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
 });

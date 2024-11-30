@@ -3650,7 +3650,7 @@ ol {
 }
 
 .categories__accordion .card-heading a {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 500;
 	color: #181307;
 	display: block;
@@ -4006,10 +4006,17 @@ ol {
 .product__details__text h5 {
 	padding: 2px 0;
 	color: #24262b;
+	margin-bottom: 5px;
+}
+
+.product__details__text h5 strong {
+	font-size: 18px;
+	color: #181307;
+	font-weight: 700;
 }
 
 .product__details__text h5 span {
-	font-size: 14px;
+	font-size: 15px;
 	color: #24262b;
 }
 
@@ -4353,6 +4360,13 @@ ol {
 	color: #181307;
 	font-weight: 600;
 	margin-bottom: 24px;
+}
+
+.tab-content .tab-pane h5 {
+	font-size: 34px;
+    color: #FF823A;
+    font-weight: 800;
+    margin-bottom: 24px;
 }
 
 .tab-content .tab-pane p:last-child {
@@ -4766,7 +4780,7 @@ ol {
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 4px 10px 20px 2px rgba(0, 0, 0, 0.1);
-
+	display: block;
 	margin-bottom: 30px;
 	overflow: hidden;
 	text-align: center;
