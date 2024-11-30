@@ -2310,11 +2310,14 @@ ol {
 /* Modal Content */
 .modal-content {
     background: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 1000px;
     width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 /* Close Button */
@@ -2326,164 +2329,192 @@ ol {
     background: none;
     border: none;
     cursor: pointer;
+    color: #000;
 }
-
+/* Donation Section */
 .donation-section {
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	padding: 20px;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	margin-bottom: 120px;
+    border-radius: 8px;
+	padding-bottom: 20px;
+    background-color: #fff;
 }
 
-.donation-section h1 {
-	font-family: "Nunito", sans-serif;
-	font-weight: 900;
-	font-size: 70px;
-}
-
-@media screen and (max-width: 768px) {
-	.donation-section h1 {
-		font-size: 40px;
-	}
-
+.donation-section h2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .donation-section h5 {
-	font-weight: 700;
-	margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3F392B;
 }
 
+/* Donation Buttons */
 .donation-buttons .donation-btn {
-	width: 100%;
-	margin-bottom: 10px;
-	font-weight: bold;
-	background-color: #FFFFFF;
-	color: #fcbc64;
-	transition: all 0.3s ease;
-	border: 1px solid #fcbc64
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #fcbc64;
+    transition: all 0.3s ease;
+    border: 1px solid #fcbc64;
 }
 
 .donation-buttons .donation-btn:hover {
-	background-color: #FFCD89;
-	color: #ffffff;
-	transform: scale(1.05);
+    background-color: #FFCD89;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .donation-btn.active {
-	background-color: #fcbc64;
-	color: #ffffff;
+    background-color: #fcbc64;
+    color: #ffffff;
 }
 
-.donation-buttons .custom-amount {
-	display: flex;
-	align-items: center;
-	margin-top: 10px;
-	width: 30%;
-}
-
-.donation-buttons .custom-amount #customAmount {
-	margin-left: 10px;
-}
-
-.donation-buttons .custom-amount .me-2 {
+/* Donation Amount Input */
+.custom-amount {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+	width: 100%;
 	position: relative;
-	top: 4px;
-	font-size: 20px;
 }
 
-.donation-buttons .custom-amount .form-check {
-	position: absolute;
-	right: 40px;
+.custom-amount label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-.donation-buttons .custom-amount input {
-	flex: 1;
+.custom-amount input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+
+.custom-amount::after {
+    content: '€';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #3F392B;
+    pointer-events: none;
+}
+
+#shelterList {
+	max-height: 150px;
+	overflow-y: auto;
+	z-index: 1000;
 	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#shelterList.d-none {
+	display: none;
+}
+
+#shelterList .list-group-item:hover {
+	background-color: #f8f9fa;
+	cursor: pointer;
+}
+
+/* Checkboxes */
+
+#selectDirect {
+	margin-left: 10px;
+	vertical-align: middle;
+}
 
 .custom-checkbox {
-	appearance: none;
-	width: 20px;
-	height: 20px;
-	outline: none;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	position: relative;
-	top: 5px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
 }
 
 .custom-checkbox:checked {
-	background-color: #FF823A;
+    background-color: #FF823A;
+    border-color: #FF823A;
 }
 
 .custom-checkbox:checked::after {
-	content: '✔';
-	display: block;
-	color: #ffffff;
-	font-size: 16px;
-	position: absolute;
-	left: 3px;
-	top: 1px;
-	line-height: 1;
-	width: 100%;
+    content: '✔';
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    line-height: 1;
 }
 
+/* Donate Button */
 .btn-donate {
-	background-color: #75CE89;
-	color: white;
-	transition: all 0.3s ease;
-	width: 100%;
-	height: 40px;
-	font-size: 20px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	margin-top: 10px;
+    background-color: #75CE89;
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn-donate:hover {
-	background-color: #A2D2AD;
-	color: #ffffff;
-	transform: scale(1.05);
+    background-color: #A2D2AD;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .btn-donate:active {
-	background-color: #00c52e;
-	color: #ffffff;
+    background-color: #00c52e;
+    color: #ffffff;
 }
 
-.sidebar_homepage {
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	padding: 20px;
-	background-color: #f8f9fa;
-}
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        padding: 15px;
+    }
 
-.sidebar_homepage h5 {
-	margin-bottom: 20px;
-}
+    .donation-section h2 {
+        font-size: 28px;
+    }
 
-.sidebar_homepage ul {
-	list-style-type: none;
-	padding: 0;
-}
+    .donation-section h5 {
+        font-size: 16px;
+    }
 
-.sidebar_homepage ul li {
-	margin-bottom: 10px;
-}
+    .custom-amount {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.sidebar_homepage ul li a {
-	text-decoration: none;
-	color: #67BFCC;
-	font-weight: bold;
-}
+    .custom-amount label {
+        margin-bottom: 5px;
+    }
 
-.sidebar_homepage ul li a:hover {
-	text-decoration: underline;
+    .btn-donate {
+        font-size: 16px;
+    }
 }
 
 /*---------------------
@@ -6325,6 +6356,7 @@ button.btn-secondary:hover {
 }
 
 .support__item .details {
+	color: #817A68;
 	font-size: 14px;
 	padding: 0;
     display: block;
@@ -6332,11 +6364,13 @@ button.btn-secondary:hover {
 }
 
 #moreDetails p{
+	color: #817A68;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
 #moreDetails li{
+	color: #817A68;
 	font-size: 14px;
 	margin-bottom: 0;
 	margin-left: 20px;
@@ -6344,24 +6378,6 @@ button.btn-secondary:hover {
 
 #moreDetails{
 	margin: 0 0 20px 0;
-}
-
-#shelterList {
-	max-height: 200px;
-	overflow-y: auto;
-	z-index: 1000;
-	border: 1px solid #ccc;
-	background-color: #fff;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#shelterList.d-none {
-	display: none;
-}
-
-#shelterList .list-group-item:hover {
-	background-color: #f8f9fa;
-	cursor: pointer;
 }
 
 /*---------------------
