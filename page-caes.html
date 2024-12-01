@@ -204,54 +204,53 @@
                             <div class="section-title">
                                 <h4>Filtros</h4>
                             </div>
+                            <!-- Botões para Filtrar e Limpar -->
+                            <div class="filter-buttons">
+                                <button id="clear-filters" class="btn btn-primary">Limpar Filtros</button>
+                            </div>
                             <div class="categories__accordion">
                                 <div class="accordion" id="accordionExample">
-                                    <!-- Filtros por Raça -->
+                                    <!-- Filtros por Idade -->
                                     <div class="card">
-                                        <!-- Collapsible Trigger -->
                                         <div class="card-heading">
-                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
-                                                role="button" aria-expanded="true" aria-controls="collapseBreed">
-                                                Raça
-                                            </a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseAge"
+                                                role="button" aria-expanded="true" aria-controls="collapseAge">Idade</a>
                                         </div>
-                                        <!-- Collapsible Content -->
-                                        <div id="collapseBreed" class="collapse show" data-parent="#accordionExample">
+                                        <div id="collapseAge" class="collapse show" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <!-- Filter Options -->
                                                 <ul>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Labrador"
-                                                            href="#">Labrador</a></li>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Bulldog"
-                                                            href="#">Bulldog</a></li>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Dachshund"
-                                                            href="#">Dachshund</a></li>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Husky"
-                                                            href="#">Husky</a></li>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Golden Retriever"
-                                                            href="#">Golden Retriever</a></li>
-                                                    <li><a class="filter-option" data-type="breed" data-value="Beagle"
-                                                            href="#">Beagle</a></li>       
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Filhote"> Filhote (0-2 anos)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Adulto"> Adulto (2-7 anos)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Idoso"> Idoso (7+ anos)</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Filtros por Idade -->
+                                    <!-- Filtros por Raça -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a class="filter-option" data-toggle="collapse"
-                                                data-target="#collapseAge">Idade</a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
+                                                role="button" aria-expanded="true"
+                                                aria-controls="collapseBreed">Raça</a>
                                         </div>
-                                        <div id="collapseAge" class="collapse" data-parent="#accordionExample">
+                                        <div id="collapseBreed" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a class="filter-option" data-type="age"
-                                                            data-value="Filhote">Filhote (0 aos 2 anos)</a></li>
-                                                    <li><a class="filter-option" data-type="age"
-                                                            data-value="Adulto">Adulto (2 aos 7 anos)</a></li>
-                                                    <li><a class="filter-option" data-type="age"
-                                                            data-value="Idoso">Idoso (7+ anos)</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Labrador"> Labrador</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Bulldog"> Bulldog</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Dachshund"> Dachshund</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Husky"> Husky</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Golden Retriever"> Golden Retriever</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Beagle"> Beagle</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -259,18 +258,19 @@
                                     <!-- Filtros por Porte -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a class="filter-option" data-toggle="collapse"
-                                                data-target="#collapseSize">Porte</a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseSize"
+                                                role="button" aria-expanded="true"
+                                                aria-controls="collapseSize">Porte</a>
                                         </div>
                                         <div id="collapseSize" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a class="filter-option" data-type="size"
-                                                            data-value="Pequeno">Pequeno</a></li>
-                                                    <li><a class="filter-option" data-type="size"
-                                                            data-value="Médio">Médio</a></li>
-                                                    <li><a class="filter-option" data-type="size"
-                                                            data-value="Grande">Grande</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Pequeno"> Pequeno</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Médio"> Médio</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Grande"> Grande</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -280,50 +280,52 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Main Adoption Cards -->
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Labrador" data-age="Adulto" data-size="Médio">
+                        <div class="col-lg-4 col-md-6 product-item" data-breed="Labrador" data-age="Adulto"
+                            data-size="Médio">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/luna4.png">
                                     <ul class="product__hover">
                                         <li><a href="img/product/details/luna4.png" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <a href="./details-cao.html">
                                         <h6>Luna</h6>
-                                        <p>Raça: Labrador Retriever | Idade: 2 anos | Porte: Médio</p>
+                                        <p>Raça: Labrador Retriever | Idade: Adulto | Porte: Médio</p>
                                         <button class="adopt-btn">Adotar</button>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Golden Retriever" data-age="Jovem" data-size="Grande">
+                        <div class="col-lg-4 col-md-6 product-item" data-breed="Golden Retriever" data-age="Jovem"
+                            data-size="Grande">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/golden.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/golden.png" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                        <li><a href="img/product/details/golden.png" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Max</a></h6>
-                                    <p>Raça: Golden Retriever | Idade: Jovem | Porte: Grande</p>
+                                    <p>Raça: Golden Retriever | Idade: Adulto | Porte: Grande</p>
                                     <button class="adopt-btn">Adotar</button>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Beagle" data-age="Adulto" data-size="Médio">
+
+                        <div class="col-lg-4 col-md-6 product-item" data-breed="Beagle" data-age="Adulto" data-size="Médio">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/beagle.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/beagle.png" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                        <li><a href="img/product/details/beagle.png" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
@@ -334,12 +336,13 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Dachshund" data-age="Idoso" data-size="Pequeno">
+
+                        <div class="col-lg-4 col-md-6 product-item" data-breed="Dachshund" data-age="Idoso" data-size="Pequeno">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/dachshund.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/dachshund.png" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                        <li><a href="img/product/details/dachshund.png" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
@@ -351,11 +354,12 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Pug" data-age="Adulto" data-size="Pequeno">
+                        <div class="col-lg-4 col-md-6 product-item" data-breed="Pug" data-age="Adulto" data-size="Pequeno">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/pug.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/product/details/pug.png" class="image-popup"><span class="arrow_expand"></span></a></li>
+                                        <li><a href="img/product/details/pug.png" class="image-popup"><span
+                                                    class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
@@ -366,19 +370,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="product__item" data-breed="Bulldog" data-age="Filhote" data-size="Pequeno">
+                        <div class="col-lg-4 col-md-6 product-item"  data-breed="Bulldog" data-age="Filhote" data-size="Pequeno">
+                            <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/details/bulldog.png">
                                     <ul class="product__hover">
                                         <li><a href="img/product/details/bulldog.png" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Buddy</a></h6>
-                                    <p>Raça: Bulldog | Idade: 1 anos | Porte: Pequeno</p>
+                                    <p>Raça: Bulldog | Idade: Filhote | Porte: Pequeno</p>
                                     <button class="adopt-btn">Adotar</button>
                                 </div>
                             </div>

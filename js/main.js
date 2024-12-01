@@ -263,12 +263,6 @@ buttons.forEach(button => {
     });
 });
 
-// Add event listener to the input to clear the active state when typing a custom amount
-customAmountInput.addEventListener('input', () => {
-    buttons.forEach(btn => btn.classList.remove('active'));
-});
-
-
 /*-------------------
         Filtering Logic
     --------------------- */
@@ -448,72 +442,52 @@ document.addEventListener("DOMContentLoaded", () => {
             searchInputBar.value = query;
         }
     }
-    console.log(searchOverlay, searchCloseSwitch, searchInput, searchForm);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize filters
-    const filters = {
-        breed: null,
-        age: null,
-        size: null,
-    };
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll(".filter-checkbox");
+    const clearFiltersButton = document.getElementById("clear-filters");
+    const products = document.querySelectorAll(".product-item");
 
-    // Get all filter options and product items
-    const filterOptions = document.querySelectorAll('.filter-option');
-    const productItems = document.querySelectorAll('.product__item');
+    // Atualizar os filtros
+    const updateFilters = () => {
+        const activeFilters = {};
 
-    // Add event listeners to filter options
-    filterOptions.forEach(option => {
-        option.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
-            const type = option.getAttribute('data-type'); // Filter type (breed, age, size)
-            const value = option.getAttribute('data-value'); // Filter value (e.g., Labrador)
-
-            // Update active class for the clicked filter
-            const siblings = option.closest('ul').querySelectorAll('.filter-option');
-            siblings.forEach(sibling => sibling.classList.remove('active'));
-            option.classList.add('active');
-
-            // Update the filters object
-            filters[type] = value;
-
-            // Apply the filters
-            applyFilters();
-        });
-    });
-
-    // Function to apply filters
-    function applyFilters() {
-        productItems.forEach(item => {
-            const matchesBreed = !filters.breed || item.getAttribute('data-breed') === filters.breed;
-            const matchesAge = !filters.age || item.getAttribute('data-age') === filters.age;
-            const matchesSize = !filters.size || item.getAttribute('data-size') === filters.size;
-
-            // Show or hide the item based on filter match
-            if (matchesBreed && matchesAge && matchesSize) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                const type = checkbox.dataset.type;
+                if (!activeFilters[type]) activeFilters[type] = [];
+                activeFilters[type].push(checkbox.value);
             }
         });
-    }
+
+        products.forEach((product) => {
+            let isVisible = true;
+
+            for (const [type, values] of Object.entries(activeFilters)) {
+                const productValue = product.dataset[type];
+                if (!values.includes(productValue)) {
+                    isVisible = false;
+                    break;
+                }
+            }
+
+            product.style.display = isVisible ? "block" : "none";
+        });
+    };
+
+    // Listener para os checkboxes
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", updateFilters);
+    });
+
+    // Limpar filtros
+    clearFiltersButton.addEventListener("click", () => {
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = false;
+        });
+        updateFilters();
+    });
+
+    updateFilters();
 });
-
-function initMap() {
-    // Coordenadas fornecidas
-    const location = { lat: 38.722944, lng: -9.184625 };
-    
-    // Criação do mapa com zoom ajustado
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10, // Ajuste do nível de zoom (menor = mais afastado)
-        center: location,
-    });
-
-    // Adicionando o marcador (ping)
-    new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Localização Específica", // Texto ao passar o mouse
-    });
-}

@@ -2295,119 +2295,120 @@ ol {
 
 /* Modal Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
 }
 
 /* Modal Content */
 .modal-content {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 1000px;
-    width: 90%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow-y: auto;
-    max-height: 90vh;
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+	max-width: 1000px;
+	width: 90%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow-y: auto;
+	max-height: 90vh;
 }
 
 /* Close Button */
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #000;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #000;
 }
+
 /* Donation Section */
 .donation-section {
-    border-radius: 8px;
+	border-radius: 8px;
 	padding-bottom: 20px;
-    background-color: #fff;
+	background-color: #fff;
 }
 
 .donation-section h2 {
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 36px;
-    margin-bottom: 10px;
-    text-align: center;
+	font-family: "Nunito", sans-serif;
+	font-weight: 900;
+	font-size: 36px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 .donation-section h5 {
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #3F392B;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-align: center;
+	color: #3F392B;
 }
 
 /* Donation Buttons */
 .donation-buttons .donation-btn {
-    width: 100%;
-    margin-bottom: 10px;
-    font-weight: bold;
-    background-color: #FFFFFF;
-    color: #fcbc64;
-    transition: all 0.3s ease;
-    border: 1px solid #fcbc64;
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #fcbc64;
+	transition: all 0.3s ease;
+	border: 1px solid #fcbc64;
 }
 
 .donation-buttons .donation-btn:hover {
-    background-color: #FFCD89;
-    color: #ffffff;
-    transform: scale(1.05);
+	background-color: #FFCD89;
+	color: #ffffff;
+	transform: scale(1.05);
 }
 
 .donation-btn.active {
-    background-color: #fcbc64;
-    color: #ffffff;
+	background-color: #fcbc64;
+	color: #ffffff;
 }
 
 /* Donation Amount Input */
 .custom-amount {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
 	width: 100%;
 	position: relative;
 }
 
 .custom-amount label {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-right: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-right: 10px;
 }
 
 .custom-amount input {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
+	flex: 1;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 8px;
 	padding-right: 30px;
 	box-sizing: border-box;
 }
 
 .custom-amount::after {
-    content: '€';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    color: #3F392B;
-    pointer-events: none;
+	content: '€';
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1rem;
+	color: #3F392B;
+	pointer-events: none;
 }
 
 #shelterList {
@@ -2436,90 +2437,90 @@ ol {
 }
 
 .custom-checkbox {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 10px;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-right: 10px;
 }
 
 .custom-checkbox:checked {
-    background-color: #FF823A;
-    border-color: #FF823A;
+	background-color: #FF823A;
+	border-color: #FF823A;
 }
 
 .custom-checkbox:checked::after {
-    content: '✔';
-    display: block;
-    color: #ffffff;
-    font-size: 16px;
-    position: absolute;
-    left: 3px;
-    top: 1px;
-    line-height: 1;
+	content: '✔';
+	display: block;
+	color: #ffffff;
+	font-size: 16px;
+	position: absolute;
+	left: 3px;
+	top: 1px;
+	line-height: 1;
 }
 
-.custom-label{
+.custom-label {
 	margin-left: 6px;
 	margin-top: 3px;
 }
 
 /* Donate Button */
 .btn-donate {
-    background-color: #75CE89;
-    color: white;
-    transition: all 0.3s ease;
-    width: 100%;
-    height: 45px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+	background-color: #75CE89;
+	color: white;
+	transition: all 0.3s ease;
+	width: 100%;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .btn-donate:hover {
-    background-color: #A2D2AD;
-    color: #ffffff;
-    transform: scale(1.05);
+	background-color: #A2D2AD;
+	color: #ffffff;
+	transform: scale(1.05);
 }
 
 .btn-donate:active {
-    background-color: #00c52e;
-    color: #ffffff;
+	background-color: #00c52e;
+	color: #ffffff;
 }
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
-    .modal-content {
-        padding: 15px;
-    }
+	.modal-content {
+		padding: 15px;
+	}
 
-    .donation-section h2 {
-        font-size: 28px;
-    }
+	.donation-section h2 {
+		font-size: 28px;
+	}
 
-    .donation-section h5 {
-        font-size: 16px;
-    }
+	.donation-section h5 {
+		font-size: 16px;
+	}
 
-    .custom-amount {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+	.custom-amount {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-    .custom-amount label {
-        margin-bottom: 5px;
-    }
+	.custom-amount label {
+		margin-bottom: 5px;
+	}
 
-    .btn-donate {
-        font-size: 16px;
-    }
+	.btn-donate {
+		font-size: 16px;
+	}
 }
 
 /*---------------------
@@ -3676,7 +3677,7 @@ ol {
 .categories__accordion .card-body li:before {
 	position: absolute;
 	left: 4px;
-	top: 14px;
+	top: 12px;
 	height: 1px;
 	width: 4px;
 	background: #181307;
@@ -3719,6 +3720,87 @@ ol {
 	position: absolute;
 	right: 30px;
 	top: -1px;
+}
+
+.filter-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.filter-buttons .btn {
+	width: 48%;
+	padding: 8px;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+.filter-buttons .btn-primary {
+	background-color: #FFB550;
+	color: #ffffff;
+	border: none;
+	transition: all 0.3s ease;
+}
+
+.filter-buttons .btn-secondary:hover {
+	background-color: transparent;
+	color: #ffffff;
+}
+
+.filter-checkbox {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	border: 2px solid #FFA500;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	background-color: white;
+	transition: all 0.3s ease;
+}
+
+.filter-checkbox:checked {
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+
+.filter-checkbox:checked::after {
+	content: '✔';
+	color: white;
+	font-size: 10px;
+	position: absolute;
+	left: 3px;
+	top: 1px;
+	font-weight: bold;
+}
+
+.filter-checkbox+label {
+	font-weight: 500;
+	font-size: 16px;
+	color: #333;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.categories__accordion ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.categories__accordion ul li {
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.categories__accordion ul li label {
+	margin: 0;
 }
 
 .sidebar__filter {
@@ -4139,16 +4221,19 @@ ol {
 	line-height: 50px;
 	text-align: center;
 	padding-top: 1px;
+	color: #fff;
 }
 
 .product__details__button ul li :hover {
-	border-color: #c21e2e8a;
-	background-color: #d1636e8a;
+	border-color: #ff823aaf;
+	background-color: #ff823a3b;
 	transition: all 0.2s ease-in-out;
+	color: #fff;
 }
 
-.product__details__button ul li a :hover{
+.product__details__button ul li a :hover {
 	background-color: transparent;
+	color: #fff;
 }
 
 .product__details__button ul li a span {
@@ -4383,9 +4468,9 @@ ol {
 
 .tab-content .tab-pane h5 {
 	font-size: 34px;
-    color: #FF823A;
-    font-weight: 800;
-    margin-bottom: 24px;
+	color: #FF823A;
+	font-weight: 800;
+	margin-bottom: 24px;
 }
 
 .tab-content .tab-pane p:last-child {
@@ -4400,62 +4485,89 @@ ol {
 	margin-bottom: 35px;
 }
 
-.tab-content .tab-pane  h6 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+.tab-content .tab-pane h6 {
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 15px;
 	margin-top: 15px;
-    color: #ff823a;
-    padding-bottom: 5px;
+	color: #ff823a;
+	padding-bottom: 5px;
 }
 
 /* Estilo para a lista */
 .tab-content .tab-pane h ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 .tab-content .tab-pane ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    display: flex;
-    color: #34495e;
+	margin-bottom: 10px;
+	font-size: 1rem;
+	display: flex;
+	color: #34495e;
 }
+
 .tab-content .tab-pane ul li strong {
-    margin-right: 4px
+	margin-right: 4px
 }
 
 .tab-content .tab-pane ul li i {
-    margin-right: 10px;
-    color: #f39c12;
-    font-size: 1.2rem;
+	margin-right: 10px;
+	color: #f39c12;
+	font-size: 1.2rem;
 }
 
 /* Sublista */
 .tab-content .tab-pane ul li ul {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 .tab-content .tab-pane ul li ul li {
-    font-size: 0.95rem;
-    color: #7f8c8d;
+	font-size: 0.95rem;
+	color: #7f8c8d;
 }
 
 /* Estilo para links */
 .tab-content .tab-pane ul li a {
-    text-decoration: none;
-    color: #2980b9;
-    font-weight: bold;
-    transition: color 0.3s ease;
+	text-decoration: none;
+	color: #2980b9;
+	font-weight: bold;
+	transition: color 0.3s ease;
 }
 
 .tab-content .tab-pane ul li a:hover {
-    color: #f39c12;
+	color: #f39c12;
 }
+
 /* Mapa */
 .map-container iframe {
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse-rotate {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+
+	50% {
+		transform: scale(1.5) rotate(15deg);
+	}
+
+	100% {
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+#like-icon-1 span {
+	display: inline-block;
+	transition: color 0.3s ease;
+}
+
+#like-icon-1.active span {
+	animation: pulse-rotate 0.5s ease-in-out;
+	color: #ff0000;
+	/* Cor do coração ao clicar */
 }
 
 
@@ -4854,22 +4966,40 @@ ol {
 	height: auto;
 }
 
+.product-item {
+	display: block;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
 /* Animais Disponíveis para Adoção */
+.card-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .product__item {
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 4px 10px 20px 2px rgba(0, 0, 0, 0.1);
-	display: block;
-	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	overflow: hidden;
-	text-align: center;
+}
+
+.hidden {
+	display: none;
 }
 
 .product__item__pic {
-	position: relative;
+	width: 100%;
 	height: 200px;
 	background-size: cover;
 	background-position: center;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
 }
 
 .product__item__pic .product__hover {
@@ -6204,25 +6334,6 @@ ol {
 	box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
 }
 
-.animal-card {
-	border: 1px solid #e0e0e0;
-	border-radius: 10px;
-	overflow: hidden;
-	background-color: #fff;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s;
-}
-
-.animal-card:hover {
-	transform: translateY(-5px);
-}
-
-.animal-card img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-}
-
 .animal-info {
 	padding: 15px;
 	text-align: center;
@@ -6456,24 +6567,24 @@ button.btn-secondary:hover {
 	color: #817A68;
 	font-size: 14px;
 	padding: 0;
-    display: block;
-    margin: 5px 0 15px 0;
+	display: block;
+	margin: 5px 0 15px 0;
 }
 
-#moreDetails p{
+#moreDetails p {
 	color: #817A68;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
-#moreDetails li{
+#moreDetails li {
 	color: #817A68;
 	font-size: 14px;
 	margin-bottom: 0;
 	margin-left: 20px;
 }
 
-#moreDetails{
+#moreDetails {
 	margin: 0 0 20px 0;
 }
 
