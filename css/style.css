@@ -91,10 +91,6 @@ ol {
   Helper CSS
 -----------------------*/
 
-.section-title-subtitle {
-	margin-bottom: 50px;
-}
-
 .section-title-subtitle h2 {
 	text-align: center;
 }
@@ -4748,6 +4744,7 @@ ol {
 
 
 /* Animal Card */
+
 .animal-card {
 	box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 	border: none;
@@ -4949,13 +4946,13 @@ ol {
 	transition: all 0.3s ease;
 }
 
-.more-info h6{
+.more-info h6 {
 	font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    margin-top: 25px;
-    color: #ff823a;
-    padding-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	margin-top: 25px;
+	color: #ff823a;
+	padding-bottom: 5px;
 }
 
 
@@ -6339,12 +6336,6 @@ ol {
 	color: #181307;
 }
 
-.animal-info .btn {
-	margin-top: 10px;
-	font-size: 14px;
-}
-
-
 
 .animal-list h3 {
 	font-size: 24px;
@@ -6353,7 +6344,6 @@ ol {
 	padding-top: 20px;
 }
 
-
 .animal-card {
 	border: 1px solid #e0e0e0;
 	border-radius: 10px;
@@ -6361,6 +6351,7 @@ ol {
 	background-color: #fff;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s;
+	height: fit-content;
 }
 
 .animal-card:hover {
@@ -6394,6 +6385,64 @@ ol {
 .animal-info .btn {
 	margin-top: 10px;
 	font-size: 14px;
+}
+
+/* General Styling */
+.lost-found-section {
+	margin: 30px 0;
+}
+
+.section-title {
+	font-size: 24px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.red-title {
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+.green-title {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+/* Animal Card Styling */
+.animal-card {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.animal-card img {
+	width: 100%;
+	display: block;
+}
+
+.animal-info {
+	padding: 15px;
+	text-align: center;
+}
+
+.lost-card {
+	border-color: #f5c6cb;
+}
+
+.found-card {
+	border-color: #c3e6cb;
+}
+
+.btn-details {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 /*---------------------
@@ -6473,6 +6522,10 @@ button.btn-primary {
 
 button.btn-primary:hover {
 	background-color: #FFAD7E;
+}
+
+.btn-details:hover {
+	background-color: #0056b3;
 }
 
 button.btn-secondary {
