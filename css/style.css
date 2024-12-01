@@ -6382,11 +6382,6 @@ ol {
 	color: #181307;
 }
 
-.animal-info .btn {
-	margin-top: 10px;
-	font-size: 14px;
-}
-
 /* General Styling */
 .lost-found-section {
 	margin: 30px 0;
@@ -6437,12 +6432,12 @@ ol {
 }
 
 .btn-details {
-	background-color: #007bff;
+	background-color: rgb(255, 130, 58);
 	color: white;
 	border: none;
-	padding: 10px 15px;
 	border-radius: 5px;
 	cursor: pointer;
+	padding: .25rem .5rem;
 }
 
 /*---------------------
