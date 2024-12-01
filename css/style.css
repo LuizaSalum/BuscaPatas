@@ -4033,8 +4033,10 @@ ol {
 .product__details__adotar {
 	margin-top: 30px;
 	margin-bottom: 30px;
-}
+	display: flex;
+	width: fit-content;
 
+}
 
 .product__details__adotar .site-btn {
 	font-size: 18px;
@@ -4042,6 +4044,8 @@ ol {
 	transition: all 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	border: #FFB550;
+	height: fit-content;
+	margin-right: 10px;
 }
 
 .product__details__adotar .site-btn:hover {
@@ -4135,6 +4139,16 @@ ol {
 	line-height: 50px;
 	text-align: center;
 	padding-top: 1px;
+}
+
+.product__details__button ul li :hover {
+	border-color: #c21e2e8a;
+	background-color: #d1636e8a;
+	transition: all 0.2s ease-in-out;
+}
+
+.product__details__button ul li a :hover{
+	background-color: transparent;
 }
 
 .product__details__button ul li a span {
@@ -4385,6 +4399,65 @@ ol {
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
+
+.tab-content .tab-pane  h6 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+	margin-top: 15px;
+    color: #ff823a;
+    padding-bottom: 5px;
+}
+
+/* Estilo para a lista */
+.tab-content .tab-pane h ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-content .tab-pane ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    color: #34495e;
+}
+.tab-content .tab-pane ul li strong {
+    margin-right: 4px
+}
+
+.tab-content .tab-pane ul li i {
+    margin-right: 10px;
+    color: #f39c12;
+    font-size: 1.2rem;
+}
+
+/* Sublista */
+.tab-content .tab-pane ul li ul {
+    margin-left: 20px;
+}
+
+.tab-content .tab-pane ul li ul li {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+}
+
+/* Estilo para links */
+.tab-content .tab-pane ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.tab-content .tab-pane ul li a:hover {
+    color: #f39c12;
+}
+/* Mapa */
+.map-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 /* ---------------------
   User Profile
@@ -4762,6 +4835,7 @@ ol {
 	color: #333;
 	font-weight: bold;
 	margin-bottom: 5px;
+	margin-top: 10px;
 }
 
 .shelter-details p,

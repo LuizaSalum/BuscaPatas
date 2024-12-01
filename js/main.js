@@ -499,3 +499,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function initMap() {
+    // Coordenadas fornecidas
+    const location = { lat: 38.722944, lng: -9.184625 };
+    
+    // Criação do mapa com zoom ajustado
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10, // Ajuste do nível de zoom (menor = mais afastado)
+        center: location,
+    });
+
+    // Adicionando o marcador (ping)
+    new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Localização Específica", // Texto ao passar o mouse
+    });
+}
