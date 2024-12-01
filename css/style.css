@@ -2463,6 +2463,11 @@ ol {
     line-height: 1;
 }
 
+.custom-label{
+	margin-left: 6px;
+	margin-top: 3px;
+}
+
 /* Donate Button */
 .btn-donate {
     background-color: #75CE89;
