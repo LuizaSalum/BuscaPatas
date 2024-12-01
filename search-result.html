@@ -77,8 +77,8 @@
                             <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
                             <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                <li><a href="./breed-info.html">Raças & Cuidados</a></li>
-                                <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
@@ -198,67 +198,195 @@
                             <div class="section-title">
                                 <h4>Filtros</h4>
                             </div>
+                            <div class="filter-buttons">
+                                <button id="clear-filters" class="btn btn-primary">Limpar Filtros</button>
+                            </div>
                             <div class="categories__accordion">
                                 <div class="accordion" id="accordionExample">
+
+                                    <!-- Categoria -->
                                     <div class="card">
-                                        <div class="card-heading active">
-                                            <a data-toggle="collapse" data-target="#collapseLocation">Localização</a>
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseCategory"
+                                                role="button" aria-expanded="true" aria-controls="collapseCategory">
+                                                Categoria 
+                                            </a>
                                         </div>
-                                        <div id="collapseLocation" class="collapse show"
-                                            data-parent="#accordionExample">
+                                        <div id="collapseCategory" class="collapse show" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Lisboa</a></li>
-                                                    <li><a href="#">Porto</a></li>
-                                                    <li><a href="#">Faro</a></li>
-                                                    <li><a href="#">Coimbra</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="category" value="merch"> Merch</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="category" value="acessorio"> Acessórios</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="category" value="abrigo"> Abrigo</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="category" value="cão"> Cão</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="category" value="gato"> Gato</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Filtros por Idade -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a data-toggle="collapse" data-target="#collapseCapacity">Capacidade</a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseAge"
+                                                role="button" aria-expanded="true" aria-controls="collapseAge">Idade</a>
                                         </div>
-                                        <div id="collapseCapacity" class="collapse" data-parent="#accordionExample">
+                                        <div id="collapseAge" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Pequena (até 50 animais)</a></li>
-                                                    <li><a href="#">Média (50-100 animais)</a></li>
-                                                    <li><a href="#">Grande (mais de 100 animais)</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Filhote"> Filhote (0-2 anos)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Adulto"> Adulto (2-7 anos)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
+                                                            value="Idoso"> Idoso (7+ anos)</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Filtros por Raça -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a data-toggle="collapse" data-target="#collapseType">Tipo de Abrigo</a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
+                                                role="button" aria-expanded="true"
+                                                aria-controls="collapseBreed">Raça</a>
                                         </div>
-                                        <div id="collapseType" class="collapse" data-parent="#accordionExample">
+                                        <div id="collapseBreed" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Geral</a></li>
-                                                    <li><a href="#">Específico para cães</a></li>
-                                                    <li><a href="#">Específico para gatos</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Labrador"> Labrador</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Bulldog"> Bulldog</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Dachshund"> Dachshund</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Husky"> Husky</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Golden Retriever"> Golden Retriever</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
+                                                            value="Beagle"> Beagle</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Filtros por Porte -->
                                     <div class="card">
                                         <div class="card-heading">
-                                            <a data-toggle="collapse" data-target="#collapseOportunity">Oportundidade de
-                                                Voluntariado</a>
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseSize"
+                                                role="button" aria-expanded="true"
+                                                aria-controls="collapseSize">Porte</a>
                                         </div>
-                                        <div id="collapseOportunity" class="collapse" data-parent="#accordionExample">
+                                        <div id="collapseSize" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Sim</a></li>
-                                                    <li><a href="#">Não</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Pequeno"> Pequeno</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Médio"> Médio</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
+                                                            value="Grande"> Grande</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Filtros por Localização -->
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseLocation"
+                                                role="button" aria-expanded="true" aria-controls="collapseLocation">
+                                                Localização
+                                            </a>
+                                        </div>
+                                        <div id="collapseLocation" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Lisboa"> Lisboa</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Porto"> Porto</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Faro"> Faro</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Coimbra"> Coimbra</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <!-- Filtros por Capacidade do Abrigo -->
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseCapacity"
+                                                role="button" aria-expanded="true" aria-controls="collapseCapacity">
+                                                Capacidade do Abrigo
+                                            </a>
+                                        </div>
+                                        <div id="collapseCapacity" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Pequena"> Pequena ( - 50
+                                                        animais)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Média"> Média (50-100 animais)
+                                                    </li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Grande"> Grande ( + 100
+                                                        animais)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Filtros por Tipo de Abrigo -->
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseType"
+                                                role="button" aria-expanded="true" aria-controls="collapseType">
+                                                Tipo de Abrigo
+                                            </a>
+                                        </div>
+                                        <div id="collapseType" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Geral"> Geral</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Cães"> Específico para cães</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Gatos"> Específico para gatos</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Filtros por Necessidade de Voluntários -->
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse"
+                                                href="#collapseVolunteers" role="button" aria-expanded="true"
+                                                aria-controls="collapseVolunteers">
+                                                Necessidade de Voluntários
+                                            </a>
+                                        </div>
+                                        <div id="collapseVolunteers" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="volunteers" value="Alta"> Alta</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="volunteers" value="Moderada"> Moderada</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="volunteers" value="Baixa"> Baixa</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -266,58 +394,60 @@
                 </div>
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        <!-- Example Shelter Card -->
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-category="cão" data-breed="Labrador" data-age="Adulto"
+                        data-size="Médio">
                             <div class="shelter__item">
-                                <div class="shelter__item__pic set-bg" data-setbg="img/product/details/dogtest4.jpg">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/product/details/luna4.png">
                                     <ul class="shelter__hover">
-                                        <li><a href="img/product/details/dogtest4.jpg" class="image-popup"><span
+                                        <li><a href="img/product/details/luna4.png" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
 
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="./details-cao.html">Buddy</a></h6>
-                                    <p>Raça: Labrador | Idade: 2 anos | Porte: Grande</p>
+                                    <h6><a href="./details-cao.html">Luna</a></h6>
+                                    <p>Raça: Labrador Retriever | Porte: Médio</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-category="abrigo" data-location="Lisboa" data-capacity="Grande"
+                        data-type="Geral" data-volunteer="Sim" >
                             <div class="shelter__item">
-                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo2.jpg">
+                                <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo.jpg">
                                     <ul class="shelter__hover">
-                                        <li><a href="img/shelters/logos/abrigo2.jpg" class="image-popup"><span
+                                        <li><a href="img/shelters/logos/abrigo.jpg" class="image-popup"><span
                                                     class="arrow_expand"></span></a></li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
                                 <div class="shelter__item__text">
-                                    <h6><a href="#">Abrigo Casa Branca</a></h6>
-                                    <p>Localização: Porto | Capacidade: Média | Tipo: Específico para cães</p>
-
+                                    <h6><a href="details-abrigo.html">Casa dos Animais</a></h6>
+                                    <p>Localização: Lisboa | Capacidade: Grande</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-category="merch">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/Merch1.png">
                                     <ul class="shelter__hover">
                                         <li><a href="img/Merch1.png" class="image-popup"><span
-                                                    class="arrow_expand"></span></a></li>
+                                                    class="arrow_expand"></span></a>
+                                        </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                     </ul>
                                 </div>
                                 <div class="shelter__item__text">
-                                    <h6><a href="#">Dog Sweat (Black)</a></h6>
+                                    <h6><a href="#">Camisola de cães</a></h6>
                                     <p>$ 59.0</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-category="abrigo" data-location="Faro" data-capacity="Grande"
+                        data-type="Geral" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo4.jpg">
                                     <ul class="shelter__hover">
@@ -327,73 +457,71 @@
                                     </ul>
                                 </div>
                                 <div class="shelter__item__text">
-                                    <h6><a href="#">Abrigo Esperança Nova</a></h6>
+                                    <h6><a href="#">Casa do Cão & Gato</a></h6>
                                     <p>Localização: Faro | Capacidade: Grande | Tipo: Geral</p>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-7">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        <!-- Footer Section Begin -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-7">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-5">
-                    <div class="footer__widget">
-                        <h6>Serviços</h6>
-                        <ul>
-                            <li><a href="adotar.html">Adotar</a></li>
-                            <li><a href="entrega-animal.html">Entrega Animal</a></li>
-                            <li><a href="breed-info.html">Espécies e Raças</a></li>
-                            <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer__widget">
+                            <h6>Serviços</h6>
+                            <ul>
+                                <li><a href="adotar.html">Adotar</a></li>
+                                <li><a href="entrega-animal.html">Entrega Animal</a></li>
+                                <li><a href="breed-info.html">Espécies e Raças</a></li>
+                                <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
-                    <div class="footer__widget">
-                        <h6>Sobre Nós</h6>
-                        <ul>
-                            <li><a href="about-us.html">Dinflux</a></li>
-                            <li><a href="team.html">Equipa BuscaPatas</a></li>
-                            <li><a href="partners.html">Nossos Parceiros</a></li>
-                            <li><a href="termos-politicas.html">Termos e Políticas</a></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Sobre Nós</h6>
+                            <ul>
+                                <li><a href="about-us.html">Dinflux</a></li>
+                                <li><a href="team.html">Equipa BuscaPatas</a></li>
+                                <li><a href="partners.html">Nossos Parceiros</a></li>
+                                <li><a href="termos-politicas.html">Termos e Políticas</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
-                    <div class="footer__widget">
-                        <h6>Apoio</h6>
-                        <ul>
-                            <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
-                            <li><a href="merch.html">Merchandise</a></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Apoio</h6>
+                            <ul>
+                                <li><a href="ajuda.html">Ajuda</a></li>
+                                <li><a href="abrigos.html">Abrigos</a></li>
+                                <li><a href="merch.html">Merchandise</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                    <div class="col-lg-3 col-md-8 col-sm-8">
+                        <div class="footer__newsletter">
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
+        </footer>
+        <!-- Footer Section End -->
 
         <!-- Search Begin -->
         <div class="search-model">

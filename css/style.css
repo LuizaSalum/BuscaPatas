@@ -3726,6 +3726,7 @@ ol {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
+	justify-content: end;
 }
 
 .filter-buttons .btn {
@@ -3736,10 +3737,11 @@ ol {
 }
 
 .filter-buttons .btn-primary {
-	background-color: #FFB550;
-	color: #ffffff;
+	background-color: transparent;
+	color: #000000;
 	border: none;
 	transition: all 0.3s ease;
+	width: 100%;
 }
 
 .filter-buttons .btn-secondary:hover {
