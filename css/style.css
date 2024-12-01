@@ -4545,31 +4545,6 @@ ol {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes pulse-rotate {
-	0% {
-		transform: scale(1) rotate(0deg);
-	}
-
-	50% {
-		transform: scale(1.5) rotate(15deg);
-	}
-
-	100% {
-		transform: scale(1) rotate(0deg);
-	}
-}
-
-#like-icon-1 span {
-	display: inline-block;
-	transition: color 0.3s ease;
-}
-
-#like-icon-1.active span {
-	animation: pulse-rotate 0.5s ease-in-out;
-	color: #ff0000;
-	/* Cor do coração ao clicar */
-}
-
 
 /* ---------------------
   User Profile
@@ -4971,6 +4946,16 @@ ol {
 	margin-bottom: 20px;
 	transition: all 0.3s ease;
 }
+
+.more-info h6{
+	font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    color: #ff823a;
+    padding-bottom: 5px;
+}
+
 
 /* Animais Disponíveis para Adoção */
 .card-item {

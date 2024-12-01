@@ -77,8 +77,8 @@
                             <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
                             <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                <li><a href="./breed-info.html">Raças & Cuidados</a></li>
-                                <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
@@ -202,6 +202,9 @@
                             <div class="section-title">
                                 <h4>Filtros</h4>
                             </div>
+                            <div class="filter-buttons">
+                                <button id="clear-filters" class="btn btn-primary">Limpar Filtros</button>
+                            </div>
                             <div class="categories__accordion">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
@@ -212,10 +215,15 @@
                                             data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Lisboa</a></li>
-                                                    <li><a href="#">Porto</a></li>
-                                                    <li><a href="#">Faro</a></li>
-                                                    <li><a href="#">Coimbra</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Lisboa">Lisboa</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Porto">Porto</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Faro">Faro</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="location" value="Coimbra">Coimbra</li>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -227,9 +235,15 @@
                                         <div id="collapseCapacity" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Pequena (até 50 animais)</a></li>
-                                                    <li><a href="#">Média (50-100 animais)</a></li>
-                                                    <li><a href="#">Grande (mais de 100 animais)</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Pequena">Pequena (até 50
+                                                        animais)</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Média">Média (50-100 animais)
+                                                    </li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="capacity" value="Grande">Grande (mais de 100
+                                                        animais)</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -241,9 +255,14 @@
                                         <div id="collapseType" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Geral</a></li>
-                                                    <li><a href="#">Específico para cães</a></li>
-                                                    <li><a href="#">Específico para gatos</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Geral">Geral</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Cães">Específico para
+                                                        cães</li>
+                                                    <li><input type="checkbox" class="filter-checkbox" data-type="type"
+                                                            value="Gatos">Específico para
+                                                        gatos</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -256,8 +275,10 @@
                                         <div id="collapseOportunity" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><a href="#">Sim</a></li>
-                                                    <li><a href="#">Não</a></li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="volunteer" value="Sim">Sim</li>
+                                                    <li><input type="checkbox" class="filter-checkbox"
+                                                            data-type="volunteer" value="Não">Não</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -273,7 +294,7 @@
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
                         <!-- Example Shelter Card -->
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-location="Lisboa" data-capacity="Grande" data-type="Geral" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo.jpg">
                                     <ul class="shelter__hover">
@@ -283,15 +304,16 @@
                                     </ul>
                                 </div>
                                 <div class="shelter__item__text">
-                                    <a href="./details-abrigo.html"><h6>Casa dos Animais</h6>
-                                    <p>Localização: Lisboa | Capacidade: Grande | Tipo: Geral</p>
-                                    <button class="adopt-btn">Consulte Agora</button>
-                                </a>
+                                    <a href="./details-abrigo.html">
+                                        <h6>Casa dos Animais</h6>
+                                        <p>Localização: Lisboa | Capacidade: Grande | Tipo: Geral</p>
+                                        <button class="adopt-btn">Consulte Agora</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-location="Porto" data-capacity="Média" data-type="Cães" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo2.jpg">
                                     <ul class="shelter__hover">
@@ -308,7 +330,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-location="Coimbra" data-capacity="Pequena" data-type="Geral" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo3.jpg">
                                     <ul class="shelter__hover">
@@ -325,7 +347,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-location="Faro" data-capacity="Grande" data-type="Geral" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo4.jpg">
                                     <ul class="shelter__hover">
@@ -342,7 +364,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 product-item" data-location="Lisboa" data-capacity="Média" data-type="Cães" data-volunteer="Sim">
                             <div class="shelter__item">
                                 <div class="shelter__item__pic set-bg" data-setbg="img/shelters/logos/abrigo5.jpg">
                                     <ul class="shelter__hover">
@@ -363,61 +385,61 @@
 
             </div>
 
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-7">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <!-- Footer Section Begin -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-7">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-5">
+                            <div class="footer__widget">
+                                <h6>Serviços</h6>
+                                <ul>
+                                    <li><a href="adotar.html">Adotar</a></li>
+                                    <li><a href="entrega-animal.html">Entrega Animal</a></li>
+                                    <li><a href="breed-info.html">Espécies e Raças</a></li>
+                                    <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4">
+                            <div class="footer__widget">
+                                <h6>Sobre Nós</h6>
+                                <ul>
+                                    <li><a href="about-us.html">Dinflux</a></li>
+                                    <li><a href="team.html">Equipa BuscaPatas</a></li>
+                                    <li><a href="partners.html">Nossos Parceiros</a></li>
+                                    <li><a href="termos-politicas.html">Termos e Políticas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4">
+                            <div class="footer__widget">
+                                <h6>Apoio</h6>
+                                <ul>
+                                    <li><a href="ajuda.html">Ajuda</a></li>
+                                    <li><a href="abrigos.html">Abrigos</a></li>
+                                    <li><a href="merch.html">Merchandise</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-8 col-sm-8">
+                            <div class="footer__newsletter">
+                                <div class="footer__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-5">
-                    <div class="footer__widget">
-                        <h6>Serviços</h6>
-                        <ul>
-                            <li><a href="adotar.html">Adotar</a></li>
-                            <li><a href="entrega-animal.html">Entrega Animal</a></li>
-                            <li><a href="breed-info.html">Espécies e Raças</a></li>
-                            <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
-                    <div class="footer__widget">
-                        <h6>Sobre Nós</h6>
-                        <ul>
-                            <li><a href="about-us.html">Dinflux</a></li>
-                            <li><a href="team.html">Equipa BuscaPatas</a></li>
-                            <li><a href="partners.html">Nossos Parceiros</a></li>
-                            <li><a href="termos-politicas.html">Termos e Políticas</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4">
-                    <div class="footer__widget">
-                        <h6>Apoio</h6>
-                        <ul>
-                            <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
-                            <li><a href="merch.html">Merchandise</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
+            </footer>
+            <!-- Footer Section End -->
 
             <!-- Search Begin -->
             <div class="search-model">
