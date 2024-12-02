@@ -3183,6 +3183,14 @@ ol {
 	z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+	.split-section {
+		height: 40vh;
+		font-size: 1.5em;
+	}
+	
+}
+
 /*---------------------
   Product
 -----------------------*/
@@ -3740,6 +3748,15 @@ ol {
 	width: 100%;
 }
 
+.filter-buttons .btn-primary:hover {
+	background-color: transparent;
+}
+
+.filter-buttons .btn-primary:active {
+	background-color: transparent;
+}
+
+
 .filter-buttons .btn-secondary:hover {
 	background-color: transparent;
 	color: #ffffff;
@@ -4228,6 +4245,50 @@ ol {
 	transition: all 0.2s ease-in-out;
 	color: #fff;
 }
+
+.like-button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    color: #ff823a;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-button .icon_heart_alt {
+    font-size: 20px;
+    color: #ff823a;
+}
+
+.like-button.liked {
+    border-color: #ff823a;
+    background-color: #ff823ab2;
+    color: #fff;
+}
+
+.like-button.liked .icon_heart_alt {
+    color: #ffffff;
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .product__details__button ul li a :hover {
 	background-color: transparent;
