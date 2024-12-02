@@ -2112,7 +2112,7 @@ ol {
 -----------------------*/
 
 #species-selection p {
-    text-align: center;
+	text-align: center;
 }
 
 .title-section-quiz p {
@@ -2350,6 +2350,18 @@ ol {
 	background: #fff;
 	padding: 40px;
 	border-radius: 10px;
+	max-width: 1000px;
+	width: 90%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow-y: auto;
+	max-height: 90vh;
+}
+
+.modal-header {
+	background: #fff;
+	padding: 0px;
+	border-radius: 20px;
 	max-width: 1000px;
 	width: 90%;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -2631,11 +2643,14 @@ ol {
   About Us
 -----------------------*/
 
-.vision.spad h2, .values.spad h2 {
+.vision.spad h2,
+.values.spad h2 {
 	text-align: left;
 }
 
-.about-us.spad p, .vision.spad p, .values.spad p {
+.about-us.spad p,
+.vision.spad p,
+.values.spad p {
 	text-align: justify;
 }
 
@@ -5045,9 +5060,9 @@ ol {
 }
 
 .user-message {
-    background-color: #ff823a;
-    color: #ffffff;
-    align-self: flex-end;
+	background-color: #ff823a;
+	color: #ffffff;
+	align-self: flex-end;
 }
 
 .chatbot-footer {
