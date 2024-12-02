@@ -6446,17 +6446,11 @@ ol {
 
 .lost-form-container {
 	background-color: #ffffff;
-	/* Cor de fundo */
 	padding: 40px;
-	/* Espaçamento interno */
 	border-radius: 12px;
-	/* Bordas arredondadas */
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	/* Sombra suave */
 	max-width: 1000px;
-	/* Largura máxima */
 	margin: 40px auto;
-	/* Centralizar com margem superior */
 }
 
 .lost-form-container h2 {
@@ -6466,7 +6460,6 @@ ol {
 	margin-bottom: 20px;
 	text-align: center;
 }
-
 
 .lost-form-label {
 	font-weight: 700;
@@ -6568,6 +6561,56 @@ button.btn-secondary:hover {
 .input-tel:focus {
 	border-color: #007bff;
 	box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/*---------------------
+  Animal Encontrado	
+-----------------------*/
+
+.found-form-container {
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	max-width: 1000px;
+	margin: 40px auto;
+}
+
+.found-form-container h2 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #ff7f50;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.found-form-label {
+	font-weight: 700;
+	font-size: 16px;
+	color: #FF823A;
+	margin-bottom: 8px;
+	margin-right: 10px;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+#FoundPhoto {
+	padding: 10px;
+}
+
+.found-form-row {
+	margin-bottom: 20px;
+}
+
+.found-form-row .col-md-6 {
+	margin-bottom: 20px;
 }
 
 /*---------------------
