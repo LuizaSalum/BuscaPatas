@@ -2619,20 +2619,28 @@ ol {
 }
 
 /*---------------------
-  About Us
+  About Us + Team
 -----------------------*/
 
-.vision.spad h2,
+.team.vision.spad h2,
+.mission.spad h2,
 .values.spad h2 {
 	text-align: left;
 }
 
 .about-us.spad p,
 .vision.spad p,
+.team.vision.spad p,
+.mission.spad p,
 .values.spad p {
 	text-align: justify;
 }
 
+.team.spad p {
+	text-align: center;
+}
+
+.team.vision.spad,
 .values.spad {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -2640,6 +2648,56 @@ ol {
 
 .values.spad h5 {
 	margin-bottom: 10px;
+}
+
+.team__item {
+	margin-top: 8px;
+}
+
+.team__item i {
+	color: #FF823A;
+}
+
+.team__item__pic img {
+	border-radius: 8px;
+	margin-bottom: 10px;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.team__item__text h5 {
+	margin-bottom: 5px;
+}
+
+.team__item__text p {
+	margin-bottom: 5px;
+}
+
+.row.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team__item__social {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 /*---------------------
