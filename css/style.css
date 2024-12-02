@@ -1706,138 +1706,13 @@ ol {
 	color: #ffffff;
 }
 
-
-/*---------------------
-  INDEX MAP
------------------------*/
-
-.categories__item_map {
-	margin-left: 10px;
-	overflow: hidden;
-	height: 314px;
-	width: auto;
-	display: flex;
-	align-self: flex-end;
-	flex-direction: column;
-	width: 100%;
-	border-radius: 12px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	margin-bottom: 30px;
-}
-
-.shelter_location {
-	margin-top: 10px;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 30px;
-}
-
-#map {
-	width: 100%;
-	height: 100%;
-}
-
-.text_2 {
-	margin-bottom: 10px;
-}
-
-/* Ensure the map is responsive on smaller screens */
-@media (max-width: 768px) {
-	#index-map {
-		height: 300px;
-		/* Adjust map height for smaller screens */
-	}
-
-	.categories__item_map {
-		height: 200px;
-		/* Adjust height for smaller screens */
-	}
-}
-
-
-@media (max-width: 768px) {
-	.shelter_location {
-		margin-top: 0;
-		margin-left: 0;
-		text-align: center;
-	}
-}
-
-#button-shelter-index {
-	background-color: #FF823A;
-	color: white;
-	transition: all 0.3s ease;
-	height: 50px;
-	font-size: 25px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	margin-top: 5px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#button-shelter-index:hover {
-	background-color: #FFCD89;
-	color: #ffffff;
-	transform: scale(1.05);
-}
-
-
-.pin_text {
-	background: white;
-	padding: 5px;
-	border: 1px solid black;
-	border-radius: 5px;
-	display: none;
-}
-
-.pin_text.show {
-	display: block;
-	/* Show when .show class is added */
-}
-
-.categories__item {
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	/* Aligns the content (image) to the bottom of the container */
-
-}
-
-.categories__item {
-	position: relative;
-}
-
-.dog_peak {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 85%;
-	height: auto;
-	transform: translateX(7%);
-}
-
-
-.cat_peaking {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 60%;
-	height: auto;
-	transform: rotate(180deg) translateX(-60%);
-}
-
-.cat_peaking_2 {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	width: 80%;
-	height: auto;
-}
-
 /*---------------------
   Banner
 -----------------------*/
+
+.homepage-carousel {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .banner {
 	height: 500px;
@@ -1952,13 +1827,117 @@ ol {
 }
 
 /*---------------------
+  Services Map
+-----------------------*/
+
+.index_map.spad {
+	padding-top: 50px;
+	padding-bottom: 60px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.index_map.spad .text {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.index_map.spad .text h1 {
+	color: #FF823A
+}
+
+.index_map.spad .text p {
+	text-align: center;
+}
+
+.categories__item_map {
+	overflow: hidden;
+	height: 500px;
+	width: auto;
+	display: flex;
+	align-self: flex-end;
+	flex-direction: column;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+/* Ensure the map is responsive on smaller screens */
+@media (max-width: 1000px) {
+	#index-map {
+		height: 300px;
+		/* Adjust map height for smaller screens */
+	}
+
+	.categories__item_map {
+		height: 300px;
+		/* Adjust height for smaller screens */
+	}
+}
+
+#button-shelter-index {
+	background-color: #FF823A;
+	color: white;
+	transition: all 0.3s ease;
+	height: 50px;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 5px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#button-shelter-index:hover {
+	background-color: #FFCD89;
+	color: #ffffff;
+	transform: scale(1.05);
+}
+
+.pin_text {
+	background: white;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: none;
+}
+
+.pin_text.show {
+	display: block;
+	/* Show when .show class is added */
+}
+
+.categories__item {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	/* Aligns the content (image) to the bottom of the container */
+
+}
+
+.categories__item {
+	position: relative;
+}
+
+/*---------------------
   Suggestions
 -----------------------*/
 
 .suggestion {
 	padding-top: 3%;
 	padding-bottom: 2%;
-	background-color: #FFCD89;
+}
+
+.suggestion .text-center {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	color: #FFFFFF;
+	margin-bottom: 50px;
+	background-color: #FFA000;
+	padding: 5px;
+	border-radius: 8px;
 }
 
 .suggestion__content {
