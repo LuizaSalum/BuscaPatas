@@ -1824,6 +1824,7 @@ ol {
 
 .container {
 	position: relative;
+	transition: transform .5s; /*Rafa meteu para a Merch...se problemas: tirar...se n incomodar: deixar*/
 }
 
 /*---------------------
@@ -3066,6 +3067,128 @@ ol {
 		font-size: 1.5em;
 	}
 
+}
+/*---------------------
+  Merch
+-----------------------*/
+.breadcrumb-option .row {
+    display: flex; 
+    align-items: center; 
+}
+
+.breadcrumb-option .col-lg-6:last-child {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+}
+
+.cart_icon {
+    display: flex; 
+    align-items: center; 
+}
+
+.cart_icon span {
+    margin-left: 8px; 
+}
+
+.cart_icon span{
+	display: flex;
+	width: 20px;
+	height: 20px;
+	font-size: 15px;
+	background-color: red;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	right: 12px;
+}
+
+.cartTab{
+	width: 400px;
+	background-color: #353432;
+	color: #eee;
+	position: fixed;
+	inset: 0 -400px 0 auto;
+	display: grid;
+	grid-template-rows: 70px 1fr 70px;
+	z-index: 4;
+	transition: .5s;
+}
+
+body.showCart .cartTab{
+	inset: 0 0 0 auto
+}
+
+body.showCart .container{
+	transform: translateX(-250px);
+}
+
+.cartTab h1{
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	color: #eee;
+}
+
+.cartTab .btnCart{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btnCart button{
+	background-color: #E8BC0E;
+	border: none;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.cartTab .btnCart .closeCart{
+	background-color: #eee;
+}
+
+.cartTab .listCart .itemCart img{
+	width: 100%;
+	border-radius: 8% ;
+	margin-left: 15px;
+}
+
+.cartTab .listCart .itemCart{
+	display: grid;
+	grid-template-columns: 70px 120px 50px 1fr;
+	gap: 10px;
+	text-align: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.listCart .quantityCart span{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: #eee;
+	color: #555;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.listCart .quantityCart span:nth-child(2){
+	background-color: transparent;
+	color: #eee;
+}
+
+.listCart .itemCart:nth-child(even){
+	background-color: #eee1;	
+}
+
+.listCart{
+	overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+	width: 0;
 }
 
 /*---------------------

@@ -310,6 +310,56 @@ function applyFilters() {
     });
 }
 
+/*-------------------
+    Merch Filtering Logic
+---------------------*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all filter triggers, product items, and filter checkboxes
+    const filterTriggers = document.querySelectorAll('.collapse-trigger');
+    const productItems = document.querySelectorAll('.product-item');
+    const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+
+    // Function to clear checkboxes of other groups
+    const clearOtherGroups = (currentGroup) => {
+        filterCheckboxes.forEach((checkbox) => {
+            const checkboxGroup = checkbox.getAttribute('data-type');
+            if (checkboxGroup !== currentGroup) {
+                checkbox.checked = false; // Deselect checkboxes not in the current group
+            }
+        });
+    };
+
+    // Function to filter items based on the selected group
+    const filterByGroup = (groupType) => {
+        // Clear other groups' selections
+        clearOtherGroups(groupType);
+
+        // Loop through all items and toggle visibility
+        productItems.forEach((item) => {
+            const hasGroupData = item.getAttribute(`data-${groupType}`);
+            if (hasGroupData) {
+                item.style.display = 'block'; // Show items matching the group
+            } else {
+                item.style.display = 'none'; // Hide items not matching the group
+            }
+        });
+    };
+
+    // Event listener for filter group triggers
+    filterTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default behavior
+            const targetGroup = trigger.getAttribute('aria-controls').replace('collapse', '').toLowerCase();
+
+            // Filter by the selected group
+            filterByGroup(targetGroup);
+        });
+    });
+});
+
+
+
 /* -------------------
 
     PDF Generation

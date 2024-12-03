@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "name": "Camisola com Estampa (preto)",
+        "price": 59.0,
+        "image": "img/Merch1.png"
+    },
+    {
+        "id": 2,
+        "name": "Camisola com Estampa (cinzento)",
+        "price": 49.0,
+        "image": "img/Merch2.png"
+    },
+    {
+        "id": 3,
+        "name": "T-Shirt com Estampa (preto)",
+        "price": 59.0,
+        "image": "img/Merch3.png"
+    },
+    {
+        "id": 4,
+        "name": "T-Shirt com Estampa (cinzento)",
+        "price": 59.0,
+        "image": "img/Merch4.png"
+    },
+    {
+        "id": 5,
+        "name": "T-Shirt com Estampa (cinzento) - Criança",
+        "price": 59.0,
+        "image": "img/child_clothes1.png"
+    },
+    {
+        "id": 6,
+        "name": "T-Shirt com Estampa (cinzento) - Criança",
+        "price": 59.0,
+        "image": "img/child_clothes2.png"
+    },
+    {
+        "id": 7,
+        "name": "Conjunto de Inverno para Gato",
+        "price": 59.0,
+        "image": "img/Merch5.png"
+    },
+    {
+        "id": 8,
+        "name": "Camisola para Cão Pequeno",
+        "price": 49.0,
+        "image": "img/Merch7.png",
+        "original_price": 59.0
+    },
+    {
+        "id": 9,
+        "name": "Brinquedo Interativo para Gato",
+        "price": 59.0,
+        "image": "img/Merch6.png"
+    },
+    {
+        "id": 10,
+        "name": "Brinquedo de Corda para Cão",
+        "price": 49.0,
+        "image": "img/Merch8.png",
+        "original_price": 59.0
+    }
+]
