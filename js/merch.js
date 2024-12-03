@@ -3,7 +3,7 @@ let closeCart = document.querySelector('.closeCart');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCarHTML = document.querySelector('.listCart');
-let iconCartSpan = document.querySelector('.cart-icon span');
+let iconCartSpan = document.querySelector('.cart_icon span');
 
 let listProducts = [];
 let carts = [];
@@ -62,14 +62,15 @@ const changeQuantity = (productName, type) => {
     }
 };
 
-
-
-// Update the cart HTML
 const addCartToHTML = () => {
     listCarHTML.innerHTML = ''; // Clear existing cart content
 
+    let totalQuantity = 0; // Initialize total quantity counter
+
     if (carts.length > 0) {
         carts.forEach(cart => {
+            // Update total quantity
+            totalQuantity += cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('itemCart');
 
@@ -118,10 +119,13 @@ const addCartToHTML = () => {
             });
         });
     }
+    console.log("Total Quantity in Cart:", totalQuantity);
 
-    // Update cart icon quantity
-    iconCartSpan.textContent = carts.reduce((sum, cart) => sum + cart.quantity, 0);
+    // Update the cart icon span to display the total quantity
+    iconCartSpan.textContent = totalQuantity;
+
 };
+
 
 // Event listener for clicking on products
 listProductHTML.addEventListener('click', (event) => {
