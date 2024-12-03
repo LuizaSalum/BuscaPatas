@@ -531,7 +531,7 @@ ol {
 
 #global-search-button {
 	padding: 10px 20px;
-	background-color: #FF823A;
+	background-color: #FF823A; 
 	color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -2308,6 +2308,29 @@ ol {
 }
 
 /*---------------------
+  Partners
+-----------------------*/
+
+#tituloParceiro{
+	font-weight: 800;
+	font-size: 1.3rem;
+}
+
+#linkParceiro {
+    font-weight: 700;
+    color: #FF823A;
+    text-decoration: none; /* Optional to remove underline */
+}
+
+#linkParceiro:hover {
+    color: #555; /* Lighter shade of black */
+    text-decoration: underline; /* Optional for a hover underline effect */
+}
+
+
+
+
+/*---------------------
   Donations
 -----------------------*/
 
@@ -2363,6 +2386,12 @@ ol {
 }
 
 /* Donation Section */
+
+.donations{ /*RAFA ADICIONOU ISTO PQ DONATIONS ESTAVA DESCENTRADO PARA A ESQUERDA*/
+	margin-left: 250px;
+	margin-bottom: 40px;
+}
+
 .donation-section {
 	border-radius: 8px;
 	padding-bottom: 20px;
@@ -3131,9 +3160,63 @@ ol {
 	}
 
 }
+
+/*---------------------
+  Raças & Cuidados
+-----------------------*/
+
+.breed-info .block{
+	position: relative;
+	left: 10px;
+}
+
+.breed-info h2{
+	text-align: left;
+	font-size: 2.2rem;
+}
+
+.breed-info #first{
+	width: 60%;
+}
+
+.breed-info .text{
+	position: relative;
+	bottom: 200px;
+}
+
+.breed-info .detective{
+	width: 30%;
+	position: relative;
+	left: 230px;
+	bottom: 50px;
+	transform: scaleX(-1);
+}
+
+#hyperLink{
+	width: 400px;
+	height: 50px;
+	position: relative;
+	bottom: 150px;
+}
+
+.credit-section{
+	position: relative;
+	left: 180px;
+	bottom: 100px;
+}
+
 /*---------------------
   Merch
 -----------------------*/
+
+.product-item a {
+	z-index: 4;
+}
+
+.product__item__text .buy-btn{
+	margin-top: 20px;
+}
+
 .breadcrumb-option .row {
     display: flex; 
     align-items: center; 
@@ -3196,20 +3279,52 @@ body.showCart .container{
 	color: #eee;
 }
 
-.cartTab .btnCart{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+.cartTab .cartTotal h3{
+    text-align: center;
+    position: relative;
+	top: 20px; 
+	font-weight: 400;
+	color: #eee;
 }
 
-.cartTab .btnCart button{
-	background-color: #E8BC0E;
-	border: none;
-	font-weight: 500;
-	cursor: pointer;
+.cartTab .btnCart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.cartTab .btnCart .closeCart{
-	background-color: #eee;
+.cartTab .btnCart button {
+    position: relative; 
+    background-color: #f4b863;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 25px;
+    overflow: hidden; 
+    z-index: 1; 
+    color: #000; 
+    transition: color 0.3s ease; 
+}
+
+.cartTab .btnCart button::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease; 
+    z-index: -1;
+    opacity: 1; 
+}
+
+.cartTab .btnCart button:hover::before {
+    background: rgba(0, 0, 0, 0); 
+}
+
+
+.cartTab .btnCart .closeCart {
+    background-color: #eee;
 }
 
 .cartTab .listCart .itemCart img{
@@ -3220,7 +3335,7 @@ body.showCart .container{
 
 .cartTab .listCart .itemCart{
 	display: grid;
-	grid-template-columns: 70px 120px 50px 1fr;
+	grid-template-columns: 70px 120px 60px 1fr;
 	gap: 10px;
 	text-align: center;
 	align-items: center;
@@ -5736,6 +5851,101 @@ body.showCart .container{
 	opacity: 0;
 	content: "";
 }
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+.payment-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.payment-form {
+    margin-top: 20px;
+}
+
+.payment-form.hidden {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.remember-me {
+    margin-top: 20px;
+}
+
+.remember-me label {
+    font-size: 14px;
+}
+
+/*---------------------
+   Thank You
+-----------------------*/
+
+/* Overlay styles */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with some transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above everything else */
+}
+
+.overlay-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds depth with a shadow */
+}
+
+.overlay-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.overlay-content a {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: #ef894c;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-content a:hover {
+    background-color: #FFB550;
+}
+
 
 /*---------------------
     Blog

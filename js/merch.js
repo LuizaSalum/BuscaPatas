@@ -15,6 +15,10 @@ iconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
+document.querySelector('.checkOut').addEventListener('click', () => {
+    window.location.href = 'checkout.html';
+});
+
 
 // Add product to the cart
 const addToCart = (productName) => {
@@ -66,13 +70,12 @@ const addCartToHTML = () => {
     listCarHTML.innerHTML = ''; // Clear existing cart content
 
     let totalQuantity = 0; // Initialize total quantity counter
+    let totalCost = 0; // Initialize total cost counter
 
     if (carts.length > 0) {
         carts.forEach(cart => {
-            // Update total quantity
+            // Update total quantity and total cost
             totalQuantity += cart.quantity;
-            let newCart = document.createElement('div');
-            newCart.classList.add('itemCart');
 
             // Find product details in listProducts by matching the name
             let productInfo = listProducts.find(product => product.name === cart.productName);
@@ -82,7 +85,12 @@ const addCartToHTML = () => {
                 return;
             }
 
+            // Add the cost of the current product to the total cost
+            totalCost += productInfo.price * cart.quantity;
+
             // Populate the cart item
+            let newCart = document.createElement('div');
+            newCart.classList.add('itemCart');
             newCart.innerHTML = `
                 <div class="imageCart">
                     <img src="${productInfo.image}" alt="${productInfo.name}">
@@ -91,7 +99,7 @@ const addCartToHTML = () => {
                     ${productInfo.name}
                 </div>
                 <div class="totalPrice">
-                    ${(productInfo.price * cart.quantity).toFixed(2)} €
+                    ${productInfo.price * cart.quantity} €
                 </div>
                 <div class="quantityCart">
                     <span class="minus" data-name="${cart.productName}">-</span>
@@ -119,12 +127,29 @@ const addCartToHTML = () => {
             });
         });
     }
-    console.log("Total Quantity in Cart:", totalQuantity);
 
     // Update the cart icon span to display the total quantity
     iconCartSpan.textContent = totalQuantity;
 
+    // Display the total cost above the buttons, ensuring it's only added once
+    const cartContainer = document.querySelector('.btnCart'); // The container for the buttons
+    let totalCostDiv = document.querySelector('.cartTotal'); // Check if totalCostDiv already exists
+
+    if (!totalCostDiv) {
+        totalCostDiv = document.createElement('div');
+        totalCostDiv.classList.add('cartTotal');
+        totalCostDiv.style.textAlign = 'center';
+        totalCostDiv.style.marginBottom = '10px';
+        cartContainer.parentElement.insertBefore(totalCostDiv, cartContainer);
+    }
+
+    // Update the total cost content
+    totalCostDiv.innerHTML = `<h3>Total Cost: ${totalCost} €</h3>`;
+
+    console.log("Total Quantity in Cart:", totalQuantity);
+    console.log("Total Cost in Cart:", totalCost);
 };
+
 
 
 // Event listener for clicking on products
@@ -157,3 +182,17 @@ const initApp = () => {
 
 // Call initApp to start the application
 initApp();
+
+/*---------------------
+  Checkout
+-----------------------*/
+
+document.getElementById('payment-options').addEventListener('change', function () {
+    const selectedMethod = this.value;
+
+    // Hide all payment forms
+    document.querySelectorAll('.payment-form').forEach(form => form.classList.add('hidden'));
+
+    // Show the selected payment form
+    document.getElementById(`${selectedMethod}-form`).classList.remove('hidden');
+});
