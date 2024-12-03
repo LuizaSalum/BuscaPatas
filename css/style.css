@@ -2620,27 +2620,90 @@ ol {
 }
 
 /*---------------------
-  About Us
+  About Us + Team
 -----------------------*/
 
+.team.vision.spad h2,
 .vision.spad h2,
+.mission.spad h2,
 .values.spad h2 {
 	text-align: left;
 }
 
 .about-us.spad p,
 .vision.spad p,
+.team.vision.spad p,
+.mission.spad p,
 .values.spad p {
 	text-align: justify;
 }
 
+.team.spad p {
+	text-align: center;
+}
+
+.team.vision.spad,
 .values.spad {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
+.values.spad {
+	padding-bottom: 50px;
+}
+
 .values.spad h5 {
 	margin-bottom: 10px;
+}
+
+.team__item {
+	margin-top: 8px;
+}
+
+.team__item i {
+	color: #FF823A;
+}
+
+.team__item__pic img {
+	border-radius: 8px;
+	margin-bottom: 10px;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.team__item__text h5 {
+	margin-bottom: 5px;
+}
+
+.team__item__text p {
+	margin-bottom: 5px;
+}
+
+.row.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team__item__social {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 /*---------------------
@@ -6741,58 +6804,32 @@ button.btn-secondary:hover {
   Termos e Politicas
 -----------------------*/
 
-/* Estilo da Seção de Termos e Políticas */
-.spad-termos-politicas {
-	padding: 60px 20px;
-	background-color: #fff;
-	color: #333;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.terms-of-service.spad h2,
+.privacy-policy.spad h2 {
+	text-align: left;
 }
 
-.spad-termos-politicas .section-title h2 {
-	font-size: 32px;
+.terms-of-service.spad p,
+.terms-policies.spad p,
+.privacy-policy.spad p {
+	text-align: justify;
+}
+
+.terms-of-service.spad,
+.privacy-policy.spad {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.privacy-policy.spad h5 {
+	margin-bottom: 10px;
+}
+
+.last_update {
 	font-weight: 700;
 	text-align: center;
-	margin-bottom: 30px;
-	color: #ff7f50;
-	/* Destaque para o título principal */
-}
-
-.spad-termos-politicas .terms-content h4 {
-	font-size: 20px;
-	font-weight: 600;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	color: #ff7f50;
-	/* Destaque para subtítulos */
-}
-
-.spad-termos-politicas .terms-content p {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #555;
-	margin-bottom: 15px;
-}
-
-.spad-termos-politicas .terms-content a {
-	color: #007bff;
-	/* Azul padrão para links */
-	text-decoration: none;
-	transition: color 0.3s ease;
-}
-
-.spad-termos-politicas .terms-content a:hover {
-	color: #0056b3;
-	/* Azul escuro ao passar o mouse */
-}
-
-.spad-termos-politicas .terms-content .text-center {
-	text-align: center;
-	font-weight: bold;
-	font-size: 16px;
-	color: #333;
-	margin-top: 20px;
+	margin-top: -10px;
+	padding-bottom: 20px;
 }
 
 /*---------------------
@@ -6804,7 +6841,6 @@ button.btn-secondary:hover {
 	text-align: center;
 	margin-top: 50px;
 }
-
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
