@@ -5149,6 +5149,20 @@ body.showCart .container{
 	cursor: pointer;
 }
 
+.logout-button {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+	position: relative;
+	top: 10px;
+}
+
+.logout-button:hover {
+    color: darkred;
+}
+
+
 /*---------------------
   Favoritos
 -----------------------*/
